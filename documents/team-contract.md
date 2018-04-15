@@ -41,6 +41,7 @@ You will need to learn to work in groups and resolve conflicts on your own. Thes
 
 7. How will we hold ourselves and one another accountable? What (exactly) will we say to a team member who appears not to be contributing equally? To a team member who fails to deliver what was promised?
   The person who doesn't do their work must do 1000 push ups, without rest.
+  We will contact each other and make sure that we are getting our work done. If one not doing their work, we will politely ask them to do their work, and if they do not listen, we will make a note that they have not contributed, and will also speak with the professor as necessary.
 
 
 8. What do we do when we disagree? What approach to conflict to we all agree to uphold?
@@ -48,7 +49,7 @@ You will need to learn to work in groups and resolve conflicts on your own. Thes
 
 
 9. What are our procedures for re-visiting this contract?
-  git pull.
+  We will speak about any changes in person or through our group message.
 
 
 10. What else do we want to include in this contract? (Think about a *fun* clause... not everything is always about work! Sometimes you need to celebrate your accomplishments!)
