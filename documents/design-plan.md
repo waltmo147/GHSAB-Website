@@ -58,12 +58,27 @@ Cornell webhosting service
 [Does the client need the ability to edit the site after the end of the semester? If **Yes**, tell us how you site fit your client's need. If **No**, write down N/A.]
 
 Yes
-updates and blog
+
+Have administrator updates where administrator can post new pictures, write blogs, etc.
+
 ### Information Architecture, Content, and Navigation
 
 [Lay out the plan for how you'll organize the site and which content will go where. Note any content (e.g., text, image) that you need to make/get from the client.]
 
 [Note: As with the Needs and Wants table, there is no specific amount to write here. You simply need enough content to do the job.]
+**Home page**
+  * Have description of clients
+**Calendar**
+  * All events posted
+  *Details page*
+    * Cab be accessed by clicking on the event in the calendar
+**Application Page**
+  * Page for Case Competition Applications
+**Administrator Page**
+  * Login for administrator
+  * Administrator will be able to update the site from here
+**Blog**
+  * Blog posts about past events and other stuff the administrator wants to have
 
 Example:
 * Content #1
@@ -86,20 +101,30 @@ Example:
 [Much of this is up to you, however, implementing a login system is **required**. Logging in should not be required to view the site, however it must unlock extra functionality, e.g., admin functionality, comment posting, etc.]
 
 [Also, describe how the interactivity connects with the needs of the clients/target audience.]
+php mail function - Have the site mail the applications to the admin, or at least a notification that an application was posted
+databases - they will hold most of the information for the website
+php sessions and cookies - for login purposes
+input filtering for Applications - for any information that will be posted
 
 ### External Code
 
 [What libraries (e.g. editor.js, jQuery Cookie, Image Sliders, jQuery) are you planning to use for the site? What do you have to do to incorporate those libraries? How much of your own code will satisfy the project requirements?]
 
+jQuery. To incorporate jQuery, we must first learn how to use it.
+
 ### Scale
 
 [How large will the site be (approximate number of pages) and how many hours of work will be required to complete it?]
-
+Approximately 6 or more pages
+A lot of hours will be required. We can not make a guess at this point, only that it will take us a lot of time to accomplish.
 ## Milestone 1, Part IV: Work Distribution
 
 [Describe how each of your responsibilities will be distributed among your group members.]
 
 [Set internal deadlines. Determine your internal dependencies. Whose task needs to be completed first in order for another person's task to be relevant? Be specific in your task descriptions so that everyone knows what needs to be done and can track the progress effectively. Consider how much time will be needed to review and integrate each other's work. Most of all, make sure that tasks are balanced across the team.]
+
+We will hold each other responsible and make sure that each one of us is pulling the same amount of weight. The work will be divided as it is being done, so that if one task seems too hard for a team member, they can divide it with another team member who has a stronger understanding of that area.
+We will also have some work done before we meet up, and then combine it when we come together,
 
 ## Milestone 1, Part V: Additional Comments
 
