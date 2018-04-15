@@ -124,7 +124,15 @@ A lot of hours will be required. We can not make a guess at this point, only tha
 [Set internal deadlines. Determine your internal dependencies. Whose task needs to be completed first in order for another person's task to be relevant? Be specific in your task descriptions so that everyone knows what needs to be done and can track the progress effectively. Consider how much time will be needed to review and integrate each other's work. Most of all, make sure that tasks are balanced across the team.]
 
 We will hold each other responsible and make sure that each one of us is pulling the same amount of weight. The work will be divided as it is being done, so that if one task seems too hard for a team member, they can divide it with another team member who has a stronger understanding of that area.
-We will also have some work done before we meet up, and then combine it when we come together,
+We will also have some work done before we meet up, and then combine it when we come together.
+
+Erie - Administrator page
+Barron - Calendar page
+David - Home page
+Walt - Blog page
+Jing - Application page
+
+subject to change
 
 ## Milestone 1, Part V: Additional Comments
 
