@@ -1,6 +1,6 @@
 # Project 4 - Design & Plan
 
-Your Team Name: [your team name]
+Your Team Name: Red Lion
 
 ## Milestone 1, Part II: Client Selection
 
@@ -125,6 +125,8 @@ A lot of hours will be required. We can not make a guess at this point, only tha
 
 We will hold each other responsible and make sure that each one of us is pulling the same amount of weight. The work will be divided as it is being done, so that if one task seems too hard for a team member, they can divide it with another team member who has a stronger understanding of that area.
 We will also have some work done before we meet up, and then combine it when we come together.
+
+We will all come up with ideas for the wireframes and come together and consolidate them
 
 Erie - Administrator page
 Barron - Calendar page
