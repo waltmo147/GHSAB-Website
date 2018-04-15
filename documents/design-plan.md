@@ -132,6 +132,8 @@ David - Home page
 Walt - Blog page
 Jing - Application page
 
+css - is a group effort
+
 subject to change
 
 ## Milestone 1, Part V: Additional Comments
