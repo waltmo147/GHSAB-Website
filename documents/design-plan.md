@@ -20,17 +20,23 @@ Global Health Student Advisory Board
 Cornell students that are interested in engaging with the global health program.
 
 ### Purpose & Content
-
-Pictures of the team, contact, calendar of events with description, tab with an application for Global Case Competition which emails to the host.
+Purpose: To provide a way to reach out to the Cornell Community and provide them with a way to easily contact or obtain information about the Global Health Student Advisory Board.
+Content:
+Pictures of the team
+Contact Information
+Calendar of events with a link that directs the user to a page containing information about the events
+Tab with an application for Global Case Competition which emails to the host when completed
 
 ### Needs and Wants
 
 [Collect your client's and target audience's needs and wants for the website. Come up with several appropriate design ideas on how those needs may be met. In the **Memo** field, justify your ideas and add any additional comments you have. There is no specific number of needs required for this, but you need enough to do the job.]
 
-Administrator updates.
-(possibly in Spanish)
-
-Blog thingy
+Administrator updates
+  Have an administrator login page where they can log in and edit the content of the site.
+Possibly have the website in Spanish
+  Erie can possibly write the Spanish for the site, or we can use Google Translate.
+Blog
+  Updated through the administrator updates
 
 Example:
 * Needs/Wants #1
@@ -45,8 +51,8 @@ Example:
 
 ### Hosting Plan
 
-[What is your plan for hosting your client's website?]
 Cornell webhosting service
+
 ### Client's Edits
 
 [Does the client need the ability to edit the site after the end of the semester? If **Yes**, tell us how you site fit your client's need. If **No**, write down N/A.]
