@@ -6,7 +6,10 @@ Your Team Name: [your team name]
 
 ### Client Description
 
-[Tell us about your client. Who is your client? What kind of website do they want? What are their key goals?]
+Global Health Student Advisory Board
+
+"something simple as who we are, a section where we could post information about our events, promote our programs and then a section that we could use to post applications for our case completion, post submissions for our symposium and maybe a platform for applications to join our group"
+
 
 [NOTE: If you are redesigning an existing website, give us the current URL and some screenshots of the current site. Tell us how you plan to update the site in a significant way that meets the final project requirements.]
 
@@ -14,15 +17,20 @@ Your Team Name: [your team name]
 
 ### Target Audience(s)
 
-[Tell us about the potential audience for this website. How, when, and where would they interact with the website? Get as much detail as possible from the client to help you find representative users.]
+Cornell students that are interested in engaging with the global health program.
 
 ### Purpose & Content
 
-[Tell us the purpose of the website and what it is all about.]
+Pictures of the team, contact, calendar of events with description, tab with an application for Global Case Competition which emails to the host.
 
 ### Needs and Wants
 
 [Collect your client's and target audience's needs and wants for the website. Come up with several appropriate design ideas on how those needs may be met. In the **Memo** field, justify your ideas and add any additional comments you have. There is no specific number of needs required for this, but you need enough to do the job.]
+
+Administrator updates.
+(possibly in Spanish)
+
+Blog thingy
 
 Example:
 * Needs/Wants #1
@@ -38,11 +46,13 @@ Example:
 ### Hosting Plan
 
 [What is your plan for hosting your client's website?]
-
+Cornell webhosting service
 ### Client's Edits
 
 [Does the client need the ability to edit the site after the end of the semester? If **Yes**, tell us how you site fit your client's need. If **No**, write down N/A.]
 
+Yes
+updates and blog
 ### Information Architecture, Content, and Navigation
 
 [Lay out the plan for how you'll organize the site and which content will go where. Note any content (e.g., text, image) that you need to make/get from the client.]
