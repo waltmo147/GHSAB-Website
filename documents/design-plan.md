@@ -66,18 +66,18 @@ Have administrator updates where administrator can post new pictures, write blog
 [Lay out the plan for how you'll organize the site and which content will go where. Note any content (e.g., text, image) that you need to make/get from the client.]
 
 [Note: As with the Needs and Wants table, there is no specific amount to write here. You simply need enough content to do the job.]
-**Home page**
+* **Home page**
   * Have description of clients
-**Calendar**
+* **Calendar**
   * All events posted
-  *Details page*
-    * Cab be accessed by clicking on the event in the calendar
-**Application Page**
+  * *Details page*
+    * Can be accessed by clicking on the event in the calendar
+* **Application Page**
   * Page for Case Competition Applications
-**Administrator Page**
+* **Administrator Page**
   * Login for administrator
   * Administrator will be able to update the site from here
-**Blog**
+* **Blog**
   * Blog posts about past events and other stuff the administrator wants to have
 
 Example:
