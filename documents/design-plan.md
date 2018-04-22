@@ -721,9 +721,16 @@ List navigation links
 
 
 #### includes/init.sql
+```
+initialize all databases
+```
 
 #### admin_login.php
-
+```
+post request and send info
+if(user is admin)
+  redirect to admin main page
+```
 
 #### admin_logo.php
 
