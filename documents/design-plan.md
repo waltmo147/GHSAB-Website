@@ -662,6 +662,23 @@ db = connect to db
 
 #### events.php
 
+```
+execute sql
+for each event in events
+  echo (<a>
+  Name
+  date and time
+  location
+  </a>);
+if($_GET)
+  search database for specific event
+  echo name
+  date
+  time
+  location
+  description
+```
+
 #### blog.php
 
 #### about.php
