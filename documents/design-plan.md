@@ -352,6 +352,183 @@ Because she will see a message on the screen saying she successfully submitted h
 #### Task 2 - Cognitive Walkthrough
 
 
+
+
+# GenderMag Template
+
+**Task name: [administrator wants to add an event]**
+
+[Add as many subgoals as you needs]
+**Subgoal # [1] : [login]**
+	(e.g., "# 1 : Select the section of the document you want to print")
+
+  - Will [Abby] have formed this sub-goal as a step to their overall goal?
+    - Yes, maybe or no: [yes]
+    - Why? (Especially consider [persona name]'s Motivations/Strategies.)
+        [Tell us why..]
+        this is a familiar task on the internet
+
+[Add as many actions as you need...]
+**Action # [1] : [put login.php in URL]**
+	(e.g., "# 1 : Put the mouse at the beginning of the section you want to print")
+
+  - Will [Abby] know what to do at this step?
+    - Yes, maybe or no: [yes]
+    - Why? (Especially consider [persona name]'s Knowledge/Skills, Motivations/Strategies, Self-Efficacy and Tinkering.)
+
+        [Tell us why...]
+        Abby (the administrator) will know to do this everytime she wants to edit something because the dev team will tell her what she needs to do in order to login and will walk through the entire process with her... Abby chose not to have a login button that other (non-admin) users would see and this is the only alternative that the dev team could theorize
+
+  - If [persona name] does the right thing, will she know that she did the right thing, and is making progress towards her goal?
+    - Yes, maybe or no: [yes]
+    - Why? (Especially consider [persona name]'s Self-Efficacy and Attitude toward Risk.)
+
+        [Tell us why...]
+        Abby will see the login page...
+
+
+
+**Action # [2] : [input login credentials]**
+
+  - Will [Abby] know what to do at this step?
+    - Yes, maybe or no: [yes]
+    - Why? (Especially consider [persona name]'s Knowledge/Skills, Motivations/Strategies, Self-Efficacy and Tinkering.)
+
+        [Tell us why...]
+        This is a very familiar part of the internet
+  - If [persona name] does the right thing, will she know that she did the right thing, and is making progress towards her goal?
+    - Yes, maybe or no: [yes]
+    - Why? (Especially consider [persona name]'s Self-Efficacy and Attitude toward Risk.)
+
+        [Tell us why...]
+        Abby will see her inputs in the login screen
+
+
+
+**Action # [2] : [press login]**
+
+  - Will [Abby] know what to do at this step?
+    - Yes, maybe or no: [yes]
+    - Why? (Especially consider [persona name]'s Knowledge/Skills, Motivations/Strategies, Self-Efficacy and Tinkering.)
+
+        [Tell us why...]
+        This is a very familiar part of the internet
+  - If [persona name] does the right thing, will she know that she did the right thing, and is making progress towards her goal?
+    - Yes, maybe or no: [yes]
+    - Why? (Especially consider [persona name]'s Self-Efficacy and Attitude toward Risk.)
+
+        [Tell us why...]
+        Abby will see the next page with feedback regarding the login attempt
+
+
+
+
+        [Add as many subgoals as you needs]
+        **Subgoal # [2] : [add an event]**
+        	(e.g., "# 1 : Select the section of the document you want to print")
+
+          - Will [Abby] have formed this sub-goal as a step to their overall goal?
+            - Yes, maybe or no: [yes]
+            - Why? (Especially consider [persona name]'s Motivations/Strategies.)
+                [Tell us why..]
+                she wants to add an event...
+
+
+
+
+
+                **Action # [1] : [click on events tab]**
+
+                  - Will [Abby] know what to do at this step?
+                    - Yes, maybe or no: [yes]
+                    - Why? (Especially consider [persona name]'s Knowledge/Skills, Motivations/Strategies, Self-Efficacy and Tinkering.)
+
+                        [Tell us why...]
+                        this will be very intuitive
+
+                  - If [persona name] does the right thing, will she know that she did the right thing, and is making progress towards her goal?
+                    - Yes, maybe or no: [yes]
+                    - Why? (Especially consider [persona name]'s Self-Efficacy and Attitude toward Risk.)
+
+                        [Tell us why...]
+                        Abby will see the the editable events page
+
+                        **Action # [2] : [click add event]**
+                        	(e.g., "# 1 : Put the mouse at the beginning of the section you want to print")
+
+                          - Will [Abby] know what to do at this step?
+                            - Yes, maybe or no: [yes]
+                            - Why? (Especially consider [persona name]'s Knowledge/Skills, Motivations/Strategies, Self-Efficacy and Tinkering.)
+
+                                [Tell us why...]
+                                she wants to add an event so she will click this...
+
+                          - If [persona name] does the right thing, will she know that she did the right thing, and is making progress towards her goal?
+                            - Yes, maybe or no: [yes]
+                            - Why? (Especially consider [persona name]'s Self-Efficacy and Attitude toward Risk.)
+
+                                [Tell us why...]
+                                she will see a form that signifies her click
+
+                                **Action # [3] : [fill out the information]**
+                                	(e.g., "# 1 : Put the mouse at the beginning of the section you want to print")
+
+                                  - Will [Abby] know what to do at this step?
+                                    - Yes, maybe or no: [yes]
+                                    - Why? (Especially consider [persona name]'s Knowledge/Skills, Motivations/Strategies, Self-Efficacy and Tinkering.)
+
+                                        [Tell us why...]
+                                        she wants to add an event, so she will input the information...
+
+                                  - If [persona name] does the right thing, will she know that she did the right thing, and is making progress towards her goal?
+                                    - Yes, maybe or no: [yes]
+                                    - Why? (Especially consider [persona name]'s Self-Efficacy and Attitude toward Risk.)
+
+                                        [Tell us why...]
+                                        there will be stuff filled out...
+
+                                        **Action # [4] : [click submit]**
+                                        	(e.g., "# 1 : Put the mouse at the beginning of the section you want to print")
+
+                                          - Will [Abby] know what to do at this step?
+                                            - Yes, maybe or no: [yes]
+                                            - Why? (Especially consider [persona name]'s Knowledge/Skills, Motivations/Strategies, Self-Efficacy and Tinkering.)
+
+                                                [Tell us why...]
+                                                she wants to add an event.. so she will click submit after typing the inputs
+
+                                          - If [persona name] does the right thing, will she know that she did the right thing, and is making progress towards her goal?
+                                            - Yes, maybe or no: [yes]
+                                            - Why? (Especially consider [persona name]'s Self-Efficacy and Attitude toward Risk.)
+
+                                                [Tell us why...]
+                                                abby will see feedback regarding whether or not the submission was successful
+
+                                                **Action # [5] : [admin logs out]**
+                                                	(e.g., "# 1 : Put the mouse at the beginning of the section you want to print")
+
+                                                  - Will [Abby] know what to do at this step?
+                                                    - Yes, maybe or no: [yes]
+                                                    - Why? (Especially consider [persona name]'s Knowledge/Skills, Motivations/Strategies, Self-Efficacy and Tinkering.)
+
+                                                        [Tell us why...]
+                                                        Abby is now done with her edits so the only logical thing to do is logout
+
+                                                  - If [persona name] does the right thing, will she know that she did the right thing, and is making progress towards her goal?
+                                                    - Yes, maybe or no: [yes]
+                                                    - Why? (Especially consider [persona name]'s Self-Efficacy and Attitude toward Risk.)
+
+                                                        [Tell us why...]
+                                                        Abby will see feedback regarding whether or not she was successfully logged out
+
+
+
+
+
+*Source*: Margaret Burnett, Simone Stumpf, Laura Beckwith, and Anicia Peters, "The GenderMag Kit: How to Use the GenderMag Method to Find Inclusiveness Issues through a Gender Lens", http://gendermag.org, Feb. 1 2018 .
+
+
+
 #### Task 3 - Cognitive Walkthrough
 
 
@@ -367,13 +544,59 @@ Because she will see a message on the screen saying she successfully submitted h
 
 [Describe the structure of your database. You may use words or a picture. A bulleted list is probably the simplest way to do this.]
 
-Table: movies
-* field 1: description...
-* field...
+Table: accounts
+* field 1: id
+* field 2: username
+* field 3: password
+* field 4: session
+
+Table: events
+* field 1: id
+* field 2: name
+* field 3: date_time
+* field 4: place
+* field 5: introduction
+
+Table: applications
+* field 1: id
+* field 2: event_id
+* field 3: email
+* field 4: name
+* field 5: comment
+
+Table: blogs
+* field 1: id
+* field 2: author_name
+* field 3: email
+* field 4: create_time
+* field 5: title
+* field 6: content
+
+Table: members
+* field 1: id
+* field 2: member_name
+* field 3: email
+* field 4: introduction
+
 
 ### Database Queries
 
-[Plan your database queries. You may use natural language, pseudocode, or SQL.]
+```
+select password from accounts where username is ...;
+UPDATE accounts SET session = :session WHERE id = :user_id;
+select * from events order by date_time DESC;
+insert into events (name, date_time, place, introduction) values (:name, :date_time, :place, :introduction);
+delete form events where id is :event_id;
+delete from events where name is :name;
+insert into applications (event_id, email, name, comment) values (:event_id, :email, :name, :comment);
+select * from blogs order by create_time DESC;
+insert into blogs (author_name, email, create_time, title, content) values (:author_name, :email, :create_time, :title, :content);
+delete from blogs where title is :title;
+delete from blogs where id is :blog_id;
+select * from members;
+insert into members (member_name, email, introduction) values (:member_name, :email, :introduction)
+```
+
 
 ## Milestone 2, Part V: Structure and Pseudocode
 
