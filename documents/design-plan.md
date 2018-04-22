@@ -566,6 +566,7 @@ Table: events
 * field 3: date_time
 * field 4: place
 * field 5: introduction
+* field 6: image
 
 Table: applications
 * field 1: id
@@ -581,13 +582,14 @@ Table: blogs
 * field 4: create_time
 * field 5: title
 * field 6: content
+* field 7: image
 
 Table: members
 * field 1: id
 * field 2: member_name
 * field 3: email
 * field 4: introduction
-
+* field 5: image
 
 ### Database Queries
 
@@ -595,16 +597,16 @@ Table: members
 select password from accounts where username is ...;
 UPDATE accounts SET session = :session WHERE id = :user_id;
 select * from events order by date_time DESC;
-insert into events (name, date_time, place, introduction) values (:name, :date_time, :place, :introduction);
+insert into events (name, date_time, place, introduction, image) values (:name, :date_time, :place, :introduction, :image);
 delete form events where id is :event_id;
 delete from events where name is :name;
 insert into applications (event_id, email, name, comment) values (:event_id, :email, :name, :comment);
 select * from blogs order by create_time DESC;
-insert into blogs (author_name, email, create_time, title, content) values (:author_name, :email, :create_time, :title, :content);
+insert into blogs (author_name, email, create_time, title, content, image) values (:author_name, :email, :create_time, :title, :content, :image);
 delete from blogs where title is :title;
 delete from blogs where id is :blog_id;
 select * from members;
-insert into members (member_name, email, introduction) values (:member_name, :email, :introduction)
+insert into members (member_name, email, introduction, image) values (:member_name, :email, :introduction, :image)
 ```
 
 
