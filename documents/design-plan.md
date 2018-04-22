@@ -680,6 +680,23 @@ if($_GET)
 ```
 
 #### blog.php
+```
+include init.php
+get blog_id
+
+head: include all.css
+body:
+	include header.php
+
+	if blog_id:
+		select the blog whose id is blog_id from the database
+		show the blog
+	else:
+		select all the blogs from database
+		show all the blogs
+
+	include footer.php
+```
 
 #### about.php
 
