@@ -453,10 +453,9 @@ Action # [5] : **admin logs out**
     - Abby will see feedback regarding whether or not she was successfully logged out
 
 #### Task 3 - Cognitive Walkthrough
-Task name: **Delete blogpost**
 
-Subgoal # 1: *Login to Administrator page*
 
+<<<<<<< HEAD
   - Will Abby have formed this sub-goal as a step to their overall goal?
     - Yes, maybe or no: maybe
     - Why?
@@ -544,7 +543,10 @@ Action #4 : click delete
     - Yes, maybe or no: yes
   - Why?
     - A pop up window asking her to confirm her deletion will appear, to which she'll click yes and be redirected back to the main delete page which will display a message telling her that the blog post has been deleted.
+=======
+>>>>>>> 24570113f8b63d2e0ab7dbe3155e5f85c1ae8bc8
 ### Cognitive Walk-though Results
+
 [Did you discover any issues with your design? What were they? How did you change your design to address the gender-inclusiveness bugs you discovered?]
 
 [Your responses here should be very thorough and thoughtful.]
@@ -555,13 +557,59 @@ Action #4 : click delete
 
 [Describe the structure of your database. You may use words or a picture. A bulleted list is probably the simplest way to do this.]
 
-Table: movies
-* field 1: description...
-* field...
+Table: accounts
+* field 1: id
+* field 2: username
+* field 3: password
+* field 4: session
+
+Table: events
+* field 1: id
+* field 2: name
+* field 3: date_time
+* field 4: place
+* field 5: introduction
+
+Table: applications
+* field 1: id
+* field 2: event_id
+* field 3: email
+* field 4: name
+* field 5: comment
+
+Table: blogs
+* field 1: id
+* field 2: author_name
+* field 3: email
+* field 4: create_time
+* field 5: title
+* field 6: content
+
+Table: members
+* field 1: id
+* field 2: member_name
+* field 3: email
+* field 4: introduction
+
 
 ### Database Queries
 
-[Plan your database queries. You may use natural language, pseudocode, or SQL.]
+```
+select password from accounts where username is ...;
+UPDATE accounts SET session = :session WHERE id = :user_id;
+select * from events order by date_time DESC;
+insert into events (name, date_time, place, introduction) values (:name, :date_time, :place, :introduction);
+delete form events where id is :event_id;
+delete from events where name is :name;
+insert into applications (event_id, email, name, comment) values (:event_id, :email, :name, :comment);
+select * from blogs order by create_time DESC;
+insert into blogs (author_name, email, create_time, title, content) values (:author_name, :email, :create_time, :title, :content);
+delete from blogs where title is :title;
+delete from blogs where id is :blog_id;
+select * from members;
+insert into members (member_name, email, introduction) values (:member_name, :email, :introduction)
+```
+
 
 ## Milestone 2, Part V: Structure and Pseudocode
 
@@ -570,8 +618,23 @@ Table: movies
 [List the PHP files you will have. You will probably want to do this with a bulleted list.]
 
 * index.php - main page.
+* events.php
+* blog.php
+* about.php
 * includes/init.php - stuff that useful for every web page.
-* TODO
+* includes/footer.php
+* includes/header.php
+* init/init.sql
+
+*Admin pages*
+* admin_login.php
+* admin_logo.php
+* admin_slides.php
+* admin_blogs.php
+* admin_applications.php
+* admin_event.php
+* descriptions.php
+
 
 ### Pseudocode
 
