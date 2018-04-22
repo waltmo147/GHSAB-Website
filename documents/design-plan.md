@@ -173,17 +173,20 @@ We will use GET requests for the Events page so that users can see events after 
 
 ### Navigation
 
-[What will be your top-level pages and your sub-pages for those top-level pages? What will your website's navigational structure?]
+* Home
+* Events
+  * Event
+* Applications
+  * Thanks for applying page
+* Blog
+  * specific blog
+* About us
 
-[Tip: If you use card sorting for your navigation, show us that work by including a picture!]
+* **Administrator**
+  * Login
+  * Change 
 
-Example:
-* Products (top-level)
-  * Shoes (sub-page)
-  * Pants
-  * Shirts
-* Shopping Cart
-* Contact
+
 
 ### Wireframes
 
