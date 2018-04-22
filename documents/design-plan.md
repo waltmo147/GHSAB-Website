@@ -727,6 +727,17 @@ List navigation links
 
 #### admin_logo.php
 
+```
+Pseudocode for admin_logo.php...
+include init.php
+include header.php
+
+display logo options: New logo
+
+include footer.php 
+```
+
+
 
 #### admin_slides.php
 
