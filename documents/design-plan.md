@@ -353,92 +353,10 @@ Because she will see a message on the screen saying she successfully submitted h
 
 
 #### Task 3 - Cognitive Walkthrough
-Task name: **Delete blogpost**
-
-Subgoal # 1: *Login to Administrator page*
-
-  - Will Abby have formed this sub-goal as a step to their overall goal?
-    - Yes, maybe or no: maybe
-    - Why?
-      She would not come up with this sub-goal on her own, because it is not an option provided in the main website. We will provide her with clear instruction on how to achieve this sub goal.
-
-Action #1 : Type in login.php at end of url
-
-  - Will Abby know what to do at this step?
-    - Yes, maybe or no: yes
-    - Why? We will tell her that this is the way to access the log in page for administrators, and there is no other way that is can happen
-
-  - If Abby does the right thing, will she know that she did the right thing, and is making progress towards her goal?
-    - Yes, maybe or no: yes
-    - Why? If she does the right thing, she will see the log in page, if not, she will possibly get a 404 error message
-
-Action #2 : Type in username and password
-
-    - Will Abby know what to do at this step?
-    - Yes, maybe or no: yes
-    - Why? Because the fields are clearly labeled
-
-    - If Abby does the right thing, will she know that she did the right thing, and is making progress towards her goal?
-    - Yes, maybe or no: yes
-    - Why? She will see her text input on the screen
 
 
-Action #3 : Click login button
-
-    - Will Abby know what to do at this step?
-    - Yes, maybe or no:yes
-    - Why? because the login button is clearly labeled
-
-    - If Abby does the right thing, will she know that she did the right thing, and is making progress towards her goal?
-    - Yes, maybe or no: yes
-    - Why? She will be redirected the administrator home page
-
-Subgoal # 2: *Delete blog*
-
-    - Will Abby have formed this sub-goal as a step to their overall goal?
-    - Yes, maybe or no: yes
-    - Why? This is her main task, so yes.
-
-Action #1 : click on Blog link
-
-    - Will Abby know what to do at this step?
-    - Yes, maybe or no: yes
-    - Why? because she wants to delete a blog post, and it makes the most sense to click on blog
-
-    - If Abby does the right thing, will she know that she did the right thing, and is making progress towards her goal?
-    - Yes, maybe or no: yes
-    - Why? She will have navigated to the administrator blog page and will be able to see EDIT BLOGS in the header of the page
-
-Action #2 : click on Delete tab
-
-    - Will Abby know what to do at this step?
-    - Yes, maybe or no: yes
-    - Why? Because if she wants to delete something, it makes sense to go to the delete tab
-
-    - If Abby does the right thing, will she know that she did the right thing, and is making progress towards her goal?
-    - Yes, maybe or no: yes
-    - Why? She will have navigated to the page to delete blogs. she will see a list of blogs and know that she has arrived at the right page, and the header will have the title of the page.
-
-Action #3 : click on specific blog post
-
-    - Will Abby know what to do at this step?
-    - Yes, maybe or no: yes
-    - Why? Because if she wants to delete a specific blog post, she should click on the blog post that she wants to delete
-
-    - If Abby does the right thing, will she know that she did the right thing, and is making progress towards her goal?
-    - Yes, maybe or no: yes
-    - Why? She will be redirected to another page clearly telling her that she is about to delete a blog post
-
-Action #4 : click delete
-
-    - Will Abby know what to do at this step?
-    - Yes, maybe or no: yes
-    - Why? Abby knows that to delete something, she needs to press delete
-
-    - If Abby does the right thing, will she know that she did the right thing, and is making progress towards her goal?
-    - Yes, maybe or no: yes
-    - Why? A pop up window asking her to confirm her deletion will appear, to which she'll click yes and be redirected back to the main delete page which will display a message telling her that the blog post has been deleted.
 ### Cognitive Walk-though Results
+
 [Did you discover any issues with your design? What were they? How did you change your design to address the gender-inclusiveness bugs you discovered?]
 
 [Your responses here should be very thorough and thoughtful.]
@@ -464,8 +382,27 @@ Table: movies
 [List the PHP files you will have. You will probably want to do this with a bulleted list.]
 
 * index.php - main page.
+* events.php
+* blog.php
+* about.php
 * includes/init.php - stuff that useful for every web page.
-* TODO
+* includes/footer.php
+* includes/header.php
+* init/init.sql
+
+*Admin pages*
+* admin_login.php
+* admin_logo.php
+* admin_slides.php
+* admin_blogs.php
+* edit_blog.php
+* delete_blog.php
+* add_blog.php
+* admin_applications.php
+* add_event.php
+* delete_event.php
+* descriptions.php
+
 
 ### Pseudocode
 
