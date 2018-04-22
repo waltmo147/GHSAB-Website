@@ -630,7 +630,7 @@ insert into members (member_name, email, introduction) values (:member_name, :em
 * admin_blogs.php
 * admin_applications.php
 * admin_event.php
-* descriptions.php
+* admin_descriptions.php
 
 
 ### Pseudocode
@@ -662,22 +662,92 @@ db = connect to db
 
 #### events.php
 
+```
+execute sql
+for each event in events
+  echo (<a>
+  Name
+  date and time
+  location
+  </a>);
+if($_GET)
+  search database for specific event
+  echo name
+  date
+  time
+  location
+  description
+```
+
 #### blog.php
+```
+include init.php
+get blog_id
+
+head: include all.css
+body:
+	include header.php
+
+	if blog_id:
+		select the blog whose id is blog_id from the database
+		show the blog
+	else:
+		select all the blogs from database
+		show all the blogs
+
+	include footer.php
+```
 
 #### about.php
+
+```
+Pseudocode for about.php...
+
+include init.php
+include header.php
+
+display pictures of members with descriptions
+
+include footer.php
+```
+
 
 
 
 #### includes/footer.php
 
+```
+Pseudocode for footer.php
+
+display client email
+```
+
+
 
 #### includes/header.php
 
+```
+Pseudocode for header.php
+
+display client logo
+
+List navigation links
+
+```
+
+
 
 #### includes/init.sql
+```
+initialize all databases
+```
 
 #### admin_login.php
-
+```
+post request and send info
+if(user is admin)
+  redirect to admin main page
+```
 
 #### admin_logo.php
 
