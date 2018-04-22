@@ -511,8 +511,8 @@ Action #2 : click on Delete tab
 
   - Will Abby know what to do at this step?
     - Yes, maybe or no: yes
-    - Why?
-      - Because if she wants to delete something, it makes sense to go to the delete tab
+  - Why?
+    - Because if she wants to delete something, it makes sense to go to the delete tab
 
   - If Abby does the right thing, will she know that she did the right thing, and is making progress towards her goal?
     - Yes, maybe or no: yes
@@ -758,7 +758,7 @@ include header.php
 
 display logo options: New logo
 
-include footer.php 
+include footer.php
 ```
 
 
