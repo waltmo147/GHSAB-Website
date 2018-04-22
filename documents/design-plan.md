@@ -562,59 +562,65 @@ Action #2 : Type in username and password
 
 Action #3 : Click login button
 
-    - Will Abby know what to do at this step?
+  - Will Abby know what to do at this step?
     - Yes, maybe or no:yes
     - Why? because the login button is clearly labeled
 
-    - If Abby does the right thing, will she know that she did the right thing, and is making progress towards her goal?
+  - If Abby does the right thing, will she know that she did the right thing, and is making progress towards her goal?
     - Yes, maybe or no: yes
     - Why? She will be redirected the administrator home page
 
 Subgoal # 2: *Delete blog*
 
-    - Will Abby have formed this sub-goal as a step to their overall goal?
+  - Will Abby have formed this sub-goal as a step to their overall goal?
     - Yes, maybe or no: yes
     - Why? This is her main task, so yes.
 
 Action #1 : click on Blog link
 
-    - Will Abby know what to do at this step?
+  - Will Abby know what to do at this step?
     - Yes, maybe or no: yes
     - Why? because she wants to delete a blog post, and it makes the most sense to click on blog
 
-    - If Abby does the right thing, will she know that she did the right thing, and is making progress towards her goal?
+  - If Abby does the right thing, will she know that she did the right thing, and is making progress towards her goal?
     - Yes, maybe or no: yes
     - Why? She will have navigated to the administrator blog page and will be able to see EDIT BLOGS in the header of the page
 
 Action #2 : click on Delete tab
 
-    - Will Abby know what to do at this step?
+  - Will Abby know what to do at this step?
     - Yes, maybe or no: yes
-    - Why? Because if she wants to delete something, it makes sense to go to the delete tab
+    - Why?
+      - Because if she wants to delete something, it makes sense to go to the delete tab
 
-    - If Abby does the right thing, will she know that she did the right thing, and is making progress towards her goal?
+  - If Abby does the right thing, will she know that she did the right thing, and is making progress towards her goal?
     - Yes, maybe or no: yes
-    - Why? She will have navigated to the page to delete blogs. she will see a list of blogs and know that she has arrived at the right page, and the header will have the title of the page.
+  - Why?
+    - She will have navigated to the page to delete blogs. she will see a list of blogs and know that she has arrived at the right page, and the header will have the title of the page.
 
 Action #3 : click on specific blog post
 
-    - Will Abby know what to do at this step?
+  - Will Abby know what to do at this step?
     - Yes, maybe or no: yes
-    - Why? Because if she wants to delete a specific blog post, she should click on the blog post that she wants to delete
+  - Why?
+    - Because if she wants to delete a specific blog post, she should click on the blog post that she wants to delete
 
-    - If Abby does the right thing, will she know that she did the right thing, and is making progress towards her goal?
+  - If Abby does the right thing, will she know that she did the right thing, and is making progress towards her goal?
     - Yes, maybe or no: yes
-    - Why? She will be redirected to another page clearly telling her that she is about to delete a blog post
+  - Why?
+    - She will be redirected to another page clearly telling her that she is about to delete a blog post
 
 Action #4 : click delete
 
-    - Will Abby know what to do at this step?
+  - Will Abby know what to do at this step?
     - Yes, maybe or no: yes
-    - Why? Abby knows that to delete something, she needs to press delete
+  - Why?
+    - Abby knows that to delete something, she needs to press delete
 
-    - If Abby does the right thing, will she know that she did the right thing, and is making progress towards her goal?
+  - If Abby does the right thing, will she know that she did the right thing, and is making progress towards her goal?
     - Yes, maybe or no: yes
-    - Why? A pop up window asking her to confirm her deletion will appear, to which she'll click yes and be redirected back to the main delete page which will display a message telling her that the blog post has been deleted.
+  - Why?
+    - A pop up window asking her to confirm her deletion will appear, to which she'll click yes and be redirected back to the main delete page which will display a message telling her that the blog post has been deleted.
 ### Cognitive Walk-though Results
 [Did you discover any issues with your design? What were they? How did you change your design to address the gender-inclusiveness bugs you discovered?]
 
