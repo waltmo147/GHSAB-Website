@@ -622,8 +622,7 @@ insert into members (member_name, email, introduction) values (:member_name, :em
 * delete_blog.php
 * add_blog.php
 * admin_applications.php
-* add_event.php
-* delete_event.php
+* admin_event.php
 * descriptions.php
 
 
