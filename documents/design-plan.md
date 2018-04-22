@@ -352,6 +352,183 @@ Because she will see a message on the screen saying she successfully submitted h
 #### Task 2 - Cognitive Walkthrough
 
 
+
+
+# GenderMag Template
+
+**Task name: [administrator wants to add an event]**
+
+[Add as many subgoals as you needs]
+**Subgoal # [1] : [login]**
+	(e.g., "# 1 : Select the section of the document you want to print")
+
+  - Will [Abby] have formed this sub-goal as a step to their overall goal?
+    - Yes, maybe or no: [yes]
+    - Why? (Especially consider [persona name]'s Motivations/Strategies.)
+        [Tell us why..]
+        this is a familiar task on the internet
+
+[Add as many actions as you need...]
+**Action # [1] : [put login.php in URL]**
+	(e.g., "# 1 : Put the mouse at the beginning of the section you want to print")
+
+  - Will [Abby] know what to do at this step?
+    - Yes, maybe or no: [yes]
+    - Why? (Especially consider [persona name]'s Knowledge/Skills, Motivations/Strategies, Self-Efficacy and Tinkering.)
+
+        [Tell us why...]
+        Abby (the administrator) will know to do this everytime she wants to edit something because the dev team will tell her what she needs to do in order to login and will walk through the entire process with her... Abby chose not to have a login button that other (non-admin) users would see and this is the only alternative that the dev team could theorize
+
+  - If [persona name] does the right thing, will she know that she did the right thing, and is making progress towards her goal?
+    - Yes, maybe or no: [yes]
+    - Why? (Especially consider [persona name]'s Self-Efficacy and Attitude toward Risk.)
+
+        [Tell us why...]
+        Abby will see the login page...
+
+
+
+**Action # [2] : [input login credentials]**
+
+  - Will [Abby] know what to do at this step?
+    - Yes, maybe or no: [yes]
+    - Why? (Especially consider [persona name]'s Knowledge/Skills, Motivations/Strategies, Self-Efficacy and Tinkering.)
+
+        [Tell us why...]
+        This is a very familiar part of the internet
+  - If [persona name] does the right thing, will she know that she did the right thing, and is making progress towards her goal?
+    - Yes, maybe or no: [yes]
+    - Why? (Especially consider [persona name]'s Self-Efficacy and Attitude toward Risk.)
+
+        [Tell us why...]
+        Abby will see her inputs in the login screen
+
+
+
+**Action # [2] : [press login]**
+
+  - Will [Abby] know what to do at this step?
+    - Yes, maybe or no: [yes]
+    - Why? (Especially consider [persona name]'s Knowledge/Skills, Motivations/Strategies, Self-Efficacy and Tinkering.)
+
+        [Tell us why...]
+        This is a very familiar part of the internet
+  - If [persona name] does the right thing, will she know that she did the right thing, and is making progress towards her goal?
+    - Yes, maybe or no: [yes]
+    - Why? (Especially consider [persona name]'s Self-Efficacy and Attitude toward Risk.)
+
+        [Tell us why...]
+        Abby will see the next page with feedback regarding the login attempt
+
+
+
+
+        [Add as many subgoals as you needs]
+        **Subgoal # [2] : [add an event]**
+        	(e.g., "# 1 : Select the section of the document you want to print")
+
+          - Will [Abby] have formed this sub-goal as a step to their overall goal?
+            - Yes, maybe or no: [yes]
+            - Why? (Especially consider [persona name]'s Motivations/Strategies.)
+                [Tell us why..]
+                she wants to add an event...
+
+
+
+
+
+                **Action # [1] : [click on events tab]**
+
+                  - Will [Abby] know what to do at this step?
+                    - Yes, maybe or no: [yes]
+                    - Why? (Especially consider [persona name]'s Knowledge/Skills, Motivations/Strategies, Self-Efficacy and Tinkering.)
+
+                        [Tell us why...]
+                        this will be very intuitive
+
+                  - If [persona name] does the right thing, will she know that she did the right thing, and is making progress towards her goal?
+                    - Yes, maybe or no: [yes]
+                    - Why? (Especially consider [persona name]'s Self-Efficacy and Attitude toward Risk.)
+
+                        [Tell us why...]
+                        Abby will see the the editable events page
+
+                        **Action # [2] : [click add event]**
+                        	(e.g., "# 1 : Put the mouse at the beginning of the section you want to print")
+
+                          - Will [Abby] know what to do at this step?
+                            - Yes, maybe or no: [yes]
+                            - Why? (Especially consider [persona name]'s Knowledge/Skills, Motivations/Strategies, Self-Efficacy and Tinkering.)
+
+                                [Tell us why...]
+                                she wants to add an event so she will click this...
+
+                          - If [persona name] does the right thing, will she know that she did the right thing, and is making progress towards her goal?
+                            - Yes, maybe or no: [yes]
+                            - Why? (Especially consider [persona name]'s Self-Efficacy and Attitude toward Risk.)
+
+                                [Tell us why...]
+                                she will see a form that signifies her click
+
+                                **Action # [3] : [fill out the information]**
+                                	(e.g., "# 1 : Put the mouse at the beginning of the section you want to print")
+
+                                  - Will [Abby] know what to do at this step?
+                                    - Yes, maybe or no: [yes]
+                                    - Why? (Especially consider [persona name]'s Knowledge/Skills, Motivations/Strategies, Self-Efficacy and Tinkering.)
+
+                                        [Tell us why...]
+                                        she wants to add an event, so she will input the information...
+
+                                  - If [persona name] does the right thing, will she know that she did the right thing, and is making progress towards her goal?
+                                    - Yes, maybe or no: [yes]
+                                    - Why? (Especially consider [persona name]'s Self-Efficacy and Attitude toward Risk.)
+
+                                        [Tell us why...]
+                                        there will be stuff filled out...
+
+                                        **Action # [4] : [click submit]**
+                                        	(e.g., "# 1 : Put the mouse at the beginning of the section you want to print")
+
+                                          - Will [Abby] know what to do at this step?
+                                            - Yes, maybe or no: [yes]
+                                            - Why? (Especially consider [persona name]'s Knowledge/Skills, Motivations/Strategies, Self-Efficacy and Tinkering.)
+
+                                                [Tell us why...]
+                                                she wants to add an event.. so she will click submit after typing the inputs
+
+                                          - If [persona name] does the right thing, will she know that she did the right thing, and is making progress towards her goal?
+                                            - Yes, maybe or no: [yes]
+                                            - Why? (Especially consider [persona name]'s Self-Efficacy and Attitude toward Risk.)
+
+                                                [Tell us why...]
+                                                abby will see feedback regarding whether or not the submission was successful
+
+                                                **Action # [5] : [admin logs out]**
+                                                	(e.g., "# 1 : Put the mouse at the beginning of the section you want to print")
+
+                                                  - Will [Abby] know what to do at this step?
+                                                    - Yes, maybe or no: [yes]
+                                                    - Why? (Especially consider [persona name]'s Knowledge/Skills, Motivations/Strategies, Self-Efficacy and Tinkering.)
+
+                                                        [Tell us why...]
+                                                        Abby is now done with her edits so the only logical thing to do is logout
+
+                                                  - If [persona name] does the right thing, will she know that she did the right thing, and is making progress towards her goal?
+                                                    - Yes, maybe or no: [yes]
+                                                    - Why? (Especially consider [persona name]'s Self-Efficacy and Attitude toward Risk.)
+
+                                                        [Tell us why...]
+                                                        Abby will see feedback regarding whether or not she was successfully logged out
+
+
+
+
+
+*Source*: Margaret Burnett, Simone Stumpf, Laura Beckwith, and Anicia Peters, "The GenderMag Kit: How to Use the GenderMag Method to Find Inclusiveness Issues through a Gender Lens", http://gendermag.org, Feb. 1 2018 .
+
+
+
 #### Task 3 - Cognitive Walkthrough
 
 
