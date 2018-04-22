@@ -265,96 +265,89 @@ Task 3: administator wants to delete a blog post
 #### Task 1 - Cognitive Walkthrough
 
 
-Task: [Apply to program ]
+Task: **Apply to program**
 
-Subgoal #[1] : [go to apply page]
-[Add as many subgoals as you needs]
+Subgoal #[1] : *go to apply page*
 
-Will [abby] have formed this sub-goal as a step to their overall goal?
+Will Abby have formed this sub-goal as a step to their overall goal?
 Yes
 
-Why? (Especially consider [persona name]'s Motivations/Strategies.)
+Why?
 
 Because she has the necessary level of skills
 
-Action #[1] : [click applications link]
-[Add as many actions as you need...]
+Action #[1] : Click applications link
 
-Will [Abby] know what to do at this step?
+Will Abby know what to do at this step?
 
 Yes
 
-Why? (Especially consider [persona name]'s Knowledge/Skills, Motivations/Strategies, Self-Efficacy and Tinkering.)
+Why?
 
 Because she is literate and has the necessary skills
 
-If [Abby] does the right thing, will she know that she did the right thing, and is making progress towards her goal?
+If Abby does the right thing, will she know that she did the right thing, and is making progress towards her goal?
 
 Yes
 
-Why? (Especially consider [persona name]'s Self-Efficacy and Attitude toward Risk.)
+Why?
 
 Because the header has 'Apply' written in big bold letters
 
 
-Subgoal #[2] : [Apply]
-[Add as many subgoals as you needs]
+Subgoal #[2] : *Apply*
 
-Will [Abby] have formed this sub-goal as a step to their overall goal?
-Yes, maybe or no: [yes]
+Will Abby have formed this sub-goal as a step to their overall goal?
+Yes, maybe or no: yes
 
-Why? (Especially consider [persona name]'s Motivations/Strategies.)
-
+Why?
 Everything is labeled clearly
 
-Action #[1] : [fill in fields]
-[Add as many actions as you need...]
+Action #[1] : Fill in fields
 
-Will [persona name] know what to do at this step?
+Will Abby know what to do at this step?
 
-Yes, maybe or no: [yes]
+Yes, maybe or no: yes
 
-Why? (Especially consider [persona name]'s Knowledge/Skills, Motivations/Strategies, Self-Efficacy and Tinkering.)
+Why?
 
 Everything will be clearly labeled and easy to understand
 
-If [Abby] does the right thing, will she know that she did the right thing, and is making progress towards her goal?
+If Abby does the right thing, will she know that she did the right thing, and is making progress towards her goal?
 
-Yes, maybe or no: [yes]
+Yes, maybe or no: yes
 
-Why? (Especially consider [persona name]'s Self-Efficacy and Attitude toward Risk.)
+Why?
 
 Text will appear in input boxes and she will see
 
 
-Subgoal #[3] : [submit application ]
-[Add as many subgoals as you needs]
+Subgoal #[3] : *Submit application*
 
-Will [Abby] have formed this sub-goal as a step to their overall goal?
-Yes, maybe or no: [yes]
+Will Abby have formed this sub-goal as a step to their overall goal?
+Yes, maybe or no: yes
 
-Why? (Especially consider [persona name]'s Motivations/Strategies.)
+Why?
 
 Because she is looking to apply
 
-Action #[1] : [click submit button]
-[Add as many actions as you need...]
+Action #[1] : Click submit button
 
 Will [Abby] know what to do at this step?
 
-Yes, maybe or no: [yes]
+Yes, maybe or no: yes
 
-Why? (Especially consider [persona name]'s Knowledge/Skills, Motivations/Strategies, Self-Efficacy and Tinkering.)
+Why?
 
 The action is not complicated. It is easy enough for her to execute
 
-If [Abby] does the right thing, will she know that she did the right thing, and is making progress towards her goal?
+If Abby does the right thing, will she know that she did the right thing, and is making progress towards her goal?
 
-Yes, maybe or no: [yes]
+Yes, maybe or no: yes
 
-Why? (Especially consider [persona name]'s Self-Efficacy and Attitude toward Risk.)
+Why?
 
-Because she will see a message on the screen saying she successfully submitted her application 
+Because she will see a message on the screen saying she successfully submitted her application
 
 #### Task 2 - Cognitive Walkthrough
 
