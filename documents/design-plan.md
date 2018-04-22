@@ -683,26 +683,71 @@ db = connect to db
 
 
 #### admin_slides.php
+'''
+if there is post data then the slideshow is being added to or deleted from
+if adding, execute an insert into query
+if deleting, execute a delete query
+
+
+display a image uploading form
+
+query the database for all the images currently present in the slideshow
+
+foreach of the records,
+display deleting tools
+'''
 
 
 #### admin_blogs.php
+'''
+if there is post data then a blog post is either being added/deleted/edited
+deal with that
+if adding, execute an insert into query
+if deleting, execute a delete query
+if editing, execute an update query
 
+
+query the database for all of the blog posts
+
+foreach of the records in the database:
+  display editting and deleting tools
+
+
+'''
 
 
 #### admin_applications.php
 
+'''
+query the database for all of the applications that have been submitted
+
+
+for each of the records in the database
+display record
+
+'''
 
 
 
 #### admin_event.php
+'''display buttons for adding an event
 
+if there is post data then an event is being added
+construct sql query to insert the new event into the database
+'''
 
 
 #### descriptions.php
+'''if their is post data then an edit is trying to be made
+update the database with the edits
+
+query the database for all of the descriptions of the gphsa organization
+display all of the descriptions of the members of global public health student advisory
+also display their images
 
 
-
-
+for each of the members, display edit options
+'''
 
 
 ## Milestone 2, Part VI: Additional Comments
