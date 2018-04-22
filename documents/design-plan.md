@@ -186,7 +186,8 @@ We will use GET requests for the Events page so that users can see events after 
   * Login
   * Change logo
   * Edit slide show Pictures
-  * Post blog
+  * Blog
+    * Edit/delete/post blog
   * View Applications
   * Edit descriptions
   * Events
