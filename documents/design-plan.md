@@ -551,11 +551,11 @@ Action #1 : Type in login.php at end of url
 
 Action #2 : Type in username and password
 
-    - Will Abby know what to do at this step?
+  - Will Abby know what to do at this step?
     - Yes, maybe or no: yes
     - Why? Because the fields are clearly labeled
 
-    - If Abby does the right thing, will she know that she did the right thing, and is making progress towards her goal?
+  - If Abby does the right thing, will she know that she did the right thing, and is making progress towards her goal?
     - Yes, maybe or no: yes
     - Why? She will see her text input on the screen
 
