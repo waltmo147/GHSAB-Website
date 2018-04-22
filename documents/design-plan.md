@@ -167,6 +167,9 @@ We will use GET requests for the Events page so that users can see events after 
 
 ![](IMG_7351.JPG)
 ![](IMG_7352.JPG)
+![](AnyNote 1.png)
+![](AnyNote 2.png)
+![](AnyNote 3.png)
 
 
 
@@ -207,6 +210,9 @@ We will use GET requests for the Events page so that users can see events after 
 ![](IMG_7355.JPG)
 ![](IMG_7356.JPG)
 ![](IMG_7357.JPG)
+![](AnyNote 4.png)
+![](AnyNote 5.png)
+![](AnyNote 6.png)
 
 
 ## Milestone 2, Part III: Evaluate your Design
@@ -760,7 +766,7 @@ include header.php
 
 display logo options: New logo
 
-remove old logo, add new logo 
+remove old logo, add new logo
 
 include footer.php
 ```
