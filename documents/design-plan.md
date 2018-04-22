@@ -633,7 +633,7 @@ insert into members (member_name, email, introduction) values (:member_name, :em
 * admin_blogs.php
 * admin_applications.php
 * admin_event.php
-* descriptions.php
+* admin_descriptions.php
 
 
 ### Pseudocode
