@@ -215,6 +215,9 @@ We will use GET requests for the Events page so that users can see events after 
 
 [Pick a persona that you believe will help you address the gender bias within your design.]
 
+I've selected **[Abby]** as my persona.
+
+We've selected Abby because the majority of engineers creating the website are men and we have decided to choose a female persona to help balance the design bias relating to gender. Our client is also a woman and we expect that this will help in the design process.
 
 
 ### Tasks
