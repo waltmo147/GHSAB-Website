@@ -154,6 +154,13 @@ subject to change
 
 [Insert your sketches here.]
 
+
+![](IMG_7351.JPG)
+![](IMG_7352.JPG)
+
+
+
+
 ### Navigation
 
 [What will be your top-level pages and your sub-pages for those top-level pages? What will your website's navigational structure?]
@@ -171,6 +178,15 @@ Example:
 ### Wireframes
 
 [Insert your wireframes here.]
+
+
+
+![](IMG_7353.JPG)
+![](IMG_7354.JPG)
+![](IMG_7355.JPG)
+![](IMG_7356.JPG)
+![](IMG_7357.JPG)
+
 
 ## Milestone 2, Part III: Evaluate your Design
 
