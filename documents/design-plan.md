@@ -148,6 +148,16 @@ subject to change
 
 [Describe here what you plan to do for your PHP Interactivity requirement.]
 
+To allow the admin to edit the content of the web pages we will have a separate /login.php page that will allow someone with admin credentials to login and then change the content of the site. The admin credentials will be stored in a database (password hashed) and then checked against the POST input coming from the login screen
+
+
+To allow users to submit an application to join the advisory board we will utilize the php mail function and have the user fill out a form that will be used to construct the arguments for the mail function. The user inputs will be filtered appropriately so that the site does not become vulnerable to attacks/exploits
+
+The content of our website will be stored in a sqlite database and will be queried to display the appropriate data
+
+We will use GET requests for the Events page so that users can see events after a certain date
+
+
 ## Milestone 2, Part II: Sketches, Navigation & Wireframes
 
 ### Sketches
