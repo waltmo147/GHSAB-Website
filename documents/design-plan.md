@@ -264,9 +264,67 @@ Task 3: administator wants to delete a blog post
 
 #### Task 1 - Cognitive Walkthrough
 
-[copy the GenderMag template here and conduct a cognitive walkthrough to evaluate your design (wireframes).]
 
-[You may need to add additional subgoals and/or actions for each task.]
+Task: [Apply to program ]
+
+Subgoal #[1] : [go to apply page]
+[Add as many subgoals as you needs]
+
+Will [abby] have formed this sub-goal as a step to their overall goal?
+Yes
+
+Why? (Especially consider [persona name]'s Motivations/Strategies.)
+
+Because she has the necessary level of skills
+
+Action #[1] : [click applications link]
+[Add as many actions as you need...]
+
+Will [Abby] know what to do at this step?
+
+Yes
+
+Why? (Especially consider [persona name]'s Knowledge/Skills, Motivations/Strategies, Self-Efficacy and Tinkering.)
+
+Because she is literate and has the necessary skills
+
+If [Abby] does the right thing, will she know that she did the right thing, and is making progress towards her goal?
+
+Yes
+
+Why? (Especially consider [persona name]'s Self-Efficacy and Attitude toward Risk.)
+
+Because the header has 'Apply' written in big bold letters
+
+
+Subgoal #[2] : [Apply]
+[Add as many subgoals as you needs]
+
+Will [Abby] have formed this sub-goal as a step to their overall goal?
+Yes, maybe or no: [yes]
+
+Why? (Especially consider [persona name]'s Motivations/Strategies.)
+
+Everything is labeled clearly
+
+Action #[1] : [fill in fields]
+[Add as many actions as you need...]
+
+Will [persona name] know what to do at this step?
+
+Yes, maybe or no: [yes]
+
+Why? (Especially consider [persona name]'s Knowledge/Skills, Motivations/Strategies, Self-Efficacy and Tinkering.)
+
+
+
+If [persona name] does the right thing, will she know that she did the right thing, and is making progress towards her goal?
+
+Yes, maybe or no: [yes/maybe/no]
+
+Why? (Especially consider [persona name]'s Self-Efficacy and Attitude toward Risk.)
+
+[Tell us why...]
 
 #### Task 2 - Cognitive Walkthrough
 
