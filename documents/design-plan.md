@@ -626,13 +626,59 @@ Action #4 : click delete
 
 [Describe the structure of your database. You may use words or a picture. A bulleted list is probably the simplest way to do this.]
 
-Table: movies
-* field 1: description...
-* field...
+Table: accounts
+* field 1: id
+* field 2: username
+* field 3: password
+* field 4: session
+
+Table: events
+* field 1: id
+* field 2: name
+* field 3: date_time
+* field 4: place
+* field 5: introduction
+
+Table: applications
+* field 1: id
+* field 2: event_id
+* field 3: email
+* field 4: name
+* field 5: comment
+
+Table: blogs
+* field 1: id
+* field 2: author_name
+* field 3: email
+* field 4: create_time
+* field 5: title
+* field 6: content
+
+Table: members
+* field 1: id
+* field 2: member_name
+* field 3: email
+* field 4: introduction
+
 
 ### Database Queries
 
-[Plan your database queries. You may use natural language, pseudocode, or SQL.]
+```
+select password from accounts where username is ...;
+UPDATE accounts SET session = :session WHERE id = :user_id;
+select * from events order by date_time DESC;
+insert into events (name, date_time, place, introduction) values (:name, :date_time, :place, :introduction);
+delete form events where id is :event_id;
+delete from events where name is :name;
+insert into applications (event_id, email, name, comment) values (:event_id, :email, :name, :comment);
+select * from blogs order by create_time DESC;
+insert into blogs (author_name, email, create_time, title, content) values (:author_name, :email, :create_time, :title, :content);
+delete from blogs where title is :title;
+delete from blogs where id is :blog_id;
+select * from members;
+insert into members (member_name, email, introduction) values (:member_name, :email, :introduction)
+```
+
 
 ## Milestone 2, Part V: Structure and Pseudocode
 
