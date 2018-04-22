@@ -19,11 +19,13 @@ You will need to learn to work in groups and resolve conflicts on your own. Thes
 
 2. To what goals do we all commit?
   To finish the project on time
-
+  To each contribute the same amount of work and hold each other accountable and to a high standard
 
 3. What are our “ground rules”? (Don't make an exhaustive list—stick with just a few.)
   Good communication.
   If you are going to work on a part of the project, let others know.
+  If you can't complete a task, let the others know.
+  If you won't be able to meet up with the team, let us know.
 
 
 4. By what means and how frequently will we meet or communicate?
@@ -32,20 +34,23 @@ You will need to learn to work in groups and resolve conflicts on your own. Thes
 
 
 5. How will we communicate and work with our client?
-  By phone, or in person, or by whatever means they prefer.
+  We will meet with our client once a week, or by phone if in person is not possible
 
 
 6. What roles will we create? Include a description of exactly what each role is responsible for.
-  Will be assigned when we have a client.
+  HTML Validator - validates html (by hand)
+  PHP Guru - will clean up code and make it readable, if possible optimize it
+  The Query King/Queen - In charge of creating sql queries that *work* all the time
+  JavaScripter - will implement any of the javascript functions needed
+  CSS Designer - will make css that works with every screen size
 
 
 7. How will we hold ourselves and one another accountable? What (exactly) will we say to a team member who appears not to be contributing equally? To a team member who fails to deliver what was promised?
-  The person who doesn't do their work must do 1000 push ups, without rest.
   We will contact each other and make sure that we are getting our work done. If one not doing their work, we will politely ask them to do their work, and if they do not listen, we will make a note that they have not contributed, and will also speak with the professor as necessary.
 
 
 8. What do we do when we disagree? What approach to conflict to we all agree to uphold?
-  Have a vote.
+  Have a vote after thoroughly discussing the conflict, and if its a tie, flip a coin. Ultimately, let the client decide the course of action to be taken.
 
 
 9. What are our procedures for re-visiting this contract?
