@@ -618,7 +618,6 @@ insert into members (member_name, email, introduction) values (:member_name, :em
 * admin_logo.php
 * admin_slides.php
 * admin_blogs.php
-* admin_blog.php 
 * admin_applications.php
 * admin_event.php
 * descriptions.php
