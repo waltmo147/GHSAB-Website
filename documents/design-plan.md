@@ -758,6 +758,8 @@ include header.php
 
 display logo options: New logo
 
+remove old logo, add new logo 
+
 include footer.php
 ```
 
