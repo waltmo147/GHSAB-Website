@@ -226,15 +226,37 @@ We've selected Abby because the majority of engineers creating the website are m
 
 [For each task, list the ideal set of actions that you would like your users to take when working towards the task.]
 
-Task 1: [describe your task]
+Task 1: user submits application
 
-  1. [action 1...]
-  2. [action 2...]
-  3. ...
+  1. user visits the website
+  2. user clicks on apply
+  3. user fills out applicaton form
+  4. user hits submit
+  5. user sees feedback and does not submit again (if the submission was successful)
 
-Task 2:
+Task 2: administrator wants to add an event
 
-Task 3:
+  1. they add "login.php" to the website path and hit enter
+  2. admin inputs credentials
+  3. press login
+  4. click on the events nav element
+  5. click add event
+  6. fill out information
+  7. clicking submit
+  8. seeing feedback and does not submit again (if the submission was successful)
+  9. admin logs out
+
+
+Task 3: administator wants to delete a blog post
+
+  1. they add "login.php" to the website path and hit enter
+  2. admin inputs credentials
+  3. press login
+  4. click on the blog nav element
+  5. admin selects the blog post(s) they would like to be deleted
+  6. admin clicks on "delete blog post"
+  7. admin sees feedback and does not attempt to delete again (if the deletion was successful)
+  8. admin logs out
 
 ### Cognitive Walkthrough
 
