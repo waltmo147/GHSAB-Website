@@ -455,7 +455,6 @@ Action # [5] : **admin logs out**
 #### Task 3 - Cognitive Walkthrough
 
 
-<<<<<<< HEAD
   - Will Abby have formed this sub-goal as a step to their overall goal?
     - Yes, maybe or no: maybe
     - Why?
@@ -543,8 +542,6 @@ Action #4 : click delete
     - Yes, maybe or no: yes
   - Why?
     - A pop up window asking her to confirm her deletion will appear, to which she'll click yes and be redirected back to the main delete page which will display a message telling her that the blog post has been deleted.
-=======
->>>>>>> 24570113f8b63d2e0ab7dbe3155e5f85c1ae8bc8
 ### Cognitive Walk-though Results
 
 [Did you discover any issues with your design? What were they? How did you change your design to address the gender-inclusiveness bugs you discovered?]
@@ -662,6 +659,51 @@ db = connect to db
 ...
 
 ```
+
+#### events.php
+
+#### blog.php
+
+#### about.php
+
+
+
+#### includes/footer.php
+
+
+#### includes/header.php
+
+
+#### includes/init.sql
+
+#### admin_login.php
+
+
+#### admin_logo.php
+
+
+#### admin_slides.php
+
+
+#### admin_blogs.php
+
+
+
+#### admin_applications.php
+
+
+
+
+#### admin_event.php
+
+
+
+#### descriptions.php
+
+
+
+
+
 
 ## Milestone 2, Part VI: Additional Comments
 
