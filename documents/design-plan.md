@@ -316,15 +316,45 @@ Yes, maybe or no: [yes]
 
 Why? (Especially consider [persona name]'s Knowledge/Skills, Motivations/Strategies, Self-Efficacy and Tinkering.)
 
+Everything will be clearly labeled and easy to understand
 
+If [Abby] does the right thing, will she know that she did the right thing, and is making progress towards her goal?
 
-If [persona name] does the right thing, will she know that she did the right thing, and is making progress towards her goal?
-
-Yes, maybe or no: [yes/maybe/no]
+Yes, maybe or no: [yes]
 
 Why? (Especially consider [persona name]'s Self-Efficacy and Attitude toward Risk.)
 
-[Tell us why...]
+Text will appear in input boxes and she will see
+
+
+Subgoal #[3] : [submit application ]
+[Add as many subgoals as you needs]
+
+Will [Abby] have formed this sub-goal as a step to their overall goal?
+Yes, maybe or no: [yes]
+
+Why? (Especially consider [persona name]'s Motivations/Strategies.)
+
+Because she is looking to apply
+
+Action #[1] : [click submit button]
+[Add as many actions as you need...]
+
+Will [Abby] know what to do at this step?
+
+Yes, maybe or no: [yes]
+
+Why? (Especially consider [persona name]'s Knowledge/Skills, Motivations/Strategies, Self-Efficacy and Tinkering.)
+
+The action is not complicated. It is easy enough for her to execute
+
+If [Abby] does the right thing, will she know that she did the right thing, and is making progress towards her goal?
+
+Yes, maybe or no: [yes]
+
+Why? (Especially consider [persona name]'s Self-Efficacy and Attitude toward Risk.)
+
+Because she will see a message on the screen saying she successfully submitted her application 
 
 #### Task 2 - Cognitive Walkthrough
 
