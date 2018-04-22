@@ -630,7 +630,7 @@ insert into members (member_name, email, introduction) values (:member_name, :em
 * admin_blogs.php
 * admin_applications.php
 * admin_event.php
-* descriptions.php
+* admin_descriptions.php
 
 
 ### Pseudocode
@@ -683,12 +683,41 @@ if($_GET)
 
 #### about.php
 
+```
+Pseudocode for about.php...
+
+include init.php
+include header.php
+
+display pictures of members with descriptions
+
+include footer.php
+```
+
+
 
 
 #### includes/footer.php
 
+```
+Pseudocode for footer.php
+
+display client email
+```
+
+
 
 #### includes/header.php
+
+```
+Pseudocode for header.php
+
+display client logo
+
+List navigation links
+
+```
+
 
 
 #### includes/init.sql
