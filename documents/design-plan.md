@@ -592,7 +592,8 @@ Table: blogs
 
 Table: members
 * field 1: id
-* field 2: member_name
+* field 2: first_name
+* field 3: last_name 
 * field 3: email
 * field 4: introduction
 * field 5: image
