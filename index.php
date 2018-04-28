@@ -1,5 +1,5 @@
 <?php include('includes/init.php');
-$current_page = "Home"?>
+$current_page = "Home";?>
 <!DOCTYPE html>
 <html>
 
