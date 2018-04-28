@@ -2,9 +2,11 @@ header {
   background-color: #7786a3;
   height: 100px;
   padding: 0px 50px 30px 300px;
+  margin-top: 0;
+}
+.headerh1 {
   margin: 0;
 }
-
 #sidebar {
     height: 100%;
     width: 300px;
@@ -28,4 +30,7 @@ header {
 }
 #current_page {
   color: blue!important;
+}
+body {
+  margin:0;
 }
