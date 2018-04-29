@@ -8,11 +8,17 @@ $pages = array("Home" => "index.php",
                "Applications" => "applications.php",
                "Blog" => "blog.php",
                "About Us" => "aboutus.php");
-$adminpages = array("Logo" => "logo.php",
-                    "Slides" => "slides.php",
-                    "Blogs" => "blogs.php",
-                    "Applications" => "applications.php",
+$adminpages = array("Home" => "index.php",
                     "Events" => "events.php",
+                    "Applications" => "applications.php",
+                    "Blog" => "blog.php",
+                    "About Us" => "aboutus.php",
+                    "Edit Logo" => "admin-logo.php",
+                    "Edit Slides" => "admin-slides.php",
+                    "Edit Events" => "admin-events.php",
+                    "Applications" => "admin-applications.php",
+                    "Edit Blogs" => "admin-blogs.php",
+                    "Edit About Us" => "admin-aboutus.php",
                     "Logout" => "logout.php");
                     
 $image_ext = array("jpg", "jpeg", "png", "gif");
@@ -170,7 +176,7 @@ function log_out() {
   // Remove the session from the cookie and force it to expire.
   setcookie("session", "", time()-3600);
   $current_user = NULL;
-  header("Refresh:0 url=logout.php");
+  // header("Refresh:0 url=logout.php");
 }
 
 //
