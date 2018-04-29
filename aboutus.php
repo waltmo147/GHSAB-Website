@@ -11,8 +11,9 @@ $current_page = "About Us"?>
 </head>
 
 <body>
-<?php include('includes/sidebar.php');
-      include('includes/header.php');
+<?php
+include('includes/header.php');
+include('includes/sidebar.php');
 ?>
 <div id="about_1">
 <h3> Who we are </h3>
