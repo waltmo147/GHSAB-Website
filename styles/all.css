@@ -206,3 +206,7 @@ img {vertical-align: middle;}
 #about_2 {
   margin-left: 240px;
 }
+.team_imgs {
+  height: 100px;
+  width: 100px;
+}

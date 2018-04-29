@@ -27,9 +27,9 @@ $current_page = "About Us"?>
       foreach($records as $record){
       $image_records = exec_sql_query($db, "SELECT * FROM member_images WHERE member_id =".$record['id'])->fetchAll(PDO::FETCH_ASSOC);
         echo "<li>";
-        echo "<img src=\"" . "uploads/member_images/" . $image_records[0]["id"] . "." . $image_records[0]["file_ext"] . "\">";
+        echo "<img class='team_imgs' src=\"" . "uploads/member_images/" . $image_records[0]["id"] . "." . $image_records[0]["file_ext"] . "\">";
         echo $record['first_name'];
-        echo $record['introduction'];
+        echo '<p>'.$record['introduction'].'</p>';
         echo "</li>";
       }
       ?>
