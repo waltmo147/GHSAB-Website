@@ -5,11 +5,17 @@ $pages = array("Home" => "index.php",
                "Applications" => "applications.php",
                "Blog" => "blog.php",
                "About Us" => "aboutus.php");
-$adminpages = array("Logo" => "logo.php",
-                    "Slides" => "slides.php",
-                    "Blogs" => "blogs.php",
-                    "Applications" => "applications.php",
+$adminpages = array("Home" => "index.php",
                     "Events" => "events.php",
+                    "Applications" => "applications.php",
+                    "Blog" => "blog.php",
+                    "About Us" => "aboutus.php",
+                    "Edit Logo" => "admin-logo.php",
+                    "Edit Slides" => "admin-slides.php",
+                    "Edit Events" => "admin-events.php",
+                    "Applications" => "admin-applications.php",
+                    "Edit Blogs" => "admin-blogs.php",
+                    "Edit About Us" => "admin-aboutus.php",
                     "Logout" => "logout.php");
 
 // An array to deliver messages to the user.

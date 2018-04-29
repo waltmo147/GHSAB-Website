@@ -1,5 +1,6 @@
 <?php
 include("includes/init.php");
+include('includes/sidebar.php');
 
 // declare the current location, utilized in header.php
 $current_page_id="logout";
@@ -24,7 +25,7 @@ if (!$current_user) {
 <body>
   <?php include("includes/header.php");?>
 
-  <div id="content-wrap">
+  <div id="logout">
     <h1>Log Out</h1>
 
     <?php

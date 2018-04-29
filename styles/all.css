@@ -210,3 +210,7 @@ img {vertical-align: middle;}
   height: 100px;
   width: 100px;
 }
+
+#logout {
+  margin-left: 250px;
+}
