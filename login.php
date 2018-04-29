@@ -1,5 +1,6 @@
 <?php
 include("includes/init.php");
+include('includes/sidebar.php');
 
 // declare the current location, utilized in header.php
 $current_page_id="login";
@@ -113,7 +114,7 @@ function printUploadForm() {
       printLoginForm();
     } else {
       // printUploadForm();
-      echo "Logged in as ".$current_user;
+      echo "5555555555%%%%%%%%%%%%%%%%%%%%Logged in as ".$current_user;
     }
     ?>
 
