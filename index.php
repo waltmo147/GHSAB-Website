@@ -23,12 +23,11 @@ $params = array();
 $pictures = exec_sql_query($db,$sql,$params)->fetchAll();
 $i=0;
 foreach($pictures as $picture){
-      $i+=1;?>
-    <div class="Slides fade">
-      <img id = "slideimg" src="<?php $picture['picpath'];?>">
-      <div class="text"><?php $picture['title'];?></div>
-    </div>
-    <?php
+      $i+=1;
+    echo("<div class='Slides fade'>
+      <img id = 'slideimg' src=". $picture['picpath'] . ">
+      <div class='text'>". $picture['title'] . "</div>
+    </div>");
 }
 ?>
 <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
@@ -38,7 +37,8 @@ foreach($pictures as $picture){
 <br>
 <div style="text-align:center">
   <?php while($i>0){
-      echp("<span class='dot' onclick='currentSlide($i)'></span>");
+      echo("<span class='dot' onclick='currentSlide($i)'></span>");
+      $i-=1;
   }?>
 </div>
 

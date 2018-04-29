@@ -21,3 +21,4 @@ composer.phar
 .Trashes
 ehthumbs.db
 Thumbs.db
+!website.sqlite
