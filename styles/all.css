@@ -161,3 +161,48 @@ img {vertical-align: middle;}
   max-height: 500px;
   width: 100%;
 }
+
+.loginform{
+  margin-left: 250px;
+  padding-top: 5px;
+}
+
+.loginform input[type=text], input[type=password], select, option, textarea {
+    /* width: 100%; */
+    padding: 5px;
+    width: 250px;
+    /* border: 1px solid #ccc; */
+    border: 1px solid;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    resize: vertical;
+}
+
+.loginform button, input[type=submit] {
+    background-color: black;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.loginform button, input[type=submit]:hover {
+    background-color: rgba(#000000, 0.87);
+}
+
+.loginform .container {
+    border-radius: 5px;
+    /* background-color: #f2f2f2; */
+    padding-left: 5px;
+    padding-top: 0px;
+}
+#about_1 {
+  margin-left: 240px;
+
+}
+#about_2 {
+  margin-left: 240px;
+}

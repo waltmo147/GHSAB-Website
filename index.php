@@ -11,6 +11,7 @@ $current_page = "Home";?>
 </head>
 
 <body>
+<<<<<<< HEAD
 <?php include('includes/header.php');
 include('includes/sidebar.php');
 include('includes/footer.php');?>
@@ -83,5 +84,10 @@ function showSlides(n) {
 
 
 
+=======
+<?php include('includes/sidebar.php');
+ include('includes/header.php');
+ include("includes/footer.php");?>
+>>>>>>> a49ad0abc559174a1d01a1a3f2e9570dbf8be211
 </body>
 </html>
