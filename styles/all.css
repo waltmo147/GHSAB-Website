@@ -2,47 +2,51 @@ body {
   margin:0;
 }
 header {
-  background-color: #7786a3;
-  height: 100px;
-  margin-left: 240px;;
+  background-color: black;
+  height: 70px;
+  width:100%;
   margin-top: 0;
   top: 0;
+  color:white;
 }
 footer {
-  position: absolute;
-  background-color: #7786a3;
-  text-align: center;
-  height: 50px;
-  width: 100%;
+  position: fixed;
+  right: 0;
   bottom: 0;
+  left: 0;
+  height: 60px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
   font-size: 20px;
+  color: white;
+  text-align: center;
 }
 footer a {
   text-decoration: none;
-  color: black;
+  color: white;
 }
 footer a:hover {
-    color: blue;
+    color: rgba(238, 188, 176, 0.93);
 }
 .headerh1{
   margin: 0;
 }
 #sidebar {
-    height: 100%;
-    width: 240px;
+    /* height: 100%; */
+    width: 200px;
     position: fixed;
     z-index: 1;
-    top: 0;
+    top: 70;
     left: 0;
-    background-color: #111;
+    background-color: white;
     overflow-x: hidden;
     padding-top: 20px;
 }
 #sidebar a{
     padding: 6px 8px 6px 16px;
     text-decoration: none;
-    font-size: 40px;
-    color: #818181;
+    font-size: 25px;
+    color: black;
     display: block;
 }
 #sidebar a:hover {
@@ -107,15 +111,6 @@ img {vertical-align: middle;}
   bottom: 8px;
   width: 100%;
   text-align: center;
-}
-
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
 }
 
 /* The dots/bullets/indicators */
@@ -221,6 +216,11 @@ img.logo {
   width: 100px;
 }
 
+<<<<<<< HEAD
 div.content {
   padding-left: 250px;
+=======
+#logout {
+  margin-left: 250px;
+>>>>>>> 2c369abe18846c14040e308e3b6f725afc22df29
 }
