@@ -31,23 +31,6 @@ foreach($pictures as $picture){
     </div>");
 }
 ?>
-<div class="Slides fade">
-  <div class="numbertext">1 / 3</div>
-  <img id = "slideimg" src="documents/IMG_7351.JPG">
-  <div class="text">Caption Text</div>
-</div>
-
-<div class="Slides fade">
-  <div class="numbertext">2 / 3</div>
-  <img id = "slideimg" src="documents/IMG_7352.JPG">
-  <div class="text">Caption Two</div>
-</div>
-
-<div class="Slides fade">
-  <div class="numbertext">3 / 3</div>
-  <img id = "slideimg" src="documents/IMG_7353.JPG">
-  <div class="text">Caption Three</div>
-</div>
 
 <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
 <a class="next" onclick="plusSlides(1)">&#10095;</a>
