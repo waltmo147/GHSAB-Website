@@ -1,5 +1,4 @@
 <?php
-
 const MAX_FILE_SIZE = 1000000;
 const BOX_UPLOADS_PATH = "documents/";
 
@@ -13,14 +12,17 @@ $adminpages = array("Home" => "index.php",
                     "Applications" => "applications.php",
                     "Blog" => "blog.php",
                     "About Us" => "aboutus.php",
-                    "Edit Logo" => "admin-logo.php",
+                    "Edit Logo" => "admin_logo.php",
                     "Edit Slides" => "admin-slides.php",
                     "Edit Events" => "admin-events.php",
                     "Applications" => "admin-applications.php",
                     "Edit Blogs" => "admin-blogs.php",
                     "Edit About Us" => "admin-aboutus.php",
                     "Logout" => "logout.php");
+<<<<<<< HEAD
 
+=======
+>>>>>>> fdb9b45800502fce2c763e0055c85440a99f47ab
 $image_ext = array("jpg", "jpeg", "png", "gif");
 
 // An array to deliver messages to the user.
@@ -176,7 +178,6 @@ function log_out() {
   // Remove the session from the cookie and force it to expire.
   setcookie("session", "", time()-3600);
   $current_user = NULL;
-  // header("Refresh:0 url=logout.php");
 }
 
 
