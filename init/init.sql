@@ -28,7 +28,7 @@ CREATE TABLE picliason (
   picture INTEGER NOT NULL,
   FOREIGN KEY (member) REFERENCES members(id) ON DELETE CASCADE,
   FOREIGN KEY (picture) REFERENCES member_images(id) ON DELETE CASCADE);
-  
+
 /* members data */
 INSERT INTO members (first_name,last_name,introduction,email) VALUES ('michael', 'schrute','admin is the president of the club.....etc','admin@cornell.edu');
 INSERT INTO members (first_name,last_name,introduction,email) VALUES ('james', 'Bond','James Bond is the muscle of the club.....etc','admin3@cornell.edu');

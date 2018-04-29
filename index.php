@@ -17,6 +17,7 @@ include('includes/footer.php');
 ?>
 
 <div class="slideshow-container">
+
 <?php
 $sql = "SELECT * FROM slideshow";
 $params = array();
@@ -30,6 +31,24 @@ foreach($pictures as $picture){
     </div>");
 }
 ?>
+<div class="Slides fade">
+  <div class="numbertext">1 / 3</div>
+  <img id = "slideimg" src="documents/IMG_7351.JPG">
+  <div class="text">Caption Text</div>
+</div>
+
+<div class="Slides fade">
+  <div class="numbertext">2 / 3</div>
+  <img id = "slideimg" src="documents/IMG_7352.JPG">
+  <div class="text">Caption Two</div>
+</div>
+
+<div class="Slides fade">
+  <div class="numbertext">3 / 3</div>
+  <img id = "slideimg" src="documents/IMG_7353.JPG">
+  <div class="text">Caption Three</div>
+</div>
+
 <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
 <a class="next" onclick="plusSlides(1)">&#10095;</a>
 
@@ -45,12 +64,15 @@ foreach($pictures as $picture){
 <script>
 var slideIndex = 1;
 showSlides(slideIndex);
+
 function plusSlides(n) {
   showSlides(slideIndex += n);
 }
+
 function currentSlide(n) {
   showSlides(slideIndex = n);
 }
+
 function showSlides(n) {
   var i;
   var slides = document.getElementsByClassName("mySlides");
@@ -66,8 +88,6 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
 }
-
-// courtesy of W3schools
 </script>
 
 
