@@ -66,7 +66,7 @@ footer a:hover {
 
 
 #mainslideshow {box-sizing: border-box}
-.Slides {display: none}
+.mySlides {display: none}
 img {vertical-align: middle;}
 
 /* Slideshow container */
@@ -157,6 +157,16 @@ img {vertical-align: middle;}
   width: 100%;
 }
 
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+.dotalign {
+  text-align:center;
+}
 .loginform{
   margin-left: 250px;
   padding-top: 5px;

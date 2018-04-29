@@ -43,7 +43,7 @@ INSERT INTO picliason (member, picture) VALUES ((SELECT id FROM members WHERE fi
 INSERT INTO admin (username, password) VALUES ('admin', '$2y$10$i41U0Al7AUAQFIAeoi0NH.1Aykum/Hf3vScM.zt1pQKcKHDSPlm0e');
 
 -- seed data for slideshow
-INSERT INTO slideshow (picpath, title) VALUES ('/pictures/bald-eagle.jpg', "Bald Eagle");
-INSERT INTO slideshow (picpath, title) VALUES ('/pictures/bald-eagle-1.jpg', "Bald Eagle");
-INSERT INTO slideshow (picpath, title) VALUES ('/pictures/bird.jpg', "Bird");
-INSERT INTO slideshow (picpath, title) VALUES ('/pictures/blackbirds.jpg', "BlackBirds");
+INSERT INTO slideshow (picpath, title) VALUES ('uploads/pictures/bald-eagle.jpg', "Bald Eagle");
+INSERT INTO slideshow (picpath, title) VALUES ('uploads/pictures/bald-eagle-1.jpg', "Bald Eagle");
+INSERT INTO slideshow (picpath, title) VALUES ('uploads/pictures/bird.jpg', "Bird");
+INSERT INTO slideshow (picpath, title) VALUES ('uploads/pictures/blackbirds.jpg', "BlackBirds");

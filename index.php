@@ -25,7 +25,8 @@ $pictures = exec_sql_query($db,$sql,$params)->fetchAll();
 $i=0;
 foreach($pictures as $picture){
       $i+=1;
-    echo("<div class='Slides fade'>
+    echo("<div class='mySlides fade'>
+      <div class='numbertext'>$i</div>
       <img id = 'slideimg' src=". $picture['picpath'] . ">
       <div class='text'>". $picture['title'] . "</div>
     </div>");
@@ -37,7 +38,7 @@ foreach($pictures as $picture){
 
 </div>
 <br>
-<div style="text-align:center">
+<div class = "dotalign">
   <?php while($i>0){
       echo("<span class='dot' onclick='currentSlide($i)'></span>");
       $i-=1;
@@ -47,15 +48,12 @@ foreach($pictures as $picture){
 <script>
 var slideIndex = 1;
 showSlides(slideIndex);
-
 function plusSlides(n) {
   showSlides(slideIndex += n);
 }
-
 function currentSlide(n) {
   showSlides(slideIndex = n);
 }
-
 function showSlides(n) {
   var i;
   var slides = document.getElementsByClassName("mySlides");
@@ -71,15 +69,8 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
 }
+
+
 </script>
-
-
-
-
-
-
-
-
-
 </body>
 </html>
