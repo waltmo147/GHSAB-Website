@@ -1,5 +1,8 @@
 <?php
 
+const MAX_FILE_SIZE = 1000000;
+const BOX_UPLOADS_PATH = "documents/";
+
 $pages = array("Home" => "index.php",
                "Events" => "events.php",
                "Applications" => "applications.php",
@@ -11,6 +14,8 @@ $adminpages = array("Logo" => "logo.php",
                     "Applications" => "applications.php",
                     "Events" => "events.php",
                     "Logout" => "logout.php");
+                    
+$image_ext = array("jpg", "jpeg", "png", "gif");
 
 // An array to deliver messages to the user.
 $messages = array();
@@ -168,31 +173,31 @@ function log_out() {
   header("Refresh:0 url=logout.php");
 }
 
-
-// open connection to database
-$db = open_or_init_sqlite_db("website.sqlite", "init/init.sql");
-
-// Check if we should login the user
-if (isset($_POST['login'])) {
-  $username = filter_input(INPUT_POST, 'username', FILTER_SANITIZE_STRING);
-  $username = trim($username);
-  $password = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_STRING);
-
-  log_in($username, $password);
-}
-
-// check if logged in
-$current_user = check_login();
-$current_user_id = NULL;
-if ($current_user) {
-  $sql = "SELECT admin_id FROM admin WHERE username = :username";
-  $params = array(
-    ':username' => $current_user
-  );
-  $records = exec_sql_query($db, $sql, $params)->fetchAll(PDO::FETCH_COLUMN);
-  if ($records) {
-    // Username is UNIQUE, so there should only be 1 record.
-      $current_user_id = $records[0];
-  }
-}
+//
+// // open connection to database
+// $db = open_or_init_sqlite_db("website.sqlite", "init/init.sql");
+//
+// // Check if we should login the user
+// if (isset($_POST['login'])) {
+//   $username = filter_input(INPUT_POST, 'username', FILTER_SANITIZE_STRING);
+//   $username = trim($username);
+//   $password = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_STRING);
+//
+//   log_in($username, $password);
+// }
+//
+// // check if logged in
+// $current_user = check_login();
+// $current_user_id = NULL;
+// if ($current_user) {
+//   $sql = "SELECT admin_id FROM admin WHERE username = :username";
+//   $params = array(
+//     ':username' => $current_user
+//   );
+//   $records = exec_sql_query($db, $sql, $params)->fetchAll(PDO::FETCH_COLUMN);
+//   if ($records) {
+//     // Username is UNIQUE, so there should only be 1 record.
+//       $current_user_id = $records[0];
+//   }
+// }
 ?>

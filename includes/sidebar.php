@@ -1,5 +1,5 @@
 <div id = "sidebar">
-<img src='logo.png' alt='logo'>
+<img class="logo" src='documents/logo.png' alt='logo'>
 <?php
 $pages = array("Home" => "index.php",
                "Events" => "events.php",
