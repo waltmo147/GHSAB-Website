@@ -1,18 +1,7 @@
 <div id = "sidebar">
-<img class="logo" src='documents/logo.png' alt='logo'>
+<img class='logo' src='documents/logo.png' alt='logo'>
 <?php
-$pages = array("Home" => "index.php",
-               "Events" => "events.php",
-               "Applications" => "applications.php",
-               "Blog" => "blog.php",
-               "About Us" => "aboutus.php");
-$adminpages = array("Logo" => "logo.php",
-                    "Slides" => "slides.php",
-                    "Blogs" => "blogs.php",
-                    "Applications" => "applications.php",
-                    "Events" => "events.php",
-                    "Logout" => "logout.php");
-if($signedin){
+if($current_user){
   foreach($adminpages as $name => $link){
     if ($name == $current_page) {
       $css_id = "id='current_page'";
