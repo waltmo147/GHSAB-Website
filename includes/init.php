@@ -19,10 +19,6 @@ $adminpages = array("Home" => "index.php",
                     "Edit Blogs" => "admin-blogs.php",
                     "Edit About Us" => "admin-aboutus.php",
                     "Logout" => "logout.php");
-<<<<<<< HEAD
-
-=======
->>>>>>> fdb9b45800502fce2c763e0055c85440a99f47ab
 $image_ext = array("jpg", "jpeg", "png", "gif");
 
 // An array to deliver messages to the user.
