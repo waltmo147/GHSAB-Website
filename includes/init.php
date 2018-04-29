@@ -171,7 +171,7 @@ function log_out() {
   // Remove the session from the cookie and force it to expire.
   setcookie("session", "", time()-3600);
   $current_user = NULL;
-  header("Refresh:0 url=logout.php");
+  // header("Refresh:0 url=logout.php");
 }
 
 
