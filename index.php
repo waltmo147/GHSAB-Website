@@ -11,8 +11,8 @@ $current_page = "Home";?>
 </head>
 
 <body>
-<?php include('includes/sidebar.php'); ?>
-<?php include('includes/header.php'); ?>
-<?php include("includes/footer.php");?>
+<?php include('includes/sidebar.php');
+ include('includes/header.php');
+ include("includes/footer.php");?>
 </body>
 </html>
