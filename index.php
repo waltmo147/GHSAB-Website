@@ -39,9 +39,11 @@ foreach($pictures as $picture){
 </div>
 <br>
 <div class = "dotalign">
-  <?php while($i>0){
-      echo("<span class='dot' onclick='currentSlide($i)'></span>");
-      $i-=1;
+<?php
+$j = 1;
+while($i>=$j){
+      echo("<span class='dot' onclick='currentSlide($j)'></span>");
+      $j+=1;
   }?>
 </div>
 
