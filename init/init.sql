@@ -16,6 +16,12 @@ CREATE TABLE `members` (
   `email` TEXT,
   `photo_id` INTEGER NOT NULL
 );
+
+CREATE TABLE slideshow (
+  id INTEGER NOT NULL PRIMARY KEY UNIQUE,
+  picpath TEXT NOT NULL UNIQUE,
+  title TEXT NOT NULL);
+)
 /* TODO: initial seed data */
 /* members data */
 
