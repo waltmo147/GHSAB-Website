@@ -21,13 +21,31 @@ CREATE TABLE slideshow (
 CREATE TABLE member_images (
   id INTEGER PRIMARY KEY NOT NULL,
   image_name TEXT NOT NULL UNIQUE,
-  file_ext TEXT NOT NULL);
+  file_ext TEXT NOT NULL
+);
 
 CREATE TABLE picliason (
   member INTEGER NOT NULL,
   picture INTEGER NOT NULL,
   FOREIGN KEY (member) REFERENCES members(id) ON DELETE CASCADE,
-  FOREIGN KEY (picture) REFERENCES member_images(id) ON DELETE CASCADE);
+  FOREIGN KEY (picture) REFERENCES member_images(id) ON DELETE CASCADE
+);
+
+CREATE TABLE events (
+  id INTEGER PRIMARY KEY NOT NULL,
+  name TEXT,
+  date_time  TEXT,
+  address TEXT,
+  description TEXT,
+  image TEXT
+);
+
+CREATE TABLE application (
+  id INTEGER PRIMARY KEY NOT NULL,
+  event_id TEXT NOT NULL,
+  email  TEXT NOT NULL,
+  comment TEXT
+);
 
 /* members data */
 INSERT INTO members (first_name,last_name,introduction,email) VALUES ('michael', 'schrute','admin is the president of the club.....etc','admin@cornell.edu');
@@ -47,3 +65,6 @@ INSERT INTO slideshow (picpath, title) VALUES ('uploads/pictures/bald-eagle.jpg'
 INSERT INTO slideshow (picpath, title) VALUES ('uploads/pictures/bald-eagle-1.jpg', "Bald Eagle");
 INSERT INTO slideshow (picpath, title) VALUES ('uploads/pictures/bird.jpg', "Bird");
 INSERT INTO slideshow (picpath, title) VALUES ('uploads/pictures/blackbirds.jpg', "BlackBirds");
+
+INSERT INTO events (name, date_time, address, description) values ('Cornell Ochestra', '2018-04-29 15:00:00', 'Bailey Hall', 'Tchaikovsky');
+INSERT INTO application (event_id, email, comment) values ((SELECT id FROM events where name is 'Cornell Ochestra'), 'jg2273@cornell.edu', 'Is is for free?');
