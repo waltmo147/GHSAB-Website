@@ -1,15 +1,14 @@
 <?php
 include("includes/init.php");
-include('includes/sidebar.php');
+
 
 // declare the current location, utilized in header.php
-$current_page_id="login";
-
+$current_page="login";
+include('includes/sidebar.php');
 // Set maximum file size for uploaded files.
 // MAX_FILE_SIZE must be set to bytes
 // 1 MB = 1000000 bytes
-const MAX_FILE_SIZE = 1000000;
-const BOX_UPLOADS_PATH = "uploads/paintings/";
+
 
 if ($current_user) {
   $user_id = $current_user_id;
