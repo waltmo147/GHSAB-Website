@@ -4,7 +4,7 @@ const BOX_UPLOADS_PATH = "documents/";
 
 $pages = array("Home" => "index.php",
                "Events" => "events.php",
-               "Applications" => "applications.php",
+               "Applications" => "application.php",
                "Blog" => "blog.php",
                "About Us" => "aboutus.php");
 $adminpages = array("Home" => "index.php",
