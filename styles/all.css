@@ -56,15 +56,6 @@ footer a:hover {
   color: blue!important;
 }
 
-
-
-
-
-
-
-
-
-
 #mainslideshow {box-sizing: border-box}
 .mySlides {display: none}
 img {vertical-align: middle;}
@@ -257,4 +248,8 @@ td,th{
   text-align: center;
   padding: 10px;
   width: 10%;
+}
+
+.blogs {
+  margin-left: 250px;
 }
