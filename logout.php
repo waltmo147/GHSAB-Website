@@ -3,7 +3,7 @@ include("includes/init.php");
 
 
 // declare the current location, utilized in header.php
-$current_page_id="logout";
+$current_page="logout";
 
 if (!$current_user) {
   record_message("You've been successfully logged out.");
@@ -27,7 +27,7 @@ if (!$current_user) {
   include("includes/header.php");
   include('includes/sidebar.php');
   ?>
-  
+
   <div id="logout">
     <h1>Log Out</h1>
 

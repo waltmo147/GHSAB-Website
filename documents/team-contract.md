@@ -58,7 +58,8 @@ You will need to learn to work in groups and resolve conflicts on your own. Thes
 
 
 10. What else do we want to include in this contract? (Think about a *fun* clause... not everything is always about work! Sometimes you need to celebrate your accomplishments!)
-  After we finish, we drink.
+
+  We will all cheer and give each other high fives!!
 
 
 ## Using your Contract

@@ -593,7 +593,7 @@ Table: blogs
 Table: members
 * field 1: id
 * field 2: first_name
-* field 3: last_name 
+* field 3: last_name
 * field 3: email
 * field 4: introduction
 * field 5: image
@@ -852,6 +852,10 @@ for each of the members, display edit options
 
 [If you make any changes to your plan or design, make a list of the changes here.]
 
+
+removed the ability for admin to see applications on the actual site because we are emailing the applications with pdf attachments already
+
+consolidated some unnecessary database tables
 
 ## Milestone 4: Updates
 

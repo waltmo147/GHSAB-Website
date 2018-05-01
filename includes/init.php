@@ -88,93 +88,142 @@ function open_or_init_sqlite_db($db_filename, $init_sql_filename) {
 }
 
 function check_login() {
-  global $db;
+  // global $db;
+  //
+  // if (isset($_COOKIE["session"])) {
+  //   $session = $_COOKIE["session"];
+  //
+  //   $sql = "SELECT * FROM admin WHERE session = :session";
+  //   $params = array(
+  //     ':session' => $session
+  //   );
+  //   $records = exec_sql_query($db, $sql, $params)->fetchAll();
+  //   if ($records) {
+  //     // Username is UNIQUE, so there should only be 1 record.
+  //     $account = $records[0];
+  //     return $account['username'];
+  //   }
+  // }
+  // return NULL;
 
-  if (isset($_COOKIE["session"])) {
-    $session = $_COOKIE["session"];
-
-    $sql = "SELECT * FROM admin WHERE session = :session";
-    $params = array(
-      ':session' => $session
-    );
-    $records = exec_sql_query($db, $sql, $params)->fetchAll();
-    if ($records) {
-      // Username is UNIQUE, so there should only be 1 record.
-      $account = $records[0];
-      return $account['username'];
-    }
+  if (isset($_SESSION['current_user'])) {
+    return $_SESSION['current_user'];
   }
   return NULL;
 }
 
 function log_in($username, $password) {
+  // global $db;
+  //
+  // if ($username && $password) {
+  //   $sql = "SELECT * FROM admin WHERE username = :username;";
+  //   $params = array(
+  //     ':username' => $username
+  //   );
+  //   $records = exec_sql_query($db, $sql, $params)->fetchAll();
+  //   if ($records) {
+  //     // Username is UNIQUE, so there should only be 1 record.
+  //     $account = $records[0];
+  //
+  //     // Check password against hash in DB
+  //     if ( password_verify($password, $account['password']) ) {
+  //
+  //       // Generate session
+  //       // Warning! Not a secure method for generating session IDs!
+  //       // TODO: secure session
+  //       $session = uniqid();
+  //       $sql = "UPDATE admin SET session = :session WHERE admin_id = :user_id;";
+  //       $params = array(
+  //         ':user_id' => $account['admin_id'],
+  //         ':session' => $session
+  //       );
+  //       $result = exec_sql_query($db, $sql, $params);
+  //       if ($result) {
+  //         // Success, we are logged in.
+  //
+  //         // Send this back to the user.
+  //         setcookie("session", $session, time()+3600);  /* expire in 1 hour */
+  //
+  //         record_message("Logged in as $username.");
+  //         header("Refresh:0 url=login.php");
+  //         return TRUE;
+  //       } else {
+  //         record_message("Log in failed.");
+  //       }
+  //     } else {
+  //       record_message("Invalid username or password.");
+  //     }
+  //   } else {
+  //     record_message("Invalid username or password.");
+  //   }
+  // } else {
+  //   record_message("No username or password given.");
+  // }
+  // return FALSE;
+
+
+
+
+
+
   global $db;
-
-  if ($username && $password) {
-    $sql = "SELECT * FROM admin WHERE username = :username;";
-    $params = array(
-      ':username' => $username
-    );
-    $records = exec_sql_query($db, $sql, $params)->fetchAll();
-    if ($records) {
-      // Username is UNIQUE, so there should only be 1 record.
-      $account = $records[0];
-
-      // Check password against hash in DB
-      if ( password_verify($password, $account['password']) ) {
-
-        // Generate session
-        // Warning! Not a secure method for generating session IDs!
-        // TODO: secure session
-        $session = uniqid();
-        $sql = "UPDATE admin SET session = :session WHERE admin_id = :user_id;";
-        $params = array(
-          ':user_id' => $account['admin_id'],
-          ':session' => $session
-        );
-        $result = exec_sql_query($db, $sql, $params);
-        if ($result) {
-          // Success, we are logged in.
-
-          // Send this back to the user.
-          setcookie("session", $session, time()+3600);  /* expire in 1 hour */
-
+    if ($username && $password) {
+      $sql = "SELECT * FROM admin WHERE username = :username;";
+      $params = array(
+        ':username' => $username
+      );
+      $records = exec_sql_query($db, $sql, $params)->fetchAll();
+      if ($records) {
+        // Username is UNIQUE, so there should only be 1 record.
+        $account = $records[0];
+        // Check password against hash in DB
+        if (password_verify($password, $account['password'])) {
+          // generate new session
+          session_regenerate_id();
+          $_SESSION['current_user'] = $username;
           record_message("Logged in as $username.");
-          header("Refresh:0 url=login.php");
-          return TRUE;
+          return $username;
         } else {
-          record_message("Log in failed.");
+          record_message("Invalid username or password.");
         }
       } else {
         record_message("Invalid username or password.");
       }
     } else {
-      record_message("Invalid username or password.");
+      record_message("No username or password given.");
     }
-  } else {
-    record_message("No username or password given.");
-  }
-  return FALSE;
+    return NULL;
+
 
 }
 
 function log_out() {
-  global $current_user;
-  global $db;
+  // global $current_user;
+  // global $db;
+  //
+  // if ($current_user) {
+  //   $sql = "UPDATE admin SET session = :session WHERE username = :username;";
+  //   $params = array(
+  //     ':username' => $current_user,
+  //     ':session' => NULL
+  //   );
+  //   if (!exec_sql_query($db, $sql, $params)) {
+  //     record_message("Log out failed.");
+  //   }
+  // }
+  // // Remove the session from the cookie and force it to expire.
+  // setcookie("session", "", time()-3600);
+  // $current_user = NULL;
 
-  if ($current_user) {
-    $sql = "UPDATE admin SET session = :session WHERE username = :username;";
-    $params = array(
-      ':username' => $current_user,
-      ':session' => NULL
-    );
-    if (!exec_sql_query($db, $sql, $params)) {
-      record_message("Log out failed.");
-    }
-  }
-  // Remove the session from the cookie and force it to expire.
-  setcookie("session", "", time()-3600);
+  global $current_user;
   $current_user = NULL;
+  // destroy PHP session
+  unset($_SESSION['current_user']);
+  session_destroy();
+
+
+
+
 }
 
 
@@ -182,12 +231,15 @@ function log_out() {
 $db = open_or_init_sqlite_db("website.sqlite", "init/init.sql");
 
 // Check if we should login the user
+session_start();
 if (isset($_POST['login'])) {
   $username = filter_input(INPUT_POST, 'username', FILTER_SANITIZE_STRING);
   $username = trim($username);
   $password = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_STRING);
 
-  log_in($username, $password);
+  // log_in($username, $password);
+
+$current_user = log_in($username, $password);
 }
 
 // check if logged in

@@ -55,11 +55,7 @@ if(isset($_POST['sendEmail'])){
           $email->AddAttachment( $_FILES['resume']['tmp_name'], $applicantFirstName . $lastName . 'coverletter' . '.pdf' );
           $email->Send();
 
-
-          array_push($messages, "Thanks for submitting your application! If your resume matches our needs a member of our organization will contact you.");
-
-
-
+          array_push($messages, "...............Thanks for submitting your application! If your resume matches our needs a member of our organization will contact you.");
 
           }
 }
@@ -138,12 +134,6 @@ include('includes/footer.php');
 
 
   </form>
-
-
-
-
-
-
 
 
 
