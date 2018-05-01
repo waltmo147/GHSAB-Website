@@ -28,6 +28,11 @@ footer a {
 footer a:hover {
     color: rgba(238, 188, 176, 0.93);
 }
+
+ul {
+  list-style-type: none;
+}
+
 .headerh1{
   margin: 0;
 }
@@ -163,7 +168,7 @@ img {vertical-align: middle;}
   padding-top: 5px;
 }
 
-.loginform input[type=text], input[type=password], select, option, textarea {
+.loginform input[type=text], input[type=password], input[type=date] select, option, textarea {
     /* width: 100%; */
     padding: 5px;
     width: 250px;
@@ -232,6 +237,13 @@ div.content {
   padding-top: 50px;
 }
 
+.event_form {
+  padding-left: 0;
+  padding-right: 80px;
+  padding-bottom: 70px;
+  padding-top: 50px;
+}
+
 /* Table Stylings */
 table {
   font-family: arial, sans-serif;
@@ -252,4 +264,14 @@ td,th{
 
 .blogs {
   margin-left: 250px;
+}
+
+
+
+#submitApplication {
+  display: inline-block;
+      text-align: center;
+      margin-left: 30%;
+
+
 }

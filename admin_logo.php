@@ -13,7 +13,7 @@ if (isset($_POST["submit_upload"])) {
 
     // check if the file is an image
     if (in_array($upload_ext, $image_ext)) {
-      $temp_file = BOX_UPLOADS_PATH . "logo.png";
+      $temp_file = "documents/" . "logo.png";
 
       if (move_uploaded_file($upload_info["tmp_name"], $temp_file)){
         array_push($messages, "Your file has been uploaded.");
@@ -25,7 +25,7 @@ if (isset($_POST["submit_upload"])) {
     }
     else {
       array_push($messages, "Not an image.");
-      array_push($messages, "Extension should be 'jpg', 'jpeg' or 'png'.");
+      array_push($messages, "Extension should be 'jpg', 'jpeg', 'gif' or 'png'.");
     }
   } else {
     array_push($messages, "Failed to upload file.");
