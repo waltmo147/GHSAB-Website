@@ -9,6 +9,8 @@
 # Then tell Git to ignore all files in those folders
 !/pictures/
 /pictures/*
+!/events/
+/events/*
 
 # Tell Git to NOT ignore your EACH seed file in your your upload folders.
 !/box/1.pdf

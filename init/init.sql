@@ -33,10 +33,10 @@ CREATE TABLE picliason (
 
 CREATE TABLE events (
   id INTEGER PRIMARY KEY NOT NULL,
-  name TEXT,
-  date_time  TEXT,
-  address TEXT,
-  description TEXT,
+  name TEXT NOT NULL,
+  date_time  TEXT NOT NULL,
+  address TEXT NOT NULL,
+  description TEXT NOT NULL,
   image TEXT
 );
 

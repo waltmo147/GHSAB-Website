@@ -1,6 +1,6 @@
 <?php
 const MAX_FILE_SIZE = 1000000;
-const BOX_UPLOADS_PATH = "documents/";
+const BOX_UPLOADS_PATH = "uploads/events/";
 
 $pages = array("Home" => "index.php",
                "Events" => "events.php",
