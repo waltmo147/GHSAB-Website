@@ -203,4 +203,13 @@ if ($current_user) {
       $current_user_id = $records[0];
   }
 }
+function remove_member($member_id){
+  //check if this actually works!
+  global $db;
+  $sql = "DELETE FROM picliason WHERE member=:member_id";
+  $params = array('member_id' => $member_id);
+  exec_sql_query($db, $sql,$params);
+  //don't forget to check!
+}
+
 ?>

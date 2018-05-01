@@ -1,5 +1,5 @@
 <?php include('includes/init.php');
-$current_page = ""?>
+$current_page = "About Us"?>
 <!DOCTYPE html>
 <html>
 
@@ -7,7 +7,7 @@ $current_page = ""?>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" type="text/css" href="styles/all.css" media="all" />
-  <title>About Us</title>
+  <title>Edit About Us</title>
 </head>
 
 <body>
@@ -21,18 +21,20 @@ $current_page = ""?>
 </p>
 </div>
 <div id='about_2'>
-<h3>Our Members</h3>
+<h3>Edit Members</h3>
 <ul>
 <?php
-      $sql = "SELECT first_name, last_name, introduction, email, picpath FROM (SELECT * FROM members join picliason on id = member) JOIN member_images on member_images.id = picture;";
+      $sql = "SELECT member,first_name, last_name, introduction, email, picpath FROM (SELECT * FROM members join picliason on id = member) JOIN member_images on member_images.id = picture;";
       $records = exec_sql_query($db, $sql)->fetchAll();
 
       foreach($records as $record){
+        echo "<a href='member.php?member_id=".$record['member']."'>";
         echo "<li>";
         echo "<h1>" . $record['first_name'] . " " . $record['last_name'] . "</h1>";
         echo "<img class='team_imgs' src=" . $record['picpath'] . ">";
-        echo '<p>'.$record['introduction'].'</p>';
+        //echo '<p>'.$record['introduction'].'</p>';
         echo "</li>";
+        echo "</a>";
       }
       ?>
 </ul>
