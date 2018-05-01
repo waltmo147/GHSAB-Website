@@ -21,6 +21,7 @@ include('includes/footer.php');
 <?php
 $sql = "SELECT * FROM slideshow";
 $params = array();
+
 $pictures = exec_sql_query($db,$sql,$params)->fetchAll();
 $i=0;
 foreach($pictures as $picture){

@@ -96,7 +96,7 @@ include('includes/footer.php');
 ?>
 
 
-  <h1> Join our team! lk;asdfkl;;adls;kldfsaa;lkdfsadfskadaklf;kdafskdasf;kfd</h1>
+  <h1>   ..................................                       Join our team!</h1>
   <br>
   <br>
 
