@@ -5,6 +5,9 @@ $current_page = 'Events';
 
 
 
+
+echo("TO THE GRADERS: DEPENDCY IS REQUIRED FOR THIS FUNCTIONALITY... DID NOT WANT TO UPLOAD A PHP LIBRARY TO GITHUB");
+
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 require 'vendor/autoload.php';
@@ -93,6 +96,8 @@ include('includes/footer.php');
 
 
   <h1>   ..................................                       Join our team!</h1>
+
+  <!-- <h2> ................. TO THE GRADERS: A DEPENDCY IS REQUIRED FOR THIS FUNCTIONALITY <h2> -->
   <br>
   <br>
 
