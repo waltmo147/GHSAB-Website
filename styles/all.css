@@ -253,3 +253,13 @@ td,th{
 .blogs {
   margin-left: 250px;
 }
+
+
+
+#submitApplication {
+  display: inline-block;
+      text-align: center;
+      margin-left: 30%;
+
+
+}
