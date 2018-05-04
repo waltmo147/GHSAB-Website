@@ -259,10 +259,17 @@ if ($current_user) {
 function remove_member($member_id){
   //check if this actually works!
   global $db;
-  $sql = "DELETE FROM picliason WHERE member=:member_id";
+  $sql = "DELETE FROM member_images WHERE member_images.id=:member_id";
   $params = array('member_id' => $member_id);
   exec_sql_query($db, $sql,$params);
+  $sql1 = "DELETE FROM members WHERE members.id=:member_id";
+  exec_sql_query($db,$sql1,$params);
+  $sql1 = "DELETE FROM picliason WHERE member=:member_id";
+  exec_sql_query($db,$sql1,$params);
   //don't forget to check!
+}
+function add_member($first_name,$last_name,$email,$description){
+
 }
 
 ?>
