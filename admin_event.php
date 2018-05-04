@@ -1,7 +1,7 @@
 <?php include('includes/init.php');
 $current_page = "Admin Events";
 //get all events
-$allevents =  exec_sql_query($db, "SELECT * FROM events", NULL)->fetchAll();
+
 
 function print_events($events) {
   ?>
@@ -21,7 +21,7 @@ function print_events($events) {
       <td>
       <?php
       if ($event["image"] != NULL) {
-        $image_file = "uploads/events/".$event["image"];
+        $image_file = "uploads/events/".$event["id"].".".$event["image"];
 
       } else {
         $image_file = "documents/logo.png";
@@ -105,29 +105,31 @@ if (isset($_POST["submit_upload"])) {
     array_push($messages, 'Time is invalid, date should be "HH:MM".');
   }
 
-  if (isset($_FILES["box_file"])) {
-    $upload_info = $_FILES["box_file"];
-    if ($upload_info['error'] == UPLOAD_ERR_OK) {
-      $upload_name = basename($upload_info["name"]);
-      $upload_ext = strtolower(pathinfo($upload_name, PATHINFO_EXTENSION) );
+  $has_image = FALSE;
 
-      if (in_array($upload_ext, $image_ext)) {
 
-      }
-      else {
-        $valid_form = FALSE;
-        array_push($messages, "Not an image.");
-        array_push($messages, "Extension should be 'jpg', 'jpeg', 'gif' or 'png'.");
-      }
+  $upload_info = $_FILES["box_file"];
+  if ($upload_info['error'] == UPLOAD_ERR_OK) {
+    $upload_name = basename($upload_info["name"]);
+    $upload_ext = strtolower(pathinfo($upload_name, PATHINFO_EXTENSION) );
 
-    } else {
-      array_push($messages, "Failed to upload file.");
+
+    if (in_array($upload_ext, $image_ext)) {
+      $has_image = TRUE;
     }
+    else {
+      $valid_form = FALSE;
+      array_push($messages, "Not an image.");
+      array_push($messages, "Extension should be 'jpg', 'jpeg', 'gif' or 'png'.");
+    }
+
+  } else {
+    #array_push($messages, "No image");
   }
 
-  if ($valid_form) {
-    if (isset($_FILES["box_file"])) {
 
+  if ($valid_form) {
+    if (isset($upload_ext)) {
       $date_time = $date.' '.$time.':00';
       $sql = "INSERT INTO events (name, date_time, address, description, image) VALUES (:name, :dt, :location, :des, :img)";
       $params = array(
@@ -140,7 +142,7 @@ if (isset($_POST["submit_upload"])) {
       $result = exec_sql_query($db, $sql, $params);
       if ($result) {
         $file_id = $db->lastInsertId("id");
-        if (move_uploaded_file($upload_info["tmp_name"], BOX_UPLOADS_PATH . "$file_id.$upload_ext")){
+        if (move_uploaded_file($upload_info["tmp_name"], BOX_UPLOADS_PATH . $file_id.".".$upload_ext)){
           array_push($messages, "Your file has been uploaded.");
         }
       } else {
@@ -168,6 +170,9 @@ if (isset($_POST["submit_upload"])) {
 
 }
 
+
+$allevents =  exec_sql_query($db, "SELECT * FROM events", NULL)->fetchAll();
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -186,11 +191,12 @@ include('includes/sidebar.php');
 ?>
 
 <div class='event_form'>
-  <?php print_messages(); ?>
 
-  <form class='loginform' method="post" action="admin_event.php">
+
+  <form class='loginform' method="post" action="admin_event.php" enctype="multipart/form-data">
     <fieldset>
       <legend>Event form</legend>
+      <?php print_messages(); ?>
       <ul>
         <li>
           <label>Name:</label>
@@ -221,7 +227,7 @@ include('includes/sidebar.php');
           <label>Description:</label>
         </li>
         <li>
-          <textarea name="description" cols="50" rows="10"></textarea>
+          <textarea name="description" cols="50" rows="10" required/></textarea>
         </li>
         <li>
           <button name="submit_upload" type="submit">Upload</button>

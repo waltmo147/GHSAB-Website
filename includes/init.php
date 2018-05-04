@@ -1,5 +1,5 @@
 <?php
-const MAX_FILE_SIZE = 1000000;
+const MAX_FILE_SIZE = 1000000000;
 const BOX_UPLOADS_PATH = "uploads/events/";
 
 $pages = array("Home" => "index.php",
@@ -15,7 +15,7 @@ $adminpages = array("Home" => "index.php",
                     "About Us" => "aboutus.php",
                     "Edit Logo" => "admin_logo.php",
                     "Edit Slides" => "admin-slides.php",
-                    "Edit Events" => "admin-events.php",
+                    "Edit Events" => "admin_event.php",
                     "Applications" => "admin-applications.php",
                     "Edit Blogs" => "admin-blogs.php",
                     "Edit About Us" => "admin-aboutus.php",
