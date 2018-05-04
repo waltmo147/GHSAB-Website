@@ -21,7 +21,7 @@ function print_events($events) {
       <td>
       <?php
       if ($event["image"] != NULL) {
-        $image_file = "uploads/events/".$event["image"];
+        $image_file = "uploads/events/".$event["id"].".".$event["image"];
 
       } else {
         $image_file = "documents/logo.png";

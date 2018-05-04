@@ -51,8 +51,9 @@ include('includes/footer.php');
 
 <div class="content">
   <form id="uploadFile" action="admin_logo.php" method="post" enctype="multipart/form-data">
+
   <?php
-  // print_messages();
+  print_messages();
   ?>
   <ul>
     <li>
