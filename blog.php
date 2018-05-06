@@ -13,7 +13,7 @@ $current_page = "Blog";?>
 <body>
 <?php include('includes/header.php');
 include('includes/sidebar.php');
-include('includes/footer.php');
+
 ?>
 <div class = 'blogs'>
 <?php
@@ -30,6 +30,6 @@ foreach($blogs as $blog){
 
 ?>
 </div>
-
+<?php include('includes/footer.php')?>
 </body>
 </html>

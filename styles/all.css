@@ -39,13 +39,15 @@ ul {
 #sidebar {
     /* height: 100%; */
     width: 200px;
-    position: fixed;
+    /* position: fixed; */
+    float:left;
     z-index: 1;
     top: 70;
     left: 0;
     background-color: white;
     overflow-x: hidden;
     padding-top: 20px;
+    margin-bottom: 70px;
 }
 #sidebar a{
     padding: 6px 8px 6px 16px;
@@ -218,6 +220,7 @@ img.logo {
 }
 #about_2 {
   margin-left: 240px;
+  margin-bottom: 70px;
 }
 .team_imgs {
   height: 100px;
@@ -266,6 +269,7 @@ td,th{
 
 .blogs {
   margin-left: 250px;
+  margin-bottom: 70px;
 }
 
 
