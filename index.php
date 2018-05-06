@@ -13,7 +13,7 @@ $current_page = "Home";?>
 <body>
 <?php include('includes/header.php');
 include('includes/sidebar.php');
-include('includes/footer.php');
+
 ?>
 
 <div class="slideshow-container">
@@ -75,5 +75,6 @@ function showSlides(n) {
 
 
 </script>
+<?php include('includes/footer.php'); ?>
 </body>
 </html>
