@@ -274,10 +274,12 @@ td,th{
 
 
 
-#submitApplication {
-  display: inline-block;
-      text-align: center;
-      margin-left: 30%;
+#applyFORM {
+  margin: auto;
+    width: 40%;
+  
+    border: 3px solid red;
+    padding: 10px;
 
 
 }

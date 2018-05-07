@@ -3,10 +3,10 @@
 
 $current_page = 'Events';
 
+$showForm = TRUE;
 
 
-
-echo("TO THE GRADERS: DEPENDCY IS REQUIRED FOR THIS FUNCTIONALITY... DID NOT WANT TO UPLOAD A PHP LIBRARY TO GITHUB");
+// echo("TO THE GRADERS: DEPENDCY IS REQUIRED FOR THIS FUNCTIONALITY... DID NOT WANT TO UPLOAD A PHP LIBRARY TO GITHUB");
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
@@ -58,17 +58,13 @@ if(isset($_POST['sendEmail'])){
           $email->AddAttachment( $_FILES['resume']['tmp_name'], $applicantFirstName . $lastName . 'coverletter' . '.pdf' );
           $email->Send();
 
-          array_push($messages, "...............Thanks for submitting your application! If your resume matches our needs a member of our organization will contact you.");
+          array_push($messages, "Thanks for submitting your application! If your resume matches our needs a member of our organization will contact you.");
+
+
+          $showForm = FALSE;
 
           }
 }
-
-
-
-
-
-
-
 
 ?>
 
@@ -95,22 +91,36 @@ include('includes/footer.php');
 ?>
 
 
-  <h1>   ..................................                       Join our team!</h1>
+
 
   <!-- <h2> ................. TO THE GRADERS: A DEPENDCY IS REQUIRED FOR THIS FUNCTIONALITY <h2> -->
   <br>
   <br>
 
 
+
+
+
+
+
+
+<div id="applyFORM">
+
+<h1> Join Our Team!</h1>
+
 <?php print_messages(); ?>
 
 
+
+
+<?php if($showForm){    ?>
   <form id="submitApplication" action="apply.php" method="post" enctype="multipart/form-data">
 
 
             First name:
             <input type="text" name="firstName" required>
             <br>
+
             Last name:
             <input type="text" name="lastName" required>
             <br>
@@ -128,18 +138,18 @@ include('includes/footer.php');
             <label> Upload Cover Letter: </label>
             <input type="file" name="coverLetter" required>
             <br>
-
-
-
+            <br>
 
             <button name="sendEmail" type="submit">Submit!</button>
 
-
-
-
-
   </form>
 
+
+<?php } ?>
+
+
+
+</div>
 
 
 </body>
