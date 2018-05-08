@@ -87,7 +87,6 @@ if(isset($_POST['sendEmail'])){
 
 <?php include('includes/header.php');
 include('includes/sidebar.php');
-include('includes/footer.php');
 ?>
 
 
@@ -153,4 +152,5 @@ include('includes/footer.php');
 
 
 </body>
+<?php include('includes/footer.php'); ?>
 </html>

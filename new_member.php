@@ -104,9 +104,9 @@ include('includes/sidebar.php');
       <?php print_messages(); ?>
 <div>
   <?php
-include('includes/footer.php');
-?>
+?>]
 
 
 </body>
+<?php include('includes/footer.php'); ?>
 </html>

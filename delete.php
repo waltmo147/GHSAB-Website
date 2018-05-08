@@ -25,10 +25,8 @@ include('includes/sidebar.php');
 print_messages();
 ?>
 <div>
-  <?php
-include('includes/footer.php');
-?>
 
 
 </body>
+<?php include('includes/footer.php'); ?>
 </html>
