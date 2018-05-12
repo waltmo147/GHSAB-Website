@@ -38,10 +38,8 @@ if($task=="remove_member"){
 }
 ?>
 <div>
-  <?php
-include('includes/footer.php');
-?>
 
 
 </body>
+<?php include('includes/footer.php'); ?>
 </html>

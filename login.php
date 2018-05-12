@@ -113,13 +113,13 @@ function printUploadForm() {
       printLoginForm();
     } else {
       // printUploadForm();
-      echo "5555555555%%%%%%%%%%%%%%%%%%%%Logged in as ".$current_user;
+      echo "Logged in as ".$current_user;
     }
     ?>
 
 
   </div>
-  <?php include("includes/footer.php");?>
 </body>
+<?php include("includes/footer.php");?>
 
 </html>

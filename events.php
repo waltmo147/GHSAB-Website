@@ -37,7 +37,7 @@ function print_events($events) {
       <td> <?php echo htmlspecialchars($event["description"]); ?> </td>
       <td>
         <?php
-        echo "<form class=\"loginform\" action=\"application.php?event_id=".$event['id']."\" method=\"post\">";
+        echo "<form class=\"loginform\" action=\"apply.php\" method=\"post\">";
         ?>
           <button type="submit" name="apply">Apply</button>
         </form>
