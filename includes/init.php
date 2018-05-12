@@ -268,8 +268,23 @@ function remove_member($member_id){
   exec_sql_query($db,$sql1,$params);
   //don't forget to check!
 }
-function add_member($first_name,$last_name,$email,$description){
-
+function remove_blog($blog_id){
+    global $db;
+    $sql = "DELETE FROM blogs WHERE blogs.id=:blog_id";
+    $params = array(
+      ":blog_id"=> $blog_id
+  );
+  exec_sql_query($db, $sql,$params);
+}
+function add_blog($title,$author,$blog_text){
+  global $db;
+  $sql = "INSERT INTO blogs (title, author, blog) VALUES (:title, :author, :blog)";
+  $params = array(
+    ":title"=>$title,
+    ":author"=>$author,
+    ":blog"=>$blog_text
+  );
+  exec_sql_query($db, $sql, $params);
 }
 
 ?>
