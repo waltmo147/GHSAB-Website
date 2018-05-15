@@ -69,7 +69,7 @@ if (isset($_POST["submit_upload"])) {
 include('includes/sidebar.php');
 ?>
 <div class='blogs'>
-  <form id="uploadFile" action="new.php" method='post' enctype="multipart/form-data">
+  <form class='loginform' id="uploadFile" action="new.php" method='post' enctype="multipart/form-data">
         <ul>
           <li>
             <label>Upload File:</label>
