@@ -277,6 +277,10 @@ td,th{
   margin-left: 250px;
   margin-bottom: 70px;
 }
+.blogpost {
+  border-width: 2px;
+  border-color: black;
+}
 
 #applyFORM {
   margin: auto;
