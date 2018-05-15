@@ -1,5 +1,6 @@
 body {
   margin:0;
+  font-family: Verdana, Geneva, sans-serif;
   /* padding-bottom: 70px; */
 }
 header {
@@ -73,6 +74,11 @@ ul {
 #mainslideshow {
   box-sizing: border-box;
 }
+
+#adminlogo li{
+  margin: 10px;
+}
+
 .mySlides {
   display: inline-block;
 }
@@ -191,7 +197,7 @@ img {
   width: 520px;
 }
 
-.loginform input[type=text], input[type=password], select, option, textarea {
+.loginform input[type=text], input[type=password], select, option {
     /* width: 100%; */
     padding: 5px;
     width: 200px;
@@ -227,7 +233,6 @@ input[type=date], input[type=time] {
     box-sizing: border-box;
     margin-top: 5px;
     margin-bottom: 5px;
-
     resize: vertical;
 }
 

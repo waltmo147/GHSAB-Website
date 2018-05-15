@@ -52,7 +52,7 @@ include('includes/sidebar.php');
 ?>
 
 <div class="content">
-  <form id="uploadFile" action="admin_logo.php" method="post" enctype="multipart/form-data">
+  <form id="adminlogo" action="admin_logo.php" method="post" enctype="multipart/form-data">
 
   <?php
   print_messages();
