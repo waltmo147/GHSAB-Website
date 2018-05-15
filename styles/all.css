@@ -276,10 +276,19 @@ td,th{
 
 #applyFORM {
   margin: auto;
-    width: 40%;
-  
+    width: 60%;
+
     border: 3px solid red;
     padding: 10px;
+    margin-bottom: 64px;
+}
+
+
+
+#resumeText {
+height: 200px;
+width: 500px;;
+
 
 
 }
