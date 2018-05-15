@@ -1,5 +1,5 @@
 <?php include('includes/init.php');
-$current_page = "";?>
+$current_page = "Edit Blogs";?>
 <!DOCTYPE html>
 <html>
 
