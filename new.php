@@ -1,6 +1,6 @@
 <?php include('includes/init.php');
 $current_page = "";
-
+$preview = FALSE;
 if (isset($_POST["submit_upload"])) {
   $first_name = $_POST["first_name"];
   $last_name = $_POST["last_name"];
@@ -44,6 +44,7 @@ if (isset($_POST["submit_upload"])) {
 
       if (move_uploaded_file($upload_info["tmp_name"], 'uploads/pictures/'."$first_name.$upload_ext")){
         array_push($messages, "Member added!");
+        $preview = TRUE;
       }
     } else {
       array_push($messages, "Failed to upload file");
@@ -68,7 +69,7 @@ if (isset($_POST["submit_upload"])) {
 include('includes/sidebar.php');
 ?>
 <div class='blogs'>
-  <form id="uploadFile" action="new_member.php" method='post' enctype="multipart/form-data">
+  <form id="uploadFile" action="new.php" method='post' enctype="multipart/form-data">
         <ul>
           <li>
             <label>Upload File:</label>
@@ -101,12 +102,16 @@ include('includes/sidebar.php');
           </li>
         </ul>
       </form>
-      <?php print_messages(); ?>
+      <?php print_messages();
+            if($preview){
+              echo "<a href='aboutus.php'>preview</a>";
+            }
+       ?>
 <div>
   <?php
-include('includes/footer.php');
 ?>
 
 
 </body>
+<?php include('includes/footer.php'); ?>
 </html>

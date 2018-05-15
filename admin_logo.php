@@ -46,7 +46,6 @@ if (isset($_POST["submit_upload"])) {
 <body>
 <?php include('includes/header.php');
 include('includes/sidebar.php');
-include('includes/footer.php');
 ?>
 
 <div class="content">
@@ -80,4 +79,5 @@ include('includes/footer.php');
 
 
 </body>
+<?php include('includes/footer.php'); ?>
 </html>

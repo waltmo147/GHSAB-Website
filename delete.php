@@ -1,9 +1,17 @@
 <?php include('includes/init.php');
 $current_page = "";
-$current_member = $_GET['member'];
-if(isset($_GET['delete_member'])){
+$task;
+if(isset($_GET['member_id'])){
+  $task="remove_member";
+  $current_member = $_GET['member_id'];
   remove_member($current_member);
   record_message("removed member!");
+}elseif(isset($_GET['blog_id'])){
+  $task="remove_blog";
+  $blog_id = $_GET['blog_id'];
+  remove_blog($blog_id);
+  record_message("Blog removed");
+
 }
 ?>
 <!DOCTYPE html>
@@ -23,12 +31,15 @@ include('includes/sidebar.php');
 <div class='blogs'>
 <?php
 print_messages();
+if($task=="remove_member"){
+  echo("<a href='aboutus.php'>preview</a>");
+}elseif($task=="remove_blog"){
+  echo("<a href='blog.php'>Preview</a>");
+}
 ?>
 <div>
-  <?php
-include('includes/footer.php');
-?>
 
 
 </body>
+<?php include('includes/footer.php'); ?>
 </html>

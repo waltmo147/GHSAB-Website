@@ -28,16 +28,16 @@ $current_page = "About Us"?>
       $records = exec_sql_query($db, $sql)->fetchAll();
 
       foreach($records as $record){
-        echo "<a href='member.php?member_id=".$record['member']."'>";
         echo "<li>";
         echo "<h1>" . $record['first_name'] . " " . $record['last_name'] . "</h1>";
         echo "<img class='team_imgs' src=" . $record['picpath'] . ">";
+        echo "<a href='delete.php?member_id=".$record['member']."'>remove_member</a>";
         //echo '<p>'.$record['introduction'].'</p>';
         echo "</li>";
-        echo "</a>";
+
       }
       ?>
-      <a href="new_member.php">Add new Member</a>
+      <a href="new.php?add_member=true">Add new Member</a>
 </ul>
 
 </div>

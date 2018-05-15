@@ -18,7 +18,7 @@ function print_events($events) {
   foreach ($events as $event) {
     ?>
     <tr>
-      <td>
+      <td width="10%">
       <?php
       if ($event["image"] != NULL) {
         $image_file = "uploads/events/".$event["id"].".".$event["image"];
@@ -31,11 +31,11 @@ function print_events($events) {
       echo "<img src=".$image_file." alt=' ' width=120 height=120> ";
       ?>
       </td>
-      <td><?php echo htmlspecialchars($event["name"]);?></td>
-      <td> <?php echo htmlspecialchars($event["date_time"]); ?> </td>
-      <td> <?php echo htmlspecialchars($event["address"]); ?> </td>
-      <td> <?php echo htmlspecialchars($event["description"]); ?> </td>
-      <td>
+      <td width="10%"><?php echo htmlspecialchars($event["name"]);?></td>
+      <td  width="20%"> <?php echo htmlspecialchars($event["date_time"]); ?> </td>
+      <td  width="20%"> <?php echo htmlspecialchars($event["address"]); ?> </td>
+      <td width="30%"> <?php echo htmlspecialchars($event["description"]); ?> </td>
+      <td width="10%">
         <?php
         echo "<form class=\"loginform\" action=\"apply.php\" method=\"post\">";
         ?>

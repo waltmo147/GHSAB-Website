@@ -17,8 +17,7 @@ if(isset($_GET['member_id'])){
 <body>
 <?php
       include('includes/header.php');
-      include('includes/sidebar.php');
-      include('includes/footer.php');?>
+      include('includes/sidebar.php');?>
 
 <div id="about_1">
   <?php echo "<form method='get' name='delete_form' action='delete.php'>";
@@ -41,4 +40,5 @@ if(isset($_GET['member_id'])){
 
 </div>
 </body>
+<?php include('includes/footer.php'); ?>
 </html>

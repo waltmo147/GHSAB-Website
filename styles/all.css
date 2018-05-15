@@ -3,11 +3,12 @@ body {
 }
 header {
   background-color: black;
-  height: 70px;
+  height: 40px;
+  padding-top: 10px;
   width:100%;
   margin-top: 0;
   top: 0;
-  color:white;
+  color: white;
 }
 footer {
   position: fixed;
@@ -35,6 +36,7 @@ ul {
 
 .headerh1{
   margin: 0;
+  margin-left: 10px;
 }
 #sidebar {
     /* height: 100%; */
@@ -59,18 +61,28 @@ ul {
 #sidebar a:hover {
     color: #f1f1f1;
 }
+
+#sidebar img {
+  margin-left: 20px;
+}
 #current_page {
   color: blue!important;
 }
 
-#mainslideshow {box-sizing: border-box}
-.mySlides {display: none}
-img {vertical-align: middle;}
+#mainslideshow {
+  box-sizing: border-box;
+}
+.mySlides {
+  display: inline-block;
+}
+img {
+  vertical-align: middle;
+}
 
 /* Slideshow container */
 .slideshow-container {
   max-width: 1200px;
-  height: 300px;
+  height: auto;
   position: relative;
   margin: auto;
   margin-left: 200px;
@@ -104,10 +116,10 @@ img {vertical-align: middle;}
 
 /* Caption text */
 .text {
-  color: #f2f2f2;
+  color: black;
   font-size: 15px;
   padding: 8px 12px;
-  position: absolute;
+  position: relative;
   bottom: 8px;
   width: 100%;
   text-align: center;
@@ -168,7 +180,7 @@ img {vertical-align: middle;}
   text-align:center;
 }
 .loginform{
-  margin-left: 250px;
+  margin-left: 10px;
   padding-top: 5px;
 }
 
@@ -188,7 +200,7 @@ img {vertical-align: middle;}
 .loginform button, input[type=submit] {
     background-color: black;
     color: white;
-    padding: 12px 20px;
+    padding: 12px 15px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
@@ -264,7 +276,7 @@ td,th{
   border-top: 1px solid;
   text-align: center;
   padding: 10px;
-  width: 10%;
+  /* width: 100%; */
 }
 
 .blogs {
@@ -272,10 +284,9 @@ td,th{
   margin-bottom: 70px;
 }
 
-
-
 #applyFORM {
   margin: auto;
+
     width: 60%;
 
     border: 3px solid red;
@@ -290,5 +301,29 @@ height: 200px;
 width: 500px;;
 
 
+
+=======
+    width: 40%;
+
+    border: 3px solid red;
+    padding: 10px;
+}
+.block {
+  display: inline-block;
+  padding: 20px;
+  width: 450px;
+  max-width: 450px;
+  min-height: 470px;
+  max-height: 470px;
+  vertical-align: top;
+}
+.block img{
+  width: auto;
+  max-width: 450px;
+  height: auto;
+  max-height: 280px;
+}
+.block img:hover {
+  opacity: .8;
 
 }

@@ -12,7 +12,7 @@ function print_events($events) {
       <th>Time</th>
       <th>Address</th>
       <th>Description</th>
-      <th>Application</th>
+      <th>Remove</th>
     </tr>
   <?php
   foreach ($events as $event) {
@@ -20,6 +20,7 @@ function print_events($events) {
     <tr>
       <td>
       <?php
+      $current_event = $event["id"];
       if ($event["image"] != NULL) {
         $image_file = "uploads/events/".$event["id"].".".$event["image"];
 
@@ -36,10 +37,8 @@ function print_events($events) {
       <td> <?php echo htmlspecialchars($event["address"]); ?> </td>
       <td> <?php echo htmlspecialchars($event["description"]); ?> </td>
       <td>
-        <?php
-        echo "<form class=\"loginform\" action=\"application.php?event_id=".$event['id']."\" method=\"post\">";
-        ?>
-          <button type="submit" name="apply">Apply</button>
+        <form class='loginform' method="post" action="admin_event.php" enctype="multipart/form-data">
+          <button type="submit" name="remove_event" value=<?php echo $current_event;?>>Remove</button>
         </form>
       </td>
     </tr>
@@ -142,7 +141,7 @@ if (isset($_POST["submit_upload"])) {
       $result = exec_sql_query($db, $sql, $params);
       if ($result) {
         $file_id = $db->lastInsertId("id");
-        if (move_uploaded_file($upload_info["tmp_name"], BOX_UPLOADS_PATH . $file_id.".".$upload_ext)){
+        if (move_uploaded_file($upload_info["tmp_name"], BOX_EVENTS_PATH .$file_id.".".$upload_ext)){
           array_push($messages, "Your file has been uploaded.");
         }
       } else {
@@ -170,6 +169,24 @@ if (isset($_POST["submit_upload"])) {
 
 }
 
+if (isset($_POST["remove_event"])) {
+  $event_id_remove = $_POST["remove_event"];
+  $sql = "SELECT * from events where id is :id";
+  $params = array(":id" => $event_id_remove);
+  $result = exec_sql_query($db, $sql, $params)->fetchAll();
+  $file = $result[0];
+  $sql = "DELETE from events where id is :id";
+  $params = array(":id" => $event_id_remove);
+  $result = exec_sql_query($db, $sql, $params);
+  if ($result) {
+    $file_path = BOX_EVENTS_PATH.$file["id"].".".$file["image"];
+    $result = unlink($file_path);
+    if ($result) {
+      //echo "Success Remove the Painting";
+      $message = "Success Remove the Event";
+    }
+  }
+}
 
 $allevents =  exec_sql_query($db, "SELECT * FROM events", NULL)->fetchAll();
 
@@ -188,6 +205,7 @@ $allevents =  exec_sql_query($db, "SELECT * FROM events", NULL)->fetchAll();
 <?php
 include('includes/header.php');
 include('includes/sidebar.php');
+if ($current_user) {
 ?>
 
 <div class='event_form'>
@@ -243,6 +261,8 @@ include('includes/sidebar.php');
       print_events($allevents);
   ?>
 </div>
-<?php include('includes/footer.php')?>
+<?php
+}
+include('includes/footer.php')?>
 </body>
 </html>
