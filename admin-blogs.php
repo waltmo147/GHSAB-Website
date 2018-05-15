@@ -17,7 +17,6 @@ include('includes/sidebar.php');
 ?>
 <div class = 'blogs'>
 <?php
-echo "<a href='new_blog.php' class='edit_links'>add blog</a>";
 $sql = "SELECT * FROM blogs";
 $params = array();
 $blogs = exec_sql_query($db, $sql, $params)->fetchAll();
@@ -31,7 +30,7 @@ foreach($blogs as $blog){
       "</div>");
 
 }
-
+echo "<a href='new_blog.php' class='edit_links'>add blog</a>";
 ?>
 </div>
 <?php include('includes/footer.php')?>
