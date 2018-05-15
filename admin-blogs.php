@@ -21,7 +21,7 @@ echo "<a href='new_blog.php'>add blog</a>";
 $sql = "SELECT * FROM blogs";
 $params = array();
 $blogs = exec_sql_query($db, $sql, $params)->fetchAll();
-echo "<a href='new_blog.php' >New Blog</a>";
+//echo "<a href='new_blog.php' >New Blog</a>";
 foreach($blogs as $blog){
   echo("<div class = 'blogpost'>
       <h1>" . $blog['title'] . "</h1>
