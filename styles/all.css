@@ -3,11 +3,12 @@ body {
 }
 header {
   background-color: black;
-  height: 30px;
+  height: 40px;
+  padding-top: 10px;
   width:100%;
   margin-top: 0;
   top: 0;
-  color:white;
+  color: white;
 }
 footer {
   position: fixed;
@@ -35,6 +36,7 @@ ul {
 
 .headerh1{
   margin: 0;
+  margin-left: 10px;
 }
 #sidebar {
     /* height: 100%; */
@@ -58,6 +60,10 @@ ul {
 }
 #sidebar a:hover {
     color: #f1f1f1;
+}
+
+#sidebar img {
+  margin-left: 20px;
 }
 #current_page {
   color: blue!important;
@@ -174,7 +180,7 @@ img {
   text-align:center;
 }
 .loginform{
-  margin-left: 250px;
+  margin-left: 10px;
   padding-top: 5px;
 }
 
@@ -194,7 +200,7 @@ img {
 .loginform button, input[type=submit] {
     background-color: black;
     color: white;
-    padding: 12px 20px;
+    padding: 12px 15px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
@@ -270,7 +276,7 @@ td,th{
   border-top: 1px solid;
   text-align: center;
   padding: 10px;
-  width: 10%;
+  /* width: 100%; */
 }
 
 .blogs {
