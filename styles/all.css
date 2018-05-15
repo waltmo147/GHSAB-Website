@@ -72,14 +72,20 @@ ul {
 img {
   vertical-align: middle;
 }
-
+.indexbody {
+  margin: auto;
+  margin-left: 200px;
+  padding-bottom: 80px;
+}
+.indextext{
+  max-width: 1200px;
+}
 /* Slideshow container */
 .slideshow-container {
   max-width: 1200px;
   height: auto;
   position: relative;
-  margin: auto;
-  margin-left: 200px;
+  /* margin: auto; */
 }
 
 /* Next & previous buttons */
@@ -178,7 +184,7 @@ img {
   padding-top: 5px;
 }
 
-.loginform input[type=text], input[type=password], input[type=date] select, option, textarea {
+.loginform input[type=text], input[type=password], input[type=date] select, option {
     /* width: 100%; */
     padding: 5px;
     width: 250px;
