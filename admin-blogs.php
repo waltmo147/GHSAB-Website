@@ -17,7 +17,7 @@ include('includes/sidebar.php');
 ?>
 <div class = 'blogs'>
 <?php
-echo "<a href='new_blog.php'>add blog</a>";
+echo "<a href='new_blog.php' class='edit_links'>add blog</a>";
 $sql = "SELECT * FROM blogs";
 $params = array();
 $blogs = exec_sql_query($db, $sql, $params)->fetchAll();
@@ -27,7 +27,7 @@ foreach($blogs as $blog){
       <h1>" . $blog['title'] . "</h1>
       <p>" . $blog['blog'] . "</p>
       <h2> By " . $blog['author'] . "</h2>
-      <a href='delete.php?blog_id=".$blog['id']."'>Remove</a>".
+      <a class='edit_links' href='delete.php?blog_id=".$blog['id']."'>Remove</a>".
       "</div>");
 
 }

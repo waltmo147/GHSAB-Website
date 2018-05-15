@@ -1,5 +1,5 @@
 <?php include('includes/init.php');
-$current_page = "";
+$current_page = "Edit About Us";
 $preview = FALSE;
 if (isset($_POST["submit_upload"])) {
   $first_name = $_POST["first_name"];
@@ -70,6 +70,8 @@ include('includes/sidebar.php');
 ?>
 <div class='blogs'>
   <form class='loginform' id="uploadFile" action="new.php" method='post' enctype="multipart/form-data">
+    <fieldset>
+      <legend>Add member details</legend>
         <ul>
           <li>
             <label>Upload File:</label>
@@ -101,6 +103,7 @@ include('includes/sidebar.php');
             <button name="submit_upload" type="submit">Upload</button>
           </li>
         </ul>
+      </fieldset>
       </form>
       <?php print_messages();
             if($preview){

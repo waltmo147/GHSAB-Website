@@ -26,6 +26,7 @@ footer a {
   text-decoration: none;
   color: white;
 }
+
 footer a:hover {
     color: rgba(238, 188, 176, 0.93);
 }
@@ -284,9 +285,13 @@ td,th{
   margin-bottom: 70px;
 }
 .blogpost {
-  border-width: 2px;
-  border-color: black;
+  border-radius: 25px;
+  border: 2px solid black;
+  padding: 1em;
+  margin: 1em;
+  text-decoration: none;
 }
+
 
 #applyFORM {
   margin: auto;
@@ -312,4 +317,14 @@ td,th{
 }
 .block img:hover {
   opacity: .8;
+}
+.links {
+  text-decoration: none;
+}
+.edit_links {
+  text-decoration: none;
+  border-radius: 2px;
+  background-color: coral;
+  height: 50px;
+
 }

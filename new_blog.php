@@ -1,5 +1,5 @@
 <?php include('includes/init.php');
-$current_page = "";
+$current_page = "Edit Blogs";
 $show_preview=FALSE;
 if(isset($_POST['submit_blog'])){
   $title = filter_input(INPUT_POST, 'blog_title', FILTER_SANITIZE_STRING);

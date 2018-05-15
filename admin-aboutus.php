@@ -22,6 +22,7 @@ $current_page = "Edit About Us"?>
 </div>
 <div id='about_2'>
 <h3>Edit Members</h3>
+<a class='edit_links' href="new.php?add_member=true">Add new Member</a>
 <ul>
 <?php
       $sql = "SELECT member,first_name, last_name, introduction, email, picpath FROM (SELECT * FROM members join picliason on id = member) JOIN member_images on member_images.id = picture;";
@@ -31,13 +32,13 @@ $current_page = "Edit About Us"?>
         echo "<li>";
         echo "<h1>" . $record['first_name'] . " " . $record['last_name'] . "</h1>";
         echo "<img class='team_imgs' src=" . $record['picpath'] . ">";
-        echo "<a href='delete.php?member_id=".$record['member']."'>remove_member</a>";
+        echo "<a class='edit_links' href='delete.php?member_id=".$record['member']."'>remove_member</a>";
         //echo '<p>'.$record['introduction'].'</p>';
         echo "</li>";
 
       }
       ?>
-      <a href="new.php?add_member=true">Add new Member</a>
+
 </ul>
 
 </div>

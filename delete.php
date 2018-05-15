@@ -32,9 +32,9 @@ include('includes/sidebar.php');
 <?php
 print_messages();
 if($task=="remove_member"){
-  echo("<a href='aboutus.php'>preview</a>");
+  echo("<a class='edit_links' href='aboutus.php'>preview</a>");
 }elseif($task=="remove_blog"){
-  echo("<a href='blog.php'>Preview</a>");
+  echo("<a class='edit_links' href='blog.php'>preview</a>");
 }
 ?>
 <div>
