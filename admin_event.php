@@ -12,7 +12,7 @@ function print_events($events) {
       <th>Time</th>
       <th>Address</th>
       <th>Description</th>
-      <th>Application</th>
+      <th>Remove</th>
     </tr>
   <?php
   foreach ($events as $event) {
@@ -37,7 +37,7 @@ function print_events($events) {
       <td> <?php echo htmlspecialchars($event["address"]); ?> </td>
       <td> <?php echo htmlspecialchars($event["description"]); ?> </td>
       <td>
-        <form class='loginform' style="align-items:center">
+        <form class='loginform' method="post" action="admin_event.php" enctype="multipart/form-data">
           <button type="submit" name="remove_event" value=<?php echo $current_event;?>>Remove</button>
         </form>
       </td>
