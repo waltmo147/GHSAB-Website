@@ -94,9 +94,9 @@ include('includes/sidebar.php');
     <form class = "addtext" action="admin-home.php" method="post">
       <h2>Add New Text:</h2>
       <label>Title:</label>
-      <textarea cols = '20' rows = '2' name="title" name = "title"></textarea>
+      <textarea class = "simple" cols = '20' rows = '2' name="title" name = "title"></textarea>
       <label>Body:</label>
-      <textarea cols = '180' rows = '30' name="body" name = "body" ></textarea>
+      <textarea class = "simple" cols = '180' rows = '30' name="body" name = "body" ></textarea>
       <button name="addtext" type="submit" onclick="return confirm('Add new text?')">Add New Text</button>
     </form>
     <?php
@@ -112,9 +112,9 @@ include('includes/sidebar.php');
     ?>
     <form class = "edittext" action="admin-home.php" method="post">
       <label>Title:</label>
-      <textarea cols = '20' rows = '2' name="title" name = "title"><?php echo($title); ?></textarea>
+      <textarea class = "simple" cols = '20' rows = '2' name="title" name = "title"><?php echo($title); ?></textarea>
       <label>Body:</label>
-      <textarea cols = '180' rows = '30' name="body" name = "body" ><?php echo($body); ?></textarea>
+      <textarea class = "simple" cols = '180' rows = '30' name="body" name = "body" ><?php echo($body); ?></textarea>
       <input type="hidden" name="id" value="<?php echo($id); ?>"/>
       <button name="changetext" type="submit" onclick="return confirm('Are you satisfied with your changes?')">Submit Changes</button>
     </form>
