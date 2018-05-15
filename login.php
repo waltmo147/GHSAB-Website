@@ -4,7 +4,7 @@ include("includes/init.php");
 
 // declare the current location, utilized in header.php
 $current_page="login";
-include('includes/sidebar.php');
+
 // Set maximum file size for uploaded files.
 // MAX_FILE_SIZE must be set to bytes
 // 1 MB = 1000000 bytes
@@ -101,7 +101,10 @@ function printUploadForm() {
 </head>
 
 <body>
-  <?php include("includes/header.php");?>
+  <?php include("includes/header.php");
+  include('includes/sidebar.php');
+  ?>
+
 
   <div id="content-wrap">
     <h1>Log in</h1>

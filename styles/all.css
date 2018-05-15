@@ -3,11 +3,12 @@ body {
 }
 header {
   background-color: black;
-  height: 30px;
+  height: 40px;
+  padding-top: 10px;
   width:100%;
   margin-top: 0;
   top: 0;
-  color:white;
+  color: white;
 }
 footer {
   position: fixed;
@@ -35,6 +36,7 @@ ul {
 
 .headerh1{
   margin: 0;
+  margin-left: 10px;
 }
 #sidebar {
     /* height: 100%; */
@@ -58,6 +60,10 @@ ul {
 }
 #sidebar a:hover {
     color: #f1f1f1;
+}
+
+#sidebar img {
+  margin-left: 20px;
 }
 #current_page {
   color: blue!important;
