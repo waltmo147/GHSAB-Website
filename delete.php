@@ -3,8 +3,10 @@ $current_page = "";
 $task;
 if(isset($_GET['member_id'])){
   $task="remove_member";
+  //$pic_name = $_GET['pic_name'];
   $current_member = $_GET['member_id'];
   remove_member($current_member);
+
   record_message("removed member!");
 }elseif(isset($_GET['blog_id'])){
   $task="remove_blog";

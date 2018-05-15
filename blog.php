@@ -23,7 +23,7 @@ $blogs = exec_sql_query($db, $sql, $params)->fetchAll();
 foreach($blogs as $blog){
   echo("<div class='blogpost'>
 
-      <h1>" . $blog['title'] . "</h1>
+      <h1 class='blog_title'>" . $blog['title'] . "</h1>
       " . $blog['blog'] . "
       <h2> By " . $blog['author'] . "</h2>
 

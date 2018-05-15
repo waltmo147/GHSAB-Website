@@ -257,13 +257,19 @@ if ($current_user) {
 function remove_member($member_id){
   //check if this actually works!
   global $db;
-  $sql = "DELETE FROM member_images WHERE member_images.id=:member_id";
+  $sql = "SELECT * FROM member_images WHERE member_images.id=:member_id";
   $params = array('member_id' => $member_id);
+  $records = exec_sql_query($db, $sql,$params)->fetchAll();
+  //Not going to delete images from file path
+  //unlink($records[0]['picpath']);
+  $sql = "DELETE FROM member_images WHERE member_images.id=:member_id";
   exec_sql_query($db, $sql,$params);
   $sql1 = "DELETE FROM members WHERE members.id=:member_id";
   exec_sql_query($db,$sql1,$params);
   $sql1 = "DELETE FROM picliason WHERE member=:member_id";
   exec_sql_query($db,$sql1,$params);
+
+
   //don't forget to check!
 }
 function remove_blog($blog_id){

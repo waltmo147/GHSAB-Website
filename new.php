@@ -74,7 +74,7 @@ include('includes/sidebar.php');
       <legend>Add member details</legend>
         <ul>
           <li>
-            <label>Upload File:</label>
+            <label>Upload photo:</label>
             <!-- MAX_FILE_SIZE must precede the file input field -->
             <input type="hidden" name="MAX_FILE_SIZE" value="<?php echo MAX_FILE_SIZE; ?>" />
             <input type="file" name="box_file" required>

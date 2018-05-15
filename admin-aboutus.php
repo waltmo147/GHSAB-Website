@@ -32,10 +32,10 @@ $current_page = "Edit About Us"?>
         echo "<li>";
         echo "<h1>" . $record['first_name'] . " " . $record['last_name'] . "</h1>";
         echo "<img class='team_imgs' src=" . $record['picpath'] . ">";
+        //echo "<input name='pic_name' type='hidden' value=".$record['first_name']>;
         echo "<a class='edit_links' href='delete.php?member_id=".$record['member']."'>remove_member</a>";
         //echo '<p>'.$record['introduction'].'</p>';
-        echo "</li>";
-
+        echo "</li>"; 
       }
       ?>
 
