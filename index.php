@@ -14,7 +14,7 @@ $current_page = "Home";?>
 <?php include('includes/header.php');
 include('includes/sidebar.php');
 ?>
-
+<div class = "indexbody">
 <div class="slideshow-container">
 
 <?php
@@ -43,6 +43,23 @@ foreach($pictures as $picture){
     echo("<span class='dot' onclick='gotoslide($j)'></span>");
     $j+=1;
   }?>
+</div>
+</div>
+<div class = "indextext">
+  <?php
+    $sql = "SELECT * FROM maindescription";
+    $params = array();
+    $text = exec_sql_query($db,$sql,$params)->fetchAll();
+    foreach($text as $bodyelement){
+      $title = $bodyelement['title'];
+      $body = $bodyelement['body'];
+      $body = explode(PHP_EOL, $body);
+      echo("<h1>$title</h1>");
+      foreach($body as $par){
+        echo("<p>$par</p>");
+      }
+    }
+  ?>
 </div>
 </div>
 <br>

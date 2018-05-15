@@ -1,4 +1,7 @@
 <?php include('includes/init.php');
+if($current_user == NULL){
+  header('location: index.php');
+}
 $current_page = "Edit Slides";?>
 <!DOCTYPE html>
 <html>
@@ -10,9 +13,6 @@ $current_page = "Edit Slides";?>
   <title>Home</title>
 </head>
 <?php
-if($current_user == NULL){
-  header('location: index.php');
-}
 
 if(isset($_POST['deletepic'])){
   $sql = "DELETE FROM slideshow WHERE id = :id AND title = :title;";
@@ -51,7 +51,7 @@ if(isset($_POST["upload"])){
 <?php include('includes/header.php');
 include('includes/sidebar.php');
 ?>
-<div class = "slideshow-container">
+<div class = "indexbody">
 <?php
 $sql = "SELECT * FROM slideshow";
 $params = array();
