@@ -65,9 +65,6 @@ foreach($pictures as $picture){
   <input type="hidden" name="pictitle" value="<?php echo($title); ?>"/>
   <input type="hidden" name="picpath" value="<?php echo($path); ?>"/>
   <input type="hidden" name="deletepic" value="deletepic"/>
-  <?php
-  echo("<a href = 'alltags.php?tag=$tag'>$tag</a>");
-  ?>
   <button onclick="return confirm('Are you sure you want to delete this picture?')" >Delete</button>
   </form>
   </div>
