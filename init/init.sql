@@ -52,6 +52,12 @@ CREATE TABLE blogs (
   blog TEXT NOT NULL,
   author TEXT
 );
+
+CREATE TABLE maindescription (
+  id INTEGER PRIMARY KEY NOT NULL,
+  title TEXT UNIQUE NOT NULL,
+  body TEXT NOT NULL
+);
 /* members data */
 INSERT INTO members (first_name,last_name,introduction,email) VALUES ('michael', 'schrute','admin is the president of the club.....etc','admin@cornell.edu');
 INSERT INTO members (first_name,last_name,introduction,email) VALUES ('james', 'Bond','James Bond is the muscle of the club.....etc','admin3@cornell.edu');
@@ -83,3 +89,4 @@ INSERT INTO blogs (title, blog, author) VALUES ('World Health', 'This is a sampl
 Suspendisse id molestie velit. Donec faucibus interdum finibus. Nullam ac varius eros. Nunc aliquet placerat sapien a aliquet. Pellentesque porttitor a dui sed tincidunt. Quisque orci ipsum, facilisis laoreet volutpat aliquet, finibus et velit. Aenean bibendum imperdiet odio, sit amet tristique est congue non. Praesent molestie augue dolor. Integer erat elit, laoreet in consequat vitae, vulputate sit amet nulla. In quam est, ultricies vitae leo at, lacinia feugiat velit.
 
 Nulla sed fringilla eros. Vestibulum dignissim dolor ac arcu porta, vel accumsan libero ullamcorper. In ornare, felis a faucibus facilisis, eros arcu interdum nisi, sit amet lobortis eros tellus eget leo. Etiam ac vulputate dolor. Vivamus vel sollicitudin tellus. Integer volutpat velit justo, vel finibus metus aliquet id. Integer eu magna pellentesque, tincidunt enim et, iaculis quam. Proin facilisis ante at urna mollis, et hendrerit erat cursus. Suspendisse potenti. Ut non congue nisi. Nullam euismod suscipit dignissim. Proin sagittis libero id sem molestie, cursus rhoncus quam dictum. Nunc auctor magna suscipit commodo sollicitudin. Integer malesuada congue mollis.', 'A.D. White');
+INSERT INTO maindescription (title, body) VALUES ('Generic Title', 'Hello everyone, we are the Global Student Health Advisory Board. We are a board that advises students about health around the globe.');
