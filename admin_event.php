@@ -203,9 +203,9 @@ $allevents =  exec_sql_query($db, "SELECT * FROM events", NULL)->fetchAll();
 
 <body>
 <?php
+if ($current_user) {
 include('includes/header.php');
 include('includes/sidebar.php');
-if ($current_user) {
 ?>
 
 <div class='event_form'>
@@ -264,7 +264,8 @@ if ($current_user) {
   ?>
 </div>
 <?php
+include('includes/footer.php');
 }
-include('includes/footer.php')?>
+?>
 </body>
 </html>
