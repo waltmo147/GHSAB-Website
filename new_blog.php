@@ -28,7 +28,7 @@ if(isset($_POST['submit_blog'])){
       ?>
 
 <div id='about_2'>
-<h3>Our Members</h3>
+<h3>Add new blog</h3>
 <form method='post' name='new_blog' action='new_blog.php'>
   <ul>
       <li>Title:
