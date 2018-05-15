@@ -10,6 +10,10 @@ $current_page = "Edit Slides";?>
   <title>Home</title>
 </head>
 <?php
+if($current_user == NULL){
+  header('location: index.php');
+}
+
 if(isset($_POST['deletepic'])){
   $sql = "DELETE FROM slideshow WHERE id = :id AND title = :title;";
   $id = $_POST['picid'];
