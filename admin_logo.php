@@ -44,12 +44,15 @@ if (isset($_POST["submit_upload"])) {
 </head>
 
 <body>
-<?php include('includes/header.php');
+<?php
+if ($current_user) {
+include('includes/header.php');
 include('includes/sidebar.php');
+
 ?>
 
 <div class="content">
-  <form id="uploadFile" action="admin_logo.php" method="post" enctype="multipart/form-data">
+  <form id="adminlogo" action="admin_logo.php" method="post" enctype="multipart/form-data">
 
   <?php
   print_messages();
@@ -79,5 +82,8 @@ include('includes/sidebar.php');
 
 
 </body>
-<?php include('includes/footer.php'); ?>
+<?php
+include('includes/footer.php');
+}
+?>
 </html>

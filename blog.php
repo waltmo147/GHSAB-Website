@@ -21,10 +21,12 @@ $sql = "SELECT * FROM blogs";
 $params = array();
 $blogs = exec_sql_query($db, $sql, $params)->fetchAll();
 foreach($blogs as $blog){
-  echo("<div class = 'blogpost'>
+  echo("<div class='blogpost'>
+
       <h1>" . $blog['title'] . "</h1>
-      <p>" . $blog['blog'] . "</p>
+      " . $blog['blog'] . "
       <h2> By " . $blog['author'] . "</h2>
+
       </div>");
 }
 

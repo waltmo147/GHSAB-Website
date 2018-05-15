@@ -1,13 +1,16 @@
 body {
   margin:0;
+  font-family: Verdana, Geneva, sans-serif;
+  /* padding-bottom: 70px; */
 }
 header {
   background-color: black;
-  height: 30px;
+  height: 40px;
+  padding-top: 10px;
   width:100%;
   margin-top: 0;
   top: 0;
-  color:white;
+  color: white;
 }
 footer {
   position: fixed;
@@ -25,6 +28,7 @@ footer a {
   text-decoration: none;
   color: white;
 }
+
 footer a:hover {
     color: rgba(238, 188, 176, 0.93);
 }
@@ -35,6 +39,7 @@ ul {
 
 .headerh1{
   margin: 0;
+  margin-left: 10px;
 }
 #sidebar {
     /* height: 100%; */
@@ -59,6 +64,10 @@ ul {
 #sidebar a:hover {
     color: #f1f1f1;
 }
+
+#sidebar img {
+  margin-left: 20px;
+}
 #current_page {
   color: blue!important;
 }
@@ -66,6 +75,11 @@ ul {
 #mainslideshow {
   box-sizing: border-box;
 }
+
+#adminlogo li{
+  margin: 10px;
+}
+
 .mySlides {
   display: inline-block;
 }
@@ -184,10 +198,20 @@ img {
   padding-top: 5px;
 }
 
+<<<<<<< HEAD
 .loginform input[type=text], input[type=password], input[type=date] select, option {
+=======
+.eventform{
+  margin-left: 250px;
+  padding-top: 5px;
+  width: 520px;
+}
+
+.loginform input[type=text], input[type=password], select, option {
+>>>>>>> 560cd54f39c4255cc03c5b4573e2e1ac8e1dab1a
     /* width: 100%; */
     padding: 5px;
-    width: 250px;
+    width: 200px;
     /* border: 1px solid #ccc; */
     border: 1px solid;
     border-radius: 4px;
@@ -197,7 +221,40 @@ img {
     resize: vertical;
 }
 
-.loginform button, input[type=submit] {
+input[type=date], input[type=time] {
+  padding: 5px;
+  width: 198px;
+  /* border: 1px solid #ccc; */
+  border: 1px solid;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  resize: vertical;
+}
+
+.eventform input[type=text], select, option, textarea {
+    /* width: 100%; */
+    padding: 5px;
+
+    width: 400px;
+    /* border: 1px solid #ccc; */
+    border: 1px solid;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    resize: vertical;
+}
+
+.eventform input[type=file] {
+    padding: 10px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button, input[type=submit] {
     background-color: black;
     color: white;
     padding: 12px 15px;
@@ -257,8 +314,9 @@ div.content {
 .event_form {
   padding-left: 0;
   padding-right: 80px;
-  padding-bottom: 70px;
+  padding-bottom: 0px;
   padding-top: 50px;
+  /* width: 600px; */
 }
 
 /* Table Stylings */
@@ -283,9 +341,29 @@ td,th{
   margin-left: 250px;
   margin-bottom: 70px;
 }
+.blogpost {
+  border-radius: 25px;
+  border: 2px solid black;
+  padding: 1em;
+  margin: 1em;
+  text-decoration: none;
+}
+
 
 #applyFORM {
   margin: auto;
+
+    width: 60%;
+
+    border: 3px solid red;
+    padding: 10px;
+    margin-bottom: 64px;
+}
+
+#resumeText {
+height: 200px;
+width: 500px;
+
     width: 40%;
 
     border: 3px solid red;
@@ -308,4 +386,15 @@ td,th{
 }
 .block img:hover {
   opacity: .8;
+
+}
+.links {
+  text-decoration: none;
+}
+.edit_links {
+  text-decoration: none;
+  border-radius: 2px;
+  background-color: coral;
+  height: 50px;
+
 }

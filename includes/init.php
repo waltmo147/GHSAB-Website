@@ -4,13 +4,11 @@ const BOX_EVENTS_PATH = "uploads/events/";
 
 $pages = array("Home" => "index.php",
                "Events" => "events.php",
-               "Applications" => "application.php",
                "Blog" => "blog.php",
                "About Us" => "aboutus.php",
                "Join Our Team" => "apply.php");
 $adminpages = array("Home" => "index.php",
                     "Events" => "events.php",
-                    "Applications" => "applications.php",
                     "Blog" => "blog.php",
                     "About Us" => "aboutus.php",
                     "Edit Home Texts" => "admin-home.php",

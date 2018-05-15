@@ -12,7 +12,7 @@ function print_events($events) {
       <th>Time</th>
       <th>Address</th>
       <th>Description</th>
-      <th>Application</th>
+      <th>Remove</th>
     </tr>
   <?php
   foreach ($events as $event) {
@@ -37,7 +37,7 @@ function print_events($events) {
       <td> <?php echo htmlspecialchars($event["address"]); ?> </td>
       <td> <?php echo htmlspecialchars($event["description"]); ?> </td>
       <td>
-        <form class='loginform' style="align-items:center">
+        <form class='loginform' method="post" action="admin_event.php" enctype="multipart/form-data">
           <button type="submit" name="remove_event" value=<?php echo $current_event;?>>Remove</button>
         </form>
       </td>
@@ -203,15 +203,15 @@ $allevents =  exec_sql_query($db, "SELECT * FROM events", NULL)->fetchAll();
 
 <body>
 <?php
+if ($current_user) {
 include('includes/header.php');
 include('includes/sidebar.php');
-if ($current_user) {
 ?>
 
 <div class='event_form'>
 
 
-  <form class='loginform' method="post" action="admin_event.php" enctype="multipart/form-data">
+  <form class='eventform' method="post" action="admin_event.php" enctype="multipart/form-data">
     <fieldset>
       <legend>Event form</legend>
       <?php print_messages(); ?>
@@ -237,6 +237,8 @@ if ($current_user) {
         </li>
         <li>
           <label>Upload Image:</label>
+        </li>
+        <li>
         <!-- MAX_FILE_SIZE must precede the file input field -->
           <input type="hidden" name="MAX_FILE_SIZE" value="<?php echo MAX_FILE_SIZE; ?>" />
           <input type="file" name="box_file" >
@@ -262,7 +264,8 @@ if ($current_user) {
   ?>
 </div>
 <?php
+include('includes/footer.php');
 }
-include('includes/footer.php')?>
+?>
 </body>
 </html>

@@ -1,7 +1,7 @@
 <?php include('includes/init.php');
 
 
-$current_page = 'Events';
+$current_page = "Join Our Team";
 
 $showForm = TRUE;
 
@@ -27,6 +27,12 @@ if(isset($_POST['sendEmail'])){
 //
 //
 
+
+
+
+
+
+
             $upload_infoResume = $_FILES["resume"];
             $upload_infoCoverLetter = $_FILES["coverLetter"];
 
@@ -42,6 +48,10 @@ if(isset($_POST['sendEmail'])){
 
 
 // $message = wordwrap($message, 70, "\r\n");
+
+
+
+
 
           //UNCOMMENT THIS , THIS IS THE REAL STUFF
           $bodytext = "An application has been submitted by: $applicantFirstName $lastName \r\n Applicant's Phone Number: $phoneNumber \r\n Applicant's Email Address: $emailAddress \r\n Applicant's documents are attached below";
@@ -114,6 +124,36 @@ include('includes/sidebar.php');
 
 <?php if($showForm){    ?>
   <form id="submitApplication" action="apply.php" method="post" enctype="multipart/form-data">
+          <label> The Global Health Student Advisory Board (GHSAB) is a diverse group of dedicated, enthusiastic and innovative upperclassmen that represents the Global Health Program and assists with overall program development.  As Global Health Student Advisors, students work 2-3 hours per week on the development of Global Health programs, including: </label>
+          <br>
+          <br>
+
+
+          <label> I. Organizing information sessions and other means of communicating various programs, </label>
+
+          <br>
+
+          <label> II. A Cornell Global Health Case Competition, and Experiential Learning Symposium </label>
+          <br>
+
+          <label> III. Standardized criterion for evaluating Independent Field Experience opportunities, and </label>
+          <br>
+          <label> IV. Organizing Global Health related workshops and various events. </label>
+          <br>
+          <br>
+          <label> Please note that this list is just a sample. As a Global Health Student Advisor, you could work on all of these projects and more, including project ideas you come up with yourself! </label>
+          <br>
+          <br>
+          <label> If you are interested in applying, please submit the following application by Monday, April 10 at 11:59 pm. </label>
+          <br>
+          <br>
+          <label> Thank you for your interest! </label>
+          <br>
+          <label> For more information, contact Tatyana Roberts (tdr37), Global Health Program Fellow. </label>
+          <br>
+          <label> For questions, or issues with application submission, contact Katharine-Grace Norris (kn293). </label>
+          <br>
+          <br>
 
 
             First name:
@@ -123,20 +163,102 @@ include('includes/sidebar.php');
             Last name:
             <input type="text" name="lastName" required>
             <br>
-            Email address:
-            <input type="text" name="emailAddress" required>
-            <br>
             Phone Number:
             <input type="text" name="phoneNumber" required>
             <br>
+
+            NetID:
+            <input type="text" name="emailAddress" required>
+            <br>
+
+
+            College:
+            <input type="text" name="college" required>
+            <br>
+
+            Major:
+            <input type="text" name="major" required>
+            <br>
+
+            Year (ex. Junior):
+            <input type="text" name="year" required>
+            <br>
+            Field Experience Location. Note: Students who have not yet completed their Field Experience (but plan to during Summer 2017) are welcome to apply. However, final acceptance to the GHSAB is contingent upon successful completion of a Field Experience.
+            <input type="text" name="fieldLocation" required>
+            <br>
+            Program/Organization:
+            <input type="text" name="program" required>
+            <br>
+            <br>
+
+            What is your current extracurricular involvement? Please list and indicate approximate time commitment.
+            <textarea name="extracurricular" rows="10" cols="30" required> </textarea>
+            <br>
+            <br>
+
+            What skills (i.e. computer programming, graphic design, etc.) have you developed that would benefit the Global Health Student Advisory Board?  Response should be 150 words or less.
+            <br>
+            <textarea name="applicantSkills" rows="10" cols="30" maxlength="150"> </textarea>
+            <br>
+            <br>
+
+
+            What skills would you like to develop through being a member of the Global Health Student Advisory Board?  Please briefly explain.  Response should be 150 words or less.
+            <br>
+            <textarea name="learnSkills" rows="10" cols="30" maxlength="150"> </textarea>
+
+            <br>
+            <br>
+
+
+
+
+            Personal Statement: Why are you interested in representing the Global Health Program and assisting with its development?  In your response, please describe your experiences in the Global Health Program and how they have shaped your Cornell experience and/or your career goals.  Responses should be 500 words or less.
+            <br>
+            <textarea name="applicantStatement" rows="10" cols="30" maxlength="500"> </textarea>
+
+            <br>
+            <br>
+
+
+
+            <!-- <br>
             <input type="hidden" name="MAX_FILE_SIZE" value="<?php echo MAX_FILE_SIZE;?>" />
             <label> Upload Resume: </label>
             <input type="file" name="resume" required>
             <br>
             <input type="hidden" name="MAX_FILE_SIZE" value="<?php echo MAX_FILE_SIZE;?>" />
             <label> Upload Cover Letter: </label>
-            <input type="file" name="coverLetter" required>
+            <input type="file" name="coverLetter" required> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             <br>
+
+
+
+
+
+
+
+            <label> Copy and Paste Resume Text Below: </label>
+            <br>
+            <textarea name="resumeText" rows="10" cols="30" required> </textarea>
+            <br>
+
+
+
             <br>
 
             <button name="sendEmail" type="submit">Submit!</button>

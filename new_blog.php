@@ -1,5 +1,5 @@
 <?php include('includes/init.php');
-$current_page = "";
+$current_page = "Edit Blogs";
 $show_preview=FALSE;
 if(isset($_POST['submit_blog'])){
   $title = filter_input(INPUT_POST, 'blog_title', FILTER_SANITIZE_STRING);
@@ -28,8 +28,10 @@ if(isset($_POST['submit_blog'])){
       ?>
 
 <div id='about_2'>
-<h3>Add new blog</h3>
+
 <form method='post' name='new_blog' action='new_blog.php'>
+  <fieldset>
+  <legend>Add new blog</legend>
   <ul>
       <li>Title:
         <input type='text' name='blog_title' required>
@@ -45,6 +47,7 @@ if(isset($_POST['submit_blog'])){
       </li>
       <input type='submit' name='submit_blog'>
   </ul>
+</fieldset>
 </form>
 <?php print_messages();
   if($show_preview){

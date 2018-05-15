@@ -1,5 +1,5 @@
 <?php include('includes/init.php');
-$current_page = "Events";
+$current_page = "Applications";
 $current_event_id = filter_input(INPUT_GET, "event_id", FILTER_VALIDATE_INT);
 //get all events
 $current_event =  exec_sql_query($db, "SELECT * FROM events where id is :event_id", NULL)->fetchAll();
