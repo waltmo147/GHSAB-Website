@@ -11,7 +11,10 @@
 /pictures/*
 !/events/
 /events/*
+!/logo/
+/logo/*
 !/events/logo.png
+!/logo/logo.png
 
 # Tell Git to NOT ignore your EACH seed file in your your upload folders.
 !/box/1.pdf
