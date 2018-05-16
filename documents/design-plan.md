@@ -1176,6 +1176,8 @@ Users can view the home, event, blog and about us page. User can also apply to j
 
 [2. Tell us about things that don't work, what you wanted to implement, or what you would do if you keep working with the client in the future. Give justifications.]
 
+If the client (a group of Cornell students) had more time, we would request more data from them. The client was incredibly slow in getting data (text descriptions and images) to us, so some of the displayed data is placeholder seed data.
+
 [3. Tell us anything else you need us to know for when we're looking at the project.]
 
 Below is a screenshot of a user application to the organization. The user fills out a form, then we format the text in a readable way before finally calling PHP's mail() function.
