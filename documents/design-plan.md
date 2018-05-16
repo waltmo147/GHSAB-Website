@@ -461,6 +461,8 @@ Action # [5] : **admin logs out**
     - Abby will see feedback regarding whether or not she was successfully logged out
 
 #### Task 3 - Cognitive Walkthrough
+**Task : Delete Blog**
+
 Subgoal #1: *login as admin*
 
   - Will Abby have formed this sub-goal as a step to their overall goal?
@@ -1010,85 +1012,15 @@ Task 2: administrator wants to add an event
   8. seeing feedback and does not submit again (if the submission was successful)
   9. admin logs out
 
-Task 3: administrator wants to delete an event
+Task 3: administrator wants to delete a blog
   1. they add "login.php" to the website path and hit enter
   2. admin inputs credentials
   3. press login
-  4. scroll down to the event list
-  5. find the specific event
-  6. click the delete button of that specific event
-  7. seeing the refresh of the page see if the event is deleted
+  4. scroll down to the edit blogs
+  5. find the specific blog
+  6. click the delete button of that specific blog
+  7. seeing the refresh of the page see if the blog is deleted
   8. admin logs out
-
-Task 4: administrator wants to delete a blog post
-  1. they add "login.php" to the website path and hit enter
-  2. admin inputs credentials
-  3. press login
-  4. click on the blog nav element
-  5. admin selects the blog post(s) they would like to be deleted
-  6. admin clicks on "delete blog post"
-  7. admin sees feedback and does not attempt to delete again (if the deletion was successful)
-  8. admin logs out
-
-Task 5: administrator wants to add a blog post
-
-  1. they add "login.php" to the website path and hit enter
-  2. admin inputs credentials
-  3. press login
-  4. click on the blog nav element
-  5. admin fill out the blog form
-  6. admin clicks on "add" button
-  7. admin sees feedback that blog is submitted
-  8. admin goes to blog page and check the submission
-  9. admin logs out
-
-Task 6: administrator wants to change the club logo
-
-  1. admin add "login.php" to the website path and hit enter
-  2. admin inputs credentials
-  3. press login
-  4. click on the edit logo in the side bar
-  5. admin uploads new logo image
-  6. admin clicks on "submit" button
-  7. admin sees feedback that new logo is submitted
-  8. admin see the logo change in the sidebar
-  9. admin logs out
-
-Task 6: administrator wants to edit the home page texts
-
-  1. admin add "login.php" to the website path and hit enter
-  2. admin inputs credentials
-  3. press login
-  4. click on the edit home texts in the side bar
-  5. admin fill in the text forms
-  6. admin clicks on "submit" button of the text form he/she would like to edit
-  7. admin goes to the home page to see if the change goes as supposed
-  8. admin logs out
-
-Task 7: administrator wants to edit the slide show in the home page
-
-  1. admin add "login.php" to the website path and hit enter
-  2. admin inputs credentials
-  3. press login
-  4. click on the edit slides in the side bar
-  5. admin click the delete button of the current pictures shown on the slide that would like to be deleted
-  6. admin upload new image files
-  7. admin click the upload button
-  8. admin goes to the home page to see if the change goes as supposed
-  9. admin logs out
-
-Task 7: administrator wants to edit the about us page
-
-  1. admin add "login.php" to the website path and hit enter
-  2. admin inputs credentials
-  3. press login
-  4. click on the edit slides in the side bar
-  5. admin click the delete button of the current member would like to be deleted
-  6. admin edit the text of each current members
-  7. admin click add new member
-  8. admin fill in the new member info in the forms
-  9. admin goes to the about us page to see if the changes are as supposed
-  10. admin logs out
 
 #### Task 1 Cognitive walkthrough
   Task: **Apply to program**
@@ -1314,7 +1246,7 @@ Task 7: administrator wants to edit the about us page
           - Yes, maybe or no: yes
           - Why? This is her main task, so yes.
 
-      Action #1 : click on Blog link
+      Action #1 : click on edit Blogs link
 
         - Will Abby know what to do at this step?
           - Yes, maybe or no: yes
@@ -1324,41 +1256,20 @@ Task 7: administrator wants to edit the about us page
           - Yes, maybe or no: yes
           - Why? She will have navigated to the administrator blog page and will be able to see EDIT BLOGS in the header of the page
 
-      Action #2 : click on Delete tab
+      Action #2 : click on Delete for blog
 
         - Will Abby know what to do at this step?
           - Yes, maybe or no: yes
         - Why?
-          - Because if she wants to delete something, it makes sense to go to the delete tab
+          - Because if she wants to delete something, it makes sense to go to the delete button for that blog
 
         - If Abby does the right thing, will she know that she did the right thing, and is making progress towards her goal?
           - Yes, maybe or no: yes
         - Why?
-          - She will have navigated to the page to delete blogs. she will see a list of blogs and know that she has arrived at the right page, and the header will have the title of the page.
+          - She will no longer see the deleted blog
 
-      Action #3 : click on specific blog post
 
-        - Will Abby know what to do at this step?
-          - Yes, maybe or no: yes
-        - Why?
-          - Because if she wants to delete a specific blog post, she should click on the blog post that she wants to delete
 
-        - If Abby does the right thing, will she know that she did the right thing, and is making progress towards her goal?
-          - Yes, maybe or no: yes
-        - Why?
-          - She will be redirected to another page clearly telling her that she is about to delete a blog post
-
-      Action #4 : click delete
-
-        - Will Abby know what to do at this step?
-          - Yes, maybe or no: yes
-        - Why?
-          - Abby knows that to delete something, she needs to press delete
-
-        - If Abby does the right thing, will she know that she did the right thing, and is making progress towards her goal?
-          - Yes, maybe or no: yes
-        - Why?
-          - A pop up window asking her to confirm her deletion will appear, to which she'll click yes and be redirected back to the main delete page which will display a message telling her that the blog post has been deleted.
 
 
 
