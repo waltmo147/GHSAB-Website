@@ -1252,6 +1252,8 @@ Task 7: administrator wants to edit the about us page
 
 [Did you discover any issues with your design? What were they? How did you change your design to address the gender-inclusiveness bugs you discovered?]
 
+We reduced the number of steps to delete a blog by adding delete buttons under each of the blogs. We realized that the initial design had a lot of steps which might be confusing for Abby.
+
 [Your responses here should be very thorough and thoughtful.]
 
 Users can view the home, event, blog and about us page. User can also apply to join the team. The admin can successfully add or delete blog, events, edit the home page, edit the club logo, edit the about us page, edit the slide show in the home page and view all the other pages.
