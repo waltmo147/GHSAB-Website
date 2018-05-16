@@ -70,7 +70,7 @@ include('includes/sidebar.php');
 ?>
 <div class='blogs'>
   <form class='loginform' id="uploadFile" action="new.php" method='post' enctype="multipart/form-data">
-    <fieldset>
+    <fieldset class='new_inputs'>
       <legend>Add member details</legend>
         <ul>
           <li>
