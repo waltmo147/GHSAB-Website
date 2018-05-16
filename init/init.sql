@@ -67,11 +67,15 @@ INSERT INTO members (first_name,last_name,introduction,email) VALUES ('Juliet', 
 
 
 /*member images data*/
-INSERT INTO member_images (image_name,picpath) VALUES ('admin_pic','uploads/pictures/camel.jpg');
-INSERT INTO member_images (image_name,picpath) VALUES ('james_pic','uploads/pictures/felted-sheep.jpg');
+INSERT INTO member_images (image_name,picpath) VALUES ('Annika','uploads/pictures/icon.png');
+INSERT INTO member_images (image_name,picpath) VALUES ('Talia','uploads/pictures/icon.png');
+INSERT INTO member_images (image_name,picpath) VALUES ('Jenny','uploads/pictures/icon.png');
+INSERT INTO member_images (image_name,picpath) VALUES ('Juliet','uploads/pictures/icon.png');
 
-INSERT INTO picliason (member, picture) VALUES ((SELECT id FROM members WHERE first_name = 'Annika'),(SELECT id FROM member_images WHERE image_name = 'admin_pic'));
-INSERT INTO picliason (member, picture) VALUES ((SELECT id FROM members WHERE first_name = 'Talia'),(SELECT id FROM member_images WHERE image_name = 'james_pic'));
+INSERT INTO picliason (member, picture) VALUES ((SELECT id FROM members WHERE first_name = 'Annika'),(SELECT id FROM member_images WHERE image_name = 'Annika'));
+INSERT INTO picliason (member, picture) VALUES ((SELECT id FROM members WHERE first_name = 'Talia'),(SELECT id FROM member_images WHERE image_name = 'Talia'));
+INSERT INTO picliason (member, picture) VALUES ((SELECT id FROM members WHERE first_name = 'Jenny'),(SELECT id FROM member_images WHERE image_name = 'Jenny'));
+INSERT INTO picliason (member, picture) VALUES ((SELECT id FROM members WHERE first_name = 'Juliet'),(SELECT id FROM member_images WHERE image_name = 'Juliet'));
 
 -- password is "good" for user 'admin'
 INSERT INTO admin (username, password) VALUES ('admin', '$2y$10$i41U0Al7AUAQFIAeoi0NH.1Aykum/Hf3vScM.zt1pQKcKHDSPlm0e');

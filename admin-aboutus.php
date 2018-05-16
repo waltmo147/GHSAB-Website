@@ -119,18 +119,20 @@ include('includes/sidebar.php');?>
           <?php
         }?>
         <form class = "addmember" action="admin-aboutus.php" method="post"  enctype="multipart/form-data">
-          <h2>Add New Member:</h2>
-          <label>First Name:</label>
-          <input type = "text" name = "fname" required>
-          <label>Last Name:</label>
-          <input type = "text" name= "lname" required>
-          <label>Description:</label>
-          <textarea class = "simple" cols = '100' rows = '10' name="description" required></textarea>
-          <label>Email:</label>
-          <input type = "email" name = "email" required>
-          <label>Upload Picture:</label>
-          <input type="file" name="upic" required>
-          <button name="addmember" type="submit">Add New Member</button>
+          <ul>
+          <li><h2>Add New Member:</h2></li>
+          <li><label>First Name:</label></li>
+          <li><input type = "text" name = "fname" required></li>
+          <li><label>Last Name:</label></li>
+          <li><input type = "text" name= "lname" required></li>
+          <li><label>Description:</label></li>
+          <li><textarea class = "simple" cols = '100' rows = '10' name="description" required></textarea></li>
+          <li><label>Email:</label></li>
+          <li><input type = "email" name = "email" required></li>
+          <li><label>Upload Picture:</label></li>
+          <li><input type="file" name="upic" required></li>
+          <li><button name="addmember" type="submit">Add New Member</button></li>
+          </ul>
         </form>
         <?php
       }

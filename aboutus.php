@@ -27,7 +27,7 @@ $current_page = "About Us"?>
         echo "<h1>" . htmlspecialchars($record['first_name']) . " " . htmlspecialchars($record['last_name']) . "</h1>";
         echo "<img class='team_imgs' src=" . htmlspecialchars($record['picpath']) . " alt=' '>";
         echo '<p class="intros">'.htmlspecialchars($record['introduction']).'</p>';
-        echo '<strong>'.htmlspecialchars($record['email']).'</strong>';
+        echo '<strong><a href="mailto:'.htmlspecialchars($record['email']).'">'.htmlspecialchars($record['email']).'</a></strong>';
         echo "</li>";
       }
       ?>
