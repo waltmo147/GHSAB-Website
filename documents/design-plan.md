@@ -1236,16 +1236,33 @@ Users can view the home, event, blog and about us page. User can also apply to j
 
 [Describe in some detail what the client will do (or would have to do) in order to make this website go live. What is the deployment plan?]
 
-Must convert sqlite into a deployment ready SQL
+If the client decides to pursue deployment on their own then they need to do some research into deploying and setting up a domain name. The internet offers a ton of tutorials, one that I thought was definitely useful and straightforward is: https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/Publishing_your_website
+
+If the client decides to have our group deploy the website, then we would first convert the sqlite database and queries into a deployment ready SQL database such as MySQL or Postgresql. Next we would choose from the variety of hosts such as Google Cloud, Microsoft Azure, Amazon Web Services, or Heroku. Since we are familiar with Heroku we would likely choose this.
+First, CD into the project directory
+type "heroku login" then login using the credentials
+"heroku create" to add the project as a Git remote
+check to see it was added using "git remote -V"
+make sure .gitignore and dependencies are handled properly before deploying
+finally execute these four commands
+"git add -A"
+"git commit -m 'deplying to heroku webserver'"
+"git push"
+"git push heroku master"
+to see the live website "heroku open"
+
+We would then discuss the hardware needs for the client, specifically how much traffic they expect to get per month along with the amount of money they are willing to spend on hosting this website
 
 [Include any other information that your client needs to know about your final website design. For example, what client wants or needs were unable to be realized in your final product? Why were you unable to meet those wants/needs?]
+
+To login as an admin, you must add "/login.php" to the end of the websites url like this "https://www.EXAMPLE.com/login.php" then login with the credentials provided to you. If the client needs assistance with this we would of course walk them through everything to get them familiar with the admin side of the site. In the current form of the website, applications should ideally be sent with a PDF copy of the applicant's resume. Since we were not able to use external php libraries, the current application page has the applicant simply copy/paste the text from their resume into the form. A php library that easily solves this problem is called PHPMailer. The client should also delete some of the placeholder data that we used for testing purposes.
 
 ## Milestone 5: Final Notes to the Graders
 
 [1. Give us three specific strengths of your site that sets it apart from the previous website of the client (if applicable) and/or from other websites. Think of this as your chance to argue for the things you did really well.]
 1. Our website gives the admin the ability to easily edit text and images
 2. Our website has a slideshow that looks good
-3. 
+3.
 
 [2. Tell us about things that don't work, what you wanted to implement, or what you would do if you keep working with the client in the future. Give justifications.]
 
