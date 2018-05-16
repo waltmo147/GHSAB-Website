@@ -1247,4 +1247,6 @@ Users can view the home, event, blog and about us page. User can also apply to j
 [3. Tell us anything else you need us to know for when we're looking at the project.]
 
 Below is a screenshot of a user application to the organization. The user fills out a form, then we format the text in a readable way before finally calling PHP's mail() function.
-![](IMGEEMAIL.png)
+
+
+![](IMGEMAIL.png)
