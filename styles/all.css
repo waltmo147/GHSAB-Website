@@ -420,10 +420,13 @@ td .apply {
   text-decoration: none;
 }
 .edit_links {
+  background-color: black;
+  color: white;
+  padding: 12px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
   text-decoration: none;
-  border-radius: 2px;
-  background-color: coral;
-  height: 50px;
 
 }
 .blog_title {
