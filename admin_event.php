@@ -29,7 +29,7 @@ function print_events($events) {
       }
 
       //echo $image_file;
-      echo "<img src=".$image_file." alt=' ' width=120 height=120> ";
+      echo "<img src=".htmlspecialchars($image_file)." alt=' ' width=120 height=120> ";
       ?>
       </td>
       <td class="name"><?php echo htmlspecialchars($event["name"]);?></td>
@@ -38,7 +38,7 @@ function print_events($events) {
       <td class="description"> <?php echo htmlspecialchars($event["description"]); ?> </td>
       <td class="apply">
         <form class='loginform' method="post" action="admin_event.php" enctype="multipart/form-data">
-          <button type="submit" name="remove_event" value=<?php echo $current_event;?>>Remove</button>
+          <button type="submit" name="remove_event" value=<?php echo htmlspecialchars($current_event);?>>Remove</button>
         </form>
       </td>
     </tr>

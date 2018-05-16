@@ -19,7 +19,7 @@ if(isset($_POST['submit_blog'])){
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" type="text/css" href="styles/all.css" media="all" />
-  <title>About Us</title>
+  <title>New Blog</title>
 </head>
 
 <body>
@@ -31,7 +31,7 @@ if(isset($_POST['submit_blog'])){
 <div id='about_2'>
 
 <form method='post' name='new_blog' action='new_blog.php'>
-  <fieldset>
+  <fieldset class='new_inputs'>
   <legend>Add new blog</legend>
   <ul>
       <li>Title:

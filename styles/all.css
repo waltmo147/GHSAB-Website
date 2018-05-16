@@ -5,12 +5,14 @@ body {
 }
 header {
   background-color: black;
+  font-family: Tahoma, Geneva, sans-serif;
   height: 40px;
   padding-top: 10px;
   width:100%;
   margin-top: 0;
   top: 0;
   color: white;
+  font-weight: 100;
 }
 footer {
   position: fixed;
@@ -429,4 +431,8 @@ td .apply {
 }
 .intros {
   margin-right: 400px;
+}
+.new_inputs {
+  margin-right: 300px;
+  margin-top: 60px;
 }

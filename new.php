@@ -2,12 +2,12 @@
 $current_page = "Edit About Us";
 $preview = FALSE;
 if (isset($_POST["submit_upload"])) {
-  $first_name = $_POST["first_name"];
-  $last_name = $_POST["last_name"];
-  $email = $_POST['email'];
-  $intro = $_POST['introduction'];
+  $first_name = filter_input(INPUT_POST,'first_name',FILTER_SANITIZE_STRING);
+  $last_name =filter_input(INPUT_POST,'last_name',FILTER_SANITIZE_STRING);
+  $email = filter_input(INPUT_POST,'email',FILTER_SANITIZE_STRING);
+  $intro = filter_input(INPUT_POST,'introduction ',FILTER_SANITIZE_STRING);
   $upload_info = $_FILES["box_file"];
-  $upload_desc = filter_input(INPUT_POST, 'introduction', FILTER_SANITIZE_STRING);
+  //$upload_desc = filter_input(INPUT_POST, 'introduction', FILTER_SANITIZE_STRING);
 
   if ($upload_info['error'] == UPLOAD_ERR_OK) {
     //add member details
@@ -70,7 +70,7 @@ include('includes/sidebar.php');
 ?>
 <div class='blogs'>
   <form class='loginform' id="uploadFile" action="new.php" method='post' enctype="multipart/form-data">
-    <fieldset>
+    <fieldset class='new_inputs'>
       <legend>Add member details</legend>
         <ul>
           <li>
