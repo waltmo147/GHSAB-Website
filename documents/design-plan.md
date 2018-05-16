@@ -1290,7 +1290,7 @@ To login as an admin, you must add "/login.php" to the end of the websites url l
 
 [2. Tell us about things that don't work, what you wanted to implement, or what you would do if you keep working with the client in the future. Give justifications.]
 
-If the client (a group of Cornell students) had more time, we would request more data from them. The client was incredibly slow in getting data (text descriptions and images) to us, so some of the displayed data is placeholder seed data. However, the admin can add/edit the data to display to their audience.
+If the client (a group of Cornell students) had more time, we would request more data from them. The client was incredibly slow in getting data (text descriptions and images) to us, so some of the displayed data is placeholder seed data. However, the admin can add/edit the data to display to their audience. Since we are unable to use external PHP libraries such as PHPMailer, we solved the issue of resume upload by simply having the applicant copy/paste the text of their resume into the form. According to stackoverflow, implementing email attachments using PHP's standard mail() function is incredibly difficult which is why we opted to just copy/paste text for the course submission of the assignment.
 
 [3. Tell us anything else you need us to know for when we're looking at the project.]
 
