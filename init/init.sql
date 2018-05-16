@@ -59,13 +59,13 @@ CREATE TABLE maindescription (
   body TEXT NOT NULL
 );
 /* members data */
-INSERT INTO members (first_name,last_name,introduction,email) VALUES ('michael', 'schrute','admin is the president of the club.....etc','admin@cornell.edu');
-INSERT INTO members (first_name,last_name,introduction,email) VALUES ('james', 'Bond','James Bond is the muscle of the club.....etc','admin3@cornell.edu');
+INSERT INTO members (first_name,last_name,introduction,email) VALUES ('Annika', 'Bjerke',' Annika is head of outreach committee. Annika focuses on leading a team in ways to share Global Health with the Ithaca and Cornell community. She helps lead events each year such as book discussions and Global Health awareness events. We hosted a great event Walk for Water last year that is also a part of outreach.','ptk592@cornell.edu');
+INSERT INTO members (first_name,last_name,introduction,email) VALUES ('Talia', 'Bailes','head of global health case competition. Talia focuses on implementing the annual global health case competition which brings different teams together from across disciplines to develop strategic solutions to global health issues.','admin3@cornell.edu');
 /*member images data*/
 INSERT INTO member_images (image_name,picpath) VALUES ('admin_pic','uploads/pictures/camel.jpg');
 INSERT INTO member_images (image_name,picpath) VALUES ('james_pic','uploads/pictures/felted-sheep.jpg');
 
-INSERT INTO picliason (member, picture) VALUES ((SELECT id FROM members WHERE first_name = 'michael'),(SELECT id FROM member_images WHERE image_name = 'admin_pic'));
+INSERT INTO picliason (member, picture) VALUES ((SELECT id FROM members WHERE first_name = 'Annika'),(SELECT id FROM member_images WHERE image_name = 'admin_pic'));
 INSERT INTO picliason (member, picture) VALUES ((SELECT id FROM members WHERE first_name = 'james'),(SELECT id FROM member_images WHERE image_name = 'james_pic'));
 
 -- password is "good" for user 'admin'
