@@ -77,7 +77,7 @@ INSERT INTO picliason (member, picture) VALUES ((SELECT id FROM members WHERE fi
 INSERT INTO picliason (member, picture) VALUES ((SELECT id FROM members WHERE first_name = 'Jenny'),(SELECT id FROM member_images WHERE image_name = 'Jenny'));
 INSERT INTO picliason (member, picture) VALUES ((SELECT id FROM members WHERE first_name = 'Juliet'),(SELECT id FROM member_images WHERE image_name = 'Juliet'));
 
--- password is "cornellglobalhealth2018" for user 'admininistrator'
+-- password is "cornellglobalhealth2018" for user 'administrator'
 INSERT INTO admin (username, password) VALUES ('administrator', '$2y$10$7yzA6bjor.PX2jkqbduReetOpP39/SifVIYUjxYLUx12Qv88jIfp2');
 
 -- seed data for slideshow
