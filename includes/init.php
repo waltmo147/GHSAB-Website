@@ -15,7 +15,6 @@ $adminpages = array("Home" => "index.php",
                     "Edit Logo" => "admin_logo.php",
                     "Edit Slides" => "admin-slides.php",
                     "Edit Events" => "admin_event.php",
-                    "Applications" => "admin-applications.php",
                     "Edit Blogs" => "admin-blogs.php",
                     "Edit About Us" => "admin-aboutus.php",
                     "Logout" => "logout.php");

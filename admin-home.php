@@ -95,9 +95,9 @@ include('includes/sidebar.php');
     <form class = "addtext" action="admin-home.php" method="post">
       <h2>Add New Text:</h2>
       <label>Title:</label>
-      <textarea class = "simple" cols = '20' rows = '2' name="title" name = "title"></textarea>
+      <textarea class = "simple" cols = '20' rows = '2' name="title"></textarea>
       <label>Body:</label>
-      <textarea class = "simple" cols = '180' rows = '30' name="body" name = "body" ></textarea>
+      <textarea class = "simple" cols = '180' rows = '30' name="body"></textarea>
       <button name="addtext" type="submit" onclick="return confirm('Add new text?')">Add New Text</button>
     </form>
     <?php
@@ -125,6 +125,7 @@ include('includes/sidebar.php');
 
 </div>
 </div>
-</body>
 <?php include('includes/footer.php'); ?>
+</body>
+
 </html>

@@ -15,10 +15,10 @@
 
 # Tell Git to NOT ignore your EACH seed file in your your upload folders.
 !/box/1.pdf
-!/pictures/bald-eagle.jpg
-!/pictures/bald-eagle-1.jpg
-!/pictures/bird.jpg
-!/pictures/blackbirds.jpg
+!/pictures/image1.jpg
+!/pictures/image2.jpg
+!/pictures/image3.jpg
+!/pictures/image4.jpg
 !/pictures/camel.jpg
 !/pictures/felted-sheep.jpg
 !/pictures/David.png
