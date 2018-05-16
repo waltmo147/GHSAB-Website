@@ -461,7 +461,7 @@ Action # [5] : **admin logs out**
     - Abby will see feedback regarding whether or not she was successfully logged out
 
 #### Task 3 - Cognitive Walkthrough
-
+Subgoal #1: *login as admin*
 
   - Will Abby have formed this sub-goal as a step to their overall goal?
     - Yes, maybe or no: maybe
@@ -505,54 +505,35 @@ Subgoal # 2: *Delete blog*
     - Yes, maybe or no: yes
     - Why? This is her main task, so yes.
 
-Action #1 : click on Blog link
+Action #1 : click on Edit Blogs link
 
   - Will Abby know what to do at this step?
     - Yes, maybe or no: yes
-    - Why? because she wants to delete a blog post, and it makes the most sense to click on blog
+    - Why? because she wants to delete a blog post, and it makes the most sense to click on edit blogs
 
   - If Abby does the right thing, will she know that she did the right thing, and is making progress towards her goal?
     - Yes, maybe or no: yes
     - Why? She will have navigated to the administrator blog page and will be able to see EDIT BLOGS in the header of the page
 
-Action #2 : click on Delete tab
+Action #2 : click on Delete blog button for specific blog
 
   - Will Abby know what to do at this step?
     - Yes, maybe or no: yes
   - Why?
-    - Because if she wants to delete something, it makes sense to go to the delete tab
+    - Because if she wants to delete something, it makes sense to go to the delete button for that blog
 
   - If Abby does the right thing, will she know that she did the right thing, and is making progress towards her goal?
     - Yes, maybe or no: yes
   - Why?
-    - She will have navigated to the page to delete blogs. she will see a list of blogs and know that she has arrived at the right page, and the header will have the title of the page.
+    - She will be prompted to confrim whether or not she is sure she wants to delete the blog. After she confirms, the blog will be removed and she will no longer see it
 
-Action #3 : click on specific blog post
 
-  - Will Abby know what to do at this step?
-    - Yes, maybe or no: yes
-  - Why?
-    - Because if she wants to delete a specific blog post, she should click on the blog post that she wants to delete
 
-  - If Abby does the right thing, will she know that she did the right thing, and is making progress towards her goal?
-    - Yes, maybe or no: yes
-  - Why?
-    - She will be redirected to another page clearly telling her that she is about to delete a blog post
-
-Action #4 : click delete
-
-  - Will Abby know what to do at this step?
-    - Yes, maybe or no: yes
-  - Why?
-    - Abby knows that to delete something, she needs to press delete
-
-  - If Abby does the right thing, will she know that she did the right thing, and is making progress towards her goal?
-    - Yes, maybe or no: yes
-  - Why?
-    - A pop up window asking her to confirm her deletion will appear, to which she'll click yes and be redirected back to the main delete page which will display a message telling her that the blog post has been deleted.
 ### Cognitive Walk-though Results
 
 [Did you discover any issues with your design? What were they? How did you change your design to address the gender-inclusiveness bugs you discovered?]
+
+We reduced the number of steps to delete a blog by adding delete buttons under each of the blogs. We realized that the initial design had a lot of steps which might be confusing for Abby.
 
 [Your responses here should be very thorough and thoughtful.]
 
@@ -970,6 +951,278 @@ Task 7: administrator wants to edit the about us page
   8. admin fill in the new member info in the forms
   9. admin goes to the about us page to see if the changes are as supposed
   10. admin logs out
+
+#### Task 1 Cognitive walkthrough
+  Task: **Apply to program**
+
+  Subgoal #[1] : *go to join our team page*
+
+  Will Abby have formed this sub-goal as a step to their overall goal?
+  Yes
+
+  Why?
+
+  Because she has the necessary level of skills
+
+  Action #[1] : Click Join our team link
+
+  Will Abby know what to do at this step?
+
+  Yes
+
+  Why?
+
+  Because she is literate and has the necessary skills
+
+  If Abby does the right thing, will she know that she did the right thing, and is making progress towards her goal?
+
+  Yes
+
+  Why?
+
+  An application from will appear and the header will say "Join Our Team" in big bold letters
+
+
+  Subgoal #[2] : *Apply*
+
+  Will Abby have formed this sub-goal as a step to their overall goal?
+  Yes, maybe or no: yes
+
+  Why?
+  Everything is labeled clearly
+
+  Action #[1] : Fill in fields
+
+  Will Abby know what to do at this step?
+
+  Yes, maybe or no: yes
+
+  Why?
+
+  Everything will be clearly labeled and easy to understand
+
+  If Abby does the right thing, will she know that she did the right thing, and is making progress towards her goal?
+
+  Yes, maybe or no: yes
+
+  Why?
+
+  Text will appear in input boxes and she will see
+
+
+  Subgoal #[3] : *Submit application*
+
+  Will Abby have formed this sub-goal as a step to their overall goal?
+  Yes, maybe or no: yes
+
+  Why?
+
+  Because she is looking to apply
+
+  Action #[1] : Click submit button
+
+  Will Abby know what to do at this step?
+
+  Yes, maybe or no: yes
+
+  Why?
+
+  The action is not complicated. It is easy enough for her to execute
+
+  If Abby does the right thing, will she know that she did the right thing, and is making progress towards her goal?
+
+  Yes, maybe or no: yes
+
+  Why?
+
+  Because she will see a message on the screen saying she successfully submitted her application
+
+#### Task 2 - Cognitive Walkthrough
+
+  **Task name: [administrator wants to add an event]**
+
+  [Add as many subgoals as you need]
+  Subgoal # 1 : **login**
+
+    - Will Abby have formed this sub-goal as a step to their overall goal?
+      - Yes, maybe or no: Yes
+    - Why?
+      - this is a familiar task on the internet
+
+  Action # 1 : put login.php in URL
+
+    - Will Abby know what to do at this step?
+      - Yes, maybe or no: yes
+    - Why?
+      - Abby (the administrator) will know to do this everytime she wants to edit something because the dev team will tell her what she needs to do in order to login and will walk through the entire process with her... Abby chose not to have a login button that other (non-admin) users would see and this is the only alternative that the dev team could theorize
+
+    - If Abby does the right thing, will she know that she did the right thing, and is making progress towards her goal?
+      - Yes, maybe or no: yes
+    - Why?
+      - Abby will see the login page...
+
+
+
+  Action # 2 : **input login credentials**
+
+    - Will Abby know what to do at this step?
+      - Yes, maybe or no: yes
+    - Why?
+        - This is a very familiar part of the internet
+    - If Abby does the right thing, will she know that she did the right thing, and is making progress towards her goal?
+      - Yes, maybe or no: yes
+    - Why?
+      - Abby will see her inputs in the login screen
+
+
+
+  Action # 2 : **press login**
+
+    - Will Abby know what to do at this step?
+      - Yes, maybe or no: yes
+    - Why?
+      - This is a very familiar part of the internet
+    - If Abby does the right thing, will she know that she did the right thing, and is making progress towards her goal?
+      - Yes, maybe or no: yes
+    - Why?
+      - Abby will see the next page with feedback regarding the login attempt
+  Subgoal # [2] : **add an event**
+    - Will Abby have formed this sub-goal as a step to their overall goal?
+      - Yes, maybe or no: yes
+    - Why?
+      - she wants to add an event...
+  Action # [1] : **click on Edit Events tab**
+    - Will Abby know what to do at this step?
+      - Yes, maybe or no: yes
+    - Why?
+      - this will be very intuitive
+    - If Abby does the right thing, will she know that she did the right thing, and is making progress towards her goal?
+      - Yes, maybe or no: yes
+    - Why?
+      -Abby will see the editable events page
+
+  Action # [2] : **fill out the information**
+    - Will Abby know what to do at this step?
+      - Yes, maybe or no: yes
+    - Why?
+      - she wants to add an event, so she will input the information...
+    - If Abby does the right thing, will she know that she did the right thing, and is making progress towards her goal
+      - Yes, maybe or no: yes
+    - Why? (Especially consider Abby's Self-Efficacy and Attitude toward Risk.)
+      - there will be stuff filled out...
+
+  Action # [3] : **click submit**
+    - Will Abby know what to do at this step?
+      - Yes, maybe or no: yes
+    - Why?
+      - she wants to add an event.. so she will click submit after typing the inputs
+    - If Abby does the right thing, will she know that she did the right thing, and is making progress towards her goal?
+      - Yes, maybe or no: yes
+    - Why?
+      - Abby will see feedback regarding whether or not the submission was successful
+  Action # [5] : **admin logs out**
+    - Will Abby know what to do at this step?
+      - Yes, maybe or no: yes
+    - Why? (Especially consider Abby's Knowledge/Skills, Motivations/Strategies, Self-Efficacy and Tinkering.)
+      - Abby is now done with her edits so the only logical thing to do is logout
+    - If Abby does the right thing, will she know that she did the right thing, and is making progress towards her goal?
+      - Yes, maybe or no: yes
+    - Why?
+      - Abby will see feedback regarding whether or not she was successfully logged out
+
+
+#### Task 3 - Cognitive Walkthrough
+**task: delete blog**
+
+        - Will Abby have formed this sub-goal as a step to their overall goal?
+          - Yes, maybe or no: maybe
+          - Why?
+            She would not come up with this sub-goal on her own, because it is not an option provided in the main website. We will provide her with clear instruction on how to achieve this sub goal.
+
+      Action #1 : Type in login.php at end of url
+
+        - Will Abby know what to do at this step?
+          - Yes, maybe or no: yes
+          - Why? We will tell her that this is the way to access the log in page for administrators, and there is no other way that is can happen
+
+        - If Abby does the right thing, will she know that she did the right thing, and is making progress towards her goal?
+          - Yes, maybe or no: yes
+          - Why? If she does the right thing, she will see the log in page, if not, she will possibly get a 404 error message
+
+      Action #2 : Type in username and password
+
+        - Will Abby know what to do at this step?
+          - Yes, maybe or no: yes
+          - Why? Because the fields are clearly labeled
+
+        - If Abby does the right thing, will she know that she did the right thing, and is making progress towards her goal?
+          - Yes, maybe or no: yes
+          - Why? She will see her text input on the screen
+
+
+      Action #3 : Click login button
+
+        - Will Abby know what to do at this step?
+          - Yes, maybe or no:yes
+          - Why? because the login button is clearly labeled
+
+        - If Abby does the right thing, will she know that she did the right thing, and is making progress towards her goal?
+          - Yes, maybe or no: yes
+          - Why? She will be redirected the administrator home page
+
+      Subgoal # 2: *Delete blog*
+
+        - Will Abby have formed this sub-goal as a step to their overall goal?
+          - Yes, maybe or no: yes
+          - Why? This is her main task, so yes.
+
+      Action #1 : click on Blog link
+
+        - Will Abby know what to do at this step?
+          - Yes, maybe or no: yes
+          - Why? because she wants to delete a blog post, and it makes the most sense to click on blog
+
+        - If Abby does the right thing, will she know that she did the right thing, and is making progress towards her goal?
+          - Yes, maybe or no: yes
+          - Why? She will have navigated to the administrator blog page and will be able to see EDIT BLOGS in the header of the page
+
+      Action #2 : click on Delete tab
+
+        - Will Abby know what to do at this step?
+          - Yes, maybe or no: yes
+        - Why?
+          - Because if she wants to delete something, it makes sense to go to the delete tab
+
+        - If Abby does the right thing, will she know that she did the right thing, and is making progress towards her goal?
+          - Yes, maybe or no: yes
+        - Why?
+          - She will have navigated to the page to delete blogs. she will see a list of blogs and know that she has arrived at the right page, and the header will have the title of the page.
+
+      Action #3 : click on specific blog post
+
+        - Will Abby know what to do at this step?
+          - Yes, maybe or no: yes
+        - Why?
+          - Because if she wants to delete a specific blog post, she should click on the blog post that she wants to delete
+
+        - If Abby does the right thing, will she know that she did the right thing, and is making progress towards her goal?
+          - Yes, maybe or no: yes
+        - Why?
+          - She will be redirected to another page clearly telling her that she is about to delete a blog post
+
+      Action #4 : click delete
+
+        - Will Abby know what to do at this step?
+          - Yes, maybe or no: yes
+        - Why?
+          - Abby knows that to delete something, she needs to press delete
+
+        - If Abby does the right thing, will she know that she did the right thing, and is making progress towards her goal?
+          - Yes, maybe or no: yes
+        - Why?
+          - A pop up window asking her to confirm her deletion will appear, to which she'll click yes and be redirected back to the main delete page which will display a message telling her that the blog post has been deleted.
+
+
 
 ### Cognitive Walk-though Results
 
