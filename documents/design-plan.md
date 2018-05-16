@@ -546,6 +546,7 @@ We reduced the number of steps to delete a blog by adding delete buttons under e
 Table: admin
 * field 1: admin_id
 * field 2: username
+* field 3: password
 
 Table: accounts
 * field 1: id
@@ -596,8 +597,8 @@ Table: member_images
 * field 3: picpath
 
 Table: picliason
-* field 1: member
-* field 2: picture
+* field 1: member FOREIGN KEY (member) REFERENCES members(id)
+* field 2: picture FOREIGN KEY (picture) REFERENCES member_images(id)
 
 Table: maindescription
 * field 1: id
@@ -612,19 +613,129 @@ Table: maindescription
 ### Database Queries
 
 ```
-select password from accounts where username is ...;
-UPDATE accounts SET session = :session WHERE id = :user_id;
-select * from events order by date_time DESC;
-insert into events (name, date_time, place, introduction, image) values (:name, :date_time, :place, :introduction, :image);
-delete form events where id is :event_id;
-delete from events where name is :name;
-insert into applications (event_id, email, name, comment) values (:event_id, :email, :name, :comment);
-select * from blogs order by create_time DESC;
-insert into blogs (author_name, email, create_time, title, content, image) values (:author_name, :email, :create_time, :title, :content, :image);
-delete from blogs where title is :title;
-delete from blogs where id is :blog_id;
-select * from members;
-insert into members (member_name, email, introduction, image) values (:member_name, :email, :introduction, :image)
+obtain member info for about
+$sql = "SELECT first_name, last_name, introduction, email, picpath FROM (SELECT * FROM members join picliason on id = member) JOIN member_images on member_images.id = picture;";
+$records = exec_sql_query($db, $sql)->fetchAll();
+
+upload event
+$date_time = $date.' '.$time.':00';
+$sql = "INSERT INTO events (name, date_time, address, description, image) VALUES (:name, :dt, :location, :des, :img)";
+$params = array(
+  ':name' => trim($name),
+  ':dt' => trim($date_time),
+  ':location' => trim($location),
+  ':des' => trim($description),
+  ':img' => $upload_ext
+);
+$result = exec_sql_query($db, $sql, $params);
+
+
+edit member about us
+$sql = "UPDATE members SET (introduction) = (:introduction) WHERE id = :id AND first_name = :first_name;";
+$params = array(':introduction' => $desc,
+                ':id' => $id,
+                ':first_name' => $fname);
+exec_sql_query($db, $sql, $params);
+
+add member to about us
+$bfile_info = $_FILES["upic"];
+$fname = filter_input(INPUT_POST, "fname", FILTER_SANITIZE_STRING);
+$lname = filter_input(INPUT_POST, "lname", FILTER_SANITIZE_STRING);
+$name = $fname . " " . $lname;
+$introduction = filter_input(INPUT_POST, "description", FILTER_SANITIZE_STRING);
+$email = filter_input(INPUT_POST, "email", FILTER_SANITIZE_STRING);
+if ($bfile_info["error"]==0){
+  $filename = basename($bfile_info["name"]);
+  $ext = strtolower(pathinfo($filename, PATHINFO_EXTENSION));
+  $picpath = "placeholder";
+  $sql = "INSERT INTO member_images (image_name, picpath)
+                        VALUES (:name, :picpath)";
+  $params = array(":picpath" => $picpath,
+                  ":name" => $name);
+  exec_sql_query($db, $sql, $params);
+  $id = $db->lastInsertId("id");
+  $picpath = "uploads/pictures/" . $id . "." . $ext;
+  $sql = "UPDATE member_images SET picpath = :picpath WHERE id = :id;";
+  $params = array(":picpath" => $picpath,
+                  ":id" => $id);
+  exec_sql_query($db, $sql, $params);
+  move_uploaded_file($bfile_info["tmp_name"], $picpath);
+  $sql = "INSERT INTO members (first_name,last_name,introduction,email) VALUES (:first_name, :last_name, :introduction, :email);";
+  $params = array(":first_name" => $fname,
+                  ":last_name" => $lname,
+                  ":introduction" => $introduction,
+                  ":email" => $email);
+  exec_sql_query($db, $sql, $params);
+  $sql = "INSERT INTO picliason (member, picture)
+          VALUES ((SELECT id FROM members WHERE first_name = :fname),(SELECT id FROM member_images WHERE image_name = :name));";
+  $params = array(":fname" => $fname,
+                  ":name" => $name);
+  exec_sql_query($db, $sql, $params);
+
+delete blog
+$sql = "DELETE FROM blogs WHERE id = :id;";
+$params = array(":id" => $id);
+exec_sql_query($db, $sql, $params);
+
+add blog
+$sql = "INSERT INTO blogs (title, author, blog, link) VALUES (:title, :author, :blog, :link)";
+$params = array(
+  ":title"=>$title,
+  ":author"=>$author,
+  ":blog"=>$blog_text,
+  ":link"=>$link
+);
+exec_sql_query($db, $sql, $params);
+
+update home text
+$sql = "UPDATE maindescription SET (title, body)
+              = (:title, :body)
+              WHERE id = :id;";
+$params = array(':id' => $id,
+                ':title' => $title,
+                ':body' => $body);
+exec_sql_query($db, $sql, $params);
+
+add new home text
+$sql = "INSERT INTO maindescription (title, body)
+            VALUES (:title, :body);";
+$params = array(':title' => $title,
+                ':body' => $body);
+exec_sql_query($db, $sql, $params);
+
+delete pic from slideshow
+$sql = "DELETE FROM slideshow WHERE id = :id AND title = :title;";
+$id = $_POST['picid'];
+$title = $_POST['pictitle'];
+$params = array(':id' => $id,
+                ':title' => $title);
+exec_sql_query($db, $sql, $params);
+$picpath = $_POST['picpath'];
+unlink("$picpath");
+
+add pic to slide show
+$filename = basename($bfile_info["name"]);
+$ext = strtolower(pathinfo($filename, PATHINFO_EXTENSION));
+$picpath = "placeholder";
+$sql = "INSERT INTO slideshow (picpath, title)
+                      VALUES (:picpath, :title)";
+$params = array(":picpath" => $picpath,
+                ":title" => $title);
+exec_sql_query($db, $sql, $params);
+$id = $db->lastInsertId("id");
+$picpath = "uploads/pictures/" . $id . "." . $ext;
+$sql = "UPDATE slideshow SET picpath = :picpath WHERE id = :id;";
+$params = array(":picpath" => $picpath,
+                ":id" => $id);
+exec_sql_query($db, $sql, $params);
+move_uploaded_file($bfile_info["tmp_name"], $picpath);
+
+dislpay Blogs$sql = "SELECT * FROM blogs";
+$params = array();
+$blogs = exec_sql_query($db, $sql, $params)->fetchAll();
+
+display events
+$allevents =  exec_sql_query($db, "SELECT * FROM events", NULL)->fetchAll();
 ```
 
 
@@ -641,7 +752,6 @@ insert into members (member_name, email, introduction, image) values (:member_na
 * includes/init.php - stuff that useful for every web page.
 * includes/footer.php
 * includes/header.php
-* init/init.sql
 
 *Admin pages*
 * admin_login.php
@@ -1299,6 +1409,10 @@ To login as an admin, you must add "/login.php" to the end of the websites url l
 If the client (a group of Cornell students) had more time, we would request more data from them. The client was incredibly slow in getting data (text descriptions and images) to us, so some of the displayed data is placeholder seed data. However, the admin can add/edit the data to display to their audience. Since we are unable to use external PHP libraries such as PHPMailer, we solved the issue of resume upload by simply having the applicant copy/paste the text of their resume into the form. According to stackoverflow, implementing email attachments using PHP's standard mail() function is incredibly difficult which is why we opted to just copy/paste text for the course submission of the assignment.
 
 [3. Tell us anything else you need us to know for when we're looking at the project.]
+
+In order to login and view the administrator pages, you must manually type in login.php. We did this because we dont want to give anyone the impression that they can log in to a website that doesnt provide them with an option to sign up and is only made for posting general information about the club.
+username: administator
+password: cornellglobalhealth2018
 
 We chose not to use database transactions while still maintaining atomic database queries. Users of the website only view data, they do not alter it nor do they add their own. The organization only has one person who will be the administrator of the site. Because there is only one person who will be altering data on the site, all database queries remain atomic.
 

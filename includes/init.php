@@ -165,4 +165,16 @@ if ($current_user) {
       $current_user_id = $records[0];
   }
 }
+//function to add new blog to database
+function add_blog($title,$author,$blog_text,$link){
+  global $db;
+  $sql = "INSERT INTO blogs (title, author, blog, link) VALUES (:title, :author, :blog, :link)";
+  $params = array(
+    ":title"=>$title,
+    ":author"=>$author,
+    ":blog"=>$blog_text,
+    ":link"=>$link
+  );
+  exec_sql_query($db, $sql, $params);
+}
 ?>
