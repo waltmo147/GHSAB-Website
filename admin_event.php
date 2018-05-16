@@ -1,5 +1,5 @@
 <?php include('includes/init.php');
-$current_page = "Admin Events";
+$current_page = "Edit Events";
 //get all events
 
 
@@ -198,7 +198,7 @@ $allevents =  exec_sql_query($db, "SELECT * FROM events", NULL)->fetchAll();
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" type="text/css" href="styles/all.css" media="all" />
-  <title>About Us</title>
+  <title>Edit Events</title>
 </head>
 
 <body>

@@ -1,4 +1,5 @@
-<?php include('includes/init.php');
+<?php
+include('includes/init.php');
 if($current_user == NULL){
   header('location: index.php');
 }
@@ -10,7 +11,7 @@ $current_page = "Edit Slides";?>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" type="text/css" href="styles/all.css" media="all" />
-  <title>Home</title>
+  <title>Edit Slides</title>
 </head>
 <?php
 

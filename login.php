@@ -58,7 +58,7 @@ function printLoginForm() {
       printLoginForm();
     } else {
       // printUploadForm();
-      echo "Logged in as ".$current_user;
+      echo "Logged in as ".htmlspecialchars($current_user);
     }
     ?>
 
