@@ -175,7 +175,7 @@ include('includes/sidebar.php');
 
 
 
-            Personal Statement: Why are you interested in representing the Global Health Program and assisting with its development?  In your response, please describe your experiences in the Global Health Program and how they have shaped your Cornell experience and/or your career goals. Please briefly explain in less than 2000 characters.
+            Personal Statement: Why are you interested in representing the Global Health Program and assisting with its development?  In your response, please describe your experiences in the Global Health Program and how they have shaped your Cornell experience and/or your career goals. Please explain in less than 2000 characters.
             <br>
             <textarea name="applicantStatement" rows="10" cols="30" maxlength="2000"> </textarea>
 
