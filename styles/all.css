@@ -288,7 +288,7 @@ img.logo {
   height: 150px;
   width: 150px;
   overflow: hidden;
-  border-radius: 75px;
+  /* border-radius: 75px; */
   background-color: grey;
   position: relative;
 }
