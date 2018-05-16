@@ -136,14 +136,14 @@ include('includes/sidebar.php');?>
         <?php
       }
       else{
-          ?><li><h1><?php echo("$fname $lname"); ?></h1>
+          ?><h1><?php echo("$fname $lname"); ?></h1>
             <form class = "edittext" action="admin-aboutus.php" method="post">
             <input type="hidden" name="memberid" value="<?php echo($id); ?>"/>
             <input type="hidden" name="fname" value="<?php echo($fname); ?>"/>
             <textarea class = "simple" cols = '100' rows = '10' name="desc" ><?php echo($desc); ?></textarea>
             <button name="changetext" type="submit" onclick="return confirm('Are you satisfied with your changes?')">Submit Changes</button>
             </form>
-          </li><?php
+          <?php
         }
       ?>
 </div>
