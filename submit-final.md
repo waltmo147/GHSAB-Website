@@ -26,10 +26,10 @@ Note: Forgetting to commit, push, or check your assignment before the deadline i
 
 We affirm our awareness of the standards of the Cornell Code of Academic Integrity.
 
-Full Names:
-Net IDs:
+Full Names: Erie M. Adames, Barron DuBois, Yufu Mo, David Mwanjabala, Jing Guo
+Net IDs: ema82, bfd27, ym445, dm592, jg2273
 (Only include the names/NetIDs of team members who contributed to this milestone.)
 
-Date:
+Date: May 16th, 2018
 
 ---
