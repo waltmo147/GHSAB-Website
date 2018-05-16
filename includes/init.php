@@ -111,59 +111,6 @@ function check_login() {
 }
 
 function log_in($username, $password) {
-  // global $db;
-  //
-  // if ($username && $password) {
-  //   $sql = "SELECT * FROM admin WHERE username = :username;";
-  //   $params = array(
-  //     ':username' => $username
-  //   );
-  //   $records = exec_sql_query($db, $sql, $params)->fetchAll();
-  //   if ($records) {
-  //     // Username is UNIQUE, so there should only be 1 record.
-  //     $account = $records[0];
-  //
-  //     // Check password against hash in DB
-  //     if ( password_verify($password, $account['password']) ) {
-  //
-  //       // Generate session
-  //       // Warning! Not a secure method for generating session IDs!
-  //       // TODO: secure session
-  //       $session = uniqid();
-  //       $sql = "UPDATE admin SET session = :session WHERE admin_id = :user_id;";
-  //       $params = array(
-  //         ':user_id' => $account['admin_id'],
-  //         ':session' => $session
-  //       );
-  //       $result = exec_sql_query($db, $sql, $params);
-  //       if ($result) {
-  //         // Success, we are logged in.
-  //
-  //         // Send this back to the user.
-  //         setcookie("session", $session, time()+3600);  /* expire in 1 hour */
-  //
-  //         record_message("Logged in as $username.");
-  //         header("Refresh:0 url=login.php");
-  //         return TRUE;
-  //       } else {
-  //         record_message("Log in failed.");
-  //       }
-  //     } else {
-  //       record_message("Invalid username or password.");
-  //     }
-  //   } else {
-  //     record_message("Invalid username or password.");
-  //   }
-  // } else {
-  //   record_message("No username or password given.");
-  // }
-  // return FALSE;
-
-
-
-
-
-
   global $db;
     if ($username && $password) {
       $sql = "SELECT * FROM admin WHERE username = :username;";
@@ -196,22 +143,6 @@ function log_in($username, $password) {
 }
 
 function log_out() {
-  // global $current_user;
-  // global $db;
-  //
-  // if ($current_user) {
-  //   $sql = "UPDATE admin SET session = :session WHERE username = :username;";
-  //   $params = array(
-  //     ':username' => $current_user,
-  //     ':session' => NULL
-  //   );
-  //   if (!exec_sql_query($db, $sql, $params)) {
-  //     record_message("Log out failed.");
-  //   }
-  // }
-  // // Remove the session from the cookie and force it to expire.
-  // setcookie("session", "", time()-3600);
-  // $current_user = NULL;
 
   global $current_user;
   $current_user = NULL;
@@ -255,13 +186,10 @@ if ($current_user) {
   }
 }
 function remove_member($member_id){
-  //check if this actually works!
   global $db;
   $sql = "SELECT * FROM member_images WHERE member_images.id=:member_id";
   $params = array('member_id' => $member_id);
   $records = exec_sql_query($db, $sql,$params)->fetchAll();
-  //Not going to delete images from file path
-  //unlink($records[0]['picpath']);
   $sql = "DELETE FROM member_images WHERE member_images.id=:member_id";
   exec_sql_query($db, $sql,$params);
   $sql1 = "DELETE FROM members WHERE members.id=:member_id";
@@ -269,9 +197,8 @@ function remove_member($member_id){
   $sql1 = "DELETE FROM picliason WHERE member=:member_id";
   exec_sql_query($db,$sql1,$params);
 
-
-  //don't forget to check!
 }
+//function to remove blog from database
 function remove_blog($blog_id){
     global $db;
     $sql = "DELETE FROM blogs WHERE blogs.id=:blog_id";
@@ -280,6 +207,7 @@ function remove_blog($blog_id){
   );
   exec_sql_query($db, $sql,$params);
 }
+//function to add new blog to database
 function add_blog($title,$author,$blog_text,$link){
   global $db;
   $sql = "INSERT INTO blogs (title, author, blog, link) VALUES (:title, :author, :blog, :link)";

@@ -158,6 +158,8 @@ The content of our website will be stored in a sqlite database and will be queri
 
 We will use GET requests for the Events page so that users can see events after a certain date
 
+We will use php to manipulate output on the aboutus page from the database
+
 
 ## Milestone 2, Part II: Sketches, Navigation & Wireframes
 
