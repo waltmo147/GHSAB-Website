@@ -12,28 +12,35 @@ $current_page = "Edit About Us"?>
 
 <body>
 <?php
-if(isset($_POST['changetext'])){
+if(isset($_POST['edit'])){
+  $showtext = FALSE;
+  $id = $_POST['memberid'];
+  $fname = $_POST['fname'];
+  $lname = $_POST['lname'];
+  $desc = $_POST['desc'];
+}
+elseif(isset($_POST['changetext'])){
+  $showtext = TRUE;
   $id = $_POST['memberid'];
   $fname = $_POST['fname'];
   $desc = $_POST['desc'];
-  var_dump($id);
-  var_dump($fname);
-  var_dump($desc);
   $sql = "UPDATE members SET (introduction) = (:introduction) WHERE id = :id AND first_name = :first_name;";
   $params = array(':introduction' => $desc,
-             ':id' => $id,
-             ':first_name' => $fname);
+                  ':id' => $id,
+                  ':first_name' => $fname);
   exec_sql_query($db, $sql, $params);
 }
-
-
+else{
+  $showtext = TRUE;
+}
 include('includes/header.php');
 include('includes/sidebar.php');?>
 <div id='about_2'>
 <h3>Edit Members</h3>
-<a class='edit_links' href="new.php?add_member=true">Add new Member</a>
 <ul>
 <?php
+      if($showtext){
+      ?><a class='edit_links' href="new.php?add_member=true">Add new Member</a><?php
       $sql = "SELECT member,first_name, last_name, introduction, email, picpath FROM (SELECT * FROM members join picliason on id = member) JOIN member_images on member_images.id = picture;";
       $records = exec_sql_query($db, $sql)->fetchAll();
 
@@ -48,13 +55,29 @@ include('includes/sidebar.php');?>
           <form class = "edittext" action="admin-aboutus.php" method="post">
           <input type="hidden" name="memberid" value="<?php echo($memberid); ?>"/>
           <input type="hidden" name="fname" value="<?php echo($fname); ?>"/>
+          <input type="hidden" name="lname" value="<?php echo($lname); ?>"/>
           <input type="hidden" name="desc" value="<?php echo($desc); ?>"/>
-          <textarea class = "simple" cols = '100' rows = '10' name="body" name = "body" ><?php echo($desc); ?></textarea>
-          <button name="changetext" type="submit" onclick="return confirm('Are you satisfied with your changes?')">Submit Changes</button>
+          <?php
+          $body = explode("\n", $desc);
+          foreach($body as $par){
+            echo "<p>".htmlspecialchars($par)."</p>";
+          }
+            ?>
+          <button name="edit" type="submit">Edit</button>
           </form>
-          <a class='edit_links' href='delete.php?member_id=<?php echo($memberid)?>'>Remove Member</a>
         </li><?php
+        }
       }
+      else{
+          ?><li><h1><?php echo("$fname $lname"); ?></h1>
+            <form class = "edittext" action="admin-aboutus.php" method="post">
+            <input type="hidden" name="memberid" value="<?php echo($id); ?>"/>
+            <input type="hidden" name="fname" value="<?php echo($fname); ?>"/>
+            <textarea class = "simple" cols = '100' rows = '10' name="desc" ><?php echo($desc); ?></textarea>
+            <button name="changetext" type="submit" onclick="return confirm('Are you satisfied with your changes?')">Submit Changes</button>
+            </form>
+          </li><?php
+    }
       ?>
 
 </ul>
