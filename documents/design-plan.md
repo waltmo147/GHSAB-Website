@@ -105,6 +105,7 @@ php mail function - Have the site mail the applications to the admin, or at leas
 databases - they will hold most of the information for the website
 php sessions and cookies - for login purposes
 input filtering for Applications - for any information that will be posted
+We will use php to dynamically output member details and blogs from the database
 
 ### External Code
 
@@ -186,24 +187,23 @@ We will use GET requests for the Events page so that users can see events after 
 * About us
 
 * **Administrator**
-  * Login
-  * Change logo
-  * Edit slide show Pictures
+  * Login : Login form
+  * Change logo: Form to change logo
+  * Edit slide show Pictures : Forms to remove pictures and add new ones
   * Blog
-    * Edit/delete/post blog
-  * View Applications
-  * Edit descriptions
+    * Edit/delete/post blog : Shows forms to edit, delete and add blogs
+  * View Applications : Shows submitted applications
+  * Edit descriptions: Allows admin to edit text
   * Events
-    * Add
-    * Delete
-
-
+    * Add: Shows form to add new event
+    * Delete: shows delete message
+  * Aboutus
+    * delete: shows delete message and link to preview changes
+    * new : contains form to add new member
 
 ### Wireframes
 
 [Insert your wireframes here.]
-
-
 
 ![](IMG_7353.JPG)
 ![](IMG_7354.JPG)
@@ -626,7 +626,7 @@ insert into members (member_name, email, introduction, image) values (:member_na
 * index.php - main page.
 * events.php
 * blog.php
-* about.php
+* aboutus.php
 * includes/init.php - stuff that useful for every web page.
 * includes/footer.php
 * includes/header.php
@@ -639,7 +639,11 @@ insert into members (member_name, email, introduction, image) values (:member_na
 * admin_blogs.php
 * admin_applications.php
 * admin_event.php
-* admin_descriptions.php
+* admin_aboutus.php
+* new.php
+* new_blog.php
+* delete.php
+
 
 
 ### Pseudocode
@@ -707,7 +711,7 @@ body:
 	include footer.php
 ```
 
-#### about.php
+#### aboutus.php
 
 ```
 Pseudocode for about.php...
@@ -829,7 +833,7 @@ construct sql query to insert the new event into the database
 ```
 
 
-#### descriptions.php
+#### admin_aboutus.php
 ```
 if their is post data then an edit is trying to be made
 update the database with the edits
