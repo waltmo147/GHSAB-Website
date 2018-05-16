@@ -64,7 +64,7 @@ function printLoginForm() {
 
 
   </div>
+  <?php include("includes/footer.php");?>
 </body>
-<?php include("includes/footer.php");?>
 
 </html>
