@@ -30,7 +30,7 @@ $current_page = "About Us"?>
       foreach($records as $record){
         echo "<li>";
         echo "<h1>" . $record['first_name'] . " " . $record['last_name'] . "</h1>";
-        echo "<img class='team_imgs' src=" . $record['picpath'] . ">";
+        echo "<img class='team_imgs' src=" . $record['picpath'] . " alt=' '>";
         echo '<p>'.$record['introduction'].'</p>';
         echo "</li>";
       }

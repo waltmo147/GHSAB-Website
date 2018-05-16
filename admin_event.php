@@ -32,11 +32,11 @@ function print_events($events) {
       echo "<img src=".$image_file." alt=' ' width=120 height=120> ";
       ?>
       </td>
-      <td><?php echo htmlspecialchars($event["name"]);?></td>
-      <td> <?php echo htmlspecialchars($event["date_time"]); ?> </td>
-      <td> <?php echo htmlspecialchars($event["address"]); ?> </td>
-      <td> <?php echo htmlspecialchars($event["description"]); ?> </td>
-      <td>
+      <td class="name"><?php echo htmlspecialchars($event["name"]);?></td>
+      <td class="date_time"> <?php echo htmlspecialchars($event["date_time"]); ?> </td>
+      <td class="address"> <?php echo htmlspecialchars($event["address"]); ?> </td>
+      <td class="description"> <?php echo htmlspecialchars($event["description"]); ?> </td>
+      <td class="apply">
         <form class='loginform' method="post" action="admin_event.php" enctype="multipart/form-data">
           <button type="submit" name="remove_event" value=<?php echo $current_event;?>>Remove</button>
         </form>
@@ -247,7 +247,7 @@ include('includes/sidebar.php');
           <label>Description:</label>
         </li>
         <li>
-          <textarea name="description" cols="50" rows="10" required/></textarea>
+          <textarea name="description" cols="50" rows="10" required></textarea>
         </li>
         <li>
           <button name="submit_upload" type="submit">Upload</button>

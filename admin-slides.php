@@ -96,6 +96,7 @@ foreach($pictures as $picture){
 </form>
 </div>
 </div>
-</body>
 <?php include('includes/footer.php'); ?>
+</body>
+
 </html>

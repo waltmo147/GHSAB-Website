@@ -178,7 +178,7 @@ img {
   .prev, .next,.text {font-size: 11px}
 }
 
-#slideimg {
+.slideimg {
   max-height: 500px;
   width: 100%;
 }
@@ -394,6 +394,24 @@ width: 500px;
   opacity: .8;
 
 }
+
+td .name {
+  width: 10%;
+}
+td .date_time {
+  width: 20%;
+}
+td .address {
+  width: 20%;
+}
+td .description {
+  width: 30%;
+}
+td .apply {
+  width: 10%; 
+}
+
+
 .links {
   text-decoration: none;
 }
