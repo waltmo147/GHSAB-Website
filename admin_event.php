@@ -258,7 +258,7 @@ include('includes/sidebar.php');
 </div>
 
 <div class='show_events'>
-  <h3>Upcomming Events</h3>
+  <h3>Upcoming Events</h3>
   <?php
       print_events($allevents);
   ?>
