@@ -59,8 +59,12 @@ CREATE TABLE maindescription (
   body TEXT NOT NULL
 );
 /* members data */
-INSERT INTO members (first_name,last_name,introduction,email) VALUES ('Annika', 'Bjerke',' Annika is head of outreach committee. Annika focuses on leading a team in ways to share Global Health with the Ithaca and Cornell community. She helps lead events each year such as book discussions and Global Health awareness events. We hosted a great event Walk for Water last year that is also a part of outreach.','ptk592@cornell.edu');
-INSERT INTO members (first_name,last_name,introduction,email) VALUES ('Talia', 'Bailes','head of global health case competition. Talia focuses on implementing the annual global health case competition which brings different teams together from across disciplines to develop strategic solutions to global health issues.','admin3@cornell.edu');
+INSERT INTO members (first_name,last_name,introduction,email) VALUES ('Annika', 'Bjerke',' Annika is head of outreach committee. Annika focuses on leading a team in ways to share Global Health with the Ithaca and Cornell community. She helps lead events each year such as book discussions and Global Health awareness events. We hosted a great event Walk for Water last year that is also a part of outreach.','aeb275@cornell.edu');
+INSERT INTO members (first_name,last_name,introduction,email) VALUES ('Talia', 'Bailes','Head of global health case competition. Talia focuses on implementing the annual global health case competition which brings different teams together from across disciplines to develop strategic solutions to global health issues.','tfb44@cornell.edu');
+INSERT INTO members (first_name,last_name,introduction,email) VALUES ('Jenny', 'DiPetro','Oversees the whole board. She graduated last year from Cornell as a Global and Public Health major and now serves as the Global Health fellow for the department.','jld322@cornell.edu');
+INSERT INTO members (first_name,last_name,introduction,email) VALUES ('Juliet', 'McCann','Head of experiential learning symposium. Juliet oversees the implementation of our annual symposium that brings together students across the Global Helath field to present in a poster symposium on their different experiential and engaged work.','jm2435@cornell.edu');
+
+
 /*member images data*/
 INSERT INTO member_images (image_name,picpath) VALUES ('admin_pic','uploads/pictures/camel.jpg');
 INSERT INTO member_images (image_name,picpath) VALUES ('james_pic','uploads/pictures/felted-sheep.jpg');
