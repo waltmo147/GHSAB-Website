@@ -74,6 +74,7 @@ include('includes/sidebar.php');
       foreach($body as $par){
         echo("<p>$par</p>");
         }
+      $body = implode("\n", $body);
       ?>
       <form class = "edittext" action="admin-home.php" method="post">
       <input type="hidden" name="id" value="<?php echo($id); ?>"/>
