@@ -1,5 +1,6 @@
 <div id = "sidebar">
 <img class='logo' src='uploads/logo/logo.png' alt='logo'>
+<!-- <a href="uploads/logo/logo.png"> Our client owns the logo image</a> -->
 <?php
 if($current_user){
   foreach($adminpages as $name => $link){
