@@ -25,11 +25,11 @@ $pictures = exec_sql_query($db,$sql,$params)->fetchAll();
 $i=0;
 foreach($pictures as $picture){
       $i+=1;
-    echo("<div class='mySlides fade'>
-      <div class='numbertext'>$i</div>
-      <img class = 'slideimg' alt='' src=". $picture['picpath'] . ">
-      <div class='text'>". $picture['title'] . "</div>
-    </div>");
+    echo "<div class='mySlides fade'>
+      <div class='numbertext'>".htmlspecialchars($i)."</div>
+      <img class = 'slideimg' alt='' src=". htmlspecialchars($picture['picpath']) . ">
+      <div class='text'>". htmlspecialchars($picture['title']) . "</div>
+    </div>";
 }
 ?>
 
@@ -40,7 +40,7 @@ foreach($pictures as $picture){
   <?php
   $j = 1;
   while($i>=$j){
-    echo("<span class='dot' onclick='gotoslide($j)'></span>");
+    echo("<span class='dot' onclick='gotoslide(".htmlspecialchars($j).")'></span>");
     $j+=1;
   }?>
 </div>
@@ -54,9 +54,9 @@ foreach($pictures as $picture){
       $title = $bodyelement['title'];
       $body = $bodyelement['body'];
       $body = explode(PHP_EOL, $body);
-      echo("<h1>$title</h1>");
+      echo("<h1>".htmlspecialchars($title)."</h1>");
       foreach($body as $par){
-        echo("<p>$par</p>");
+        echo("<p>".htmlspecialchars($par)."</p>");
       }
     }
   ?>
