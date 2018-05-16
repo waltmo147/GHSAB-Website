@@ -22,10 +22,9 @@ $params = array();
 $blogs = exec_sql_query($db, $sql, $params)->fetchAll();
 foreach($blogs as $blog){
   echo("<div class='blogpost'>
-
-      <h1 class='blog_title'>" . $blog['title'] . "</h1>
-      " . htmlspecialchars($blog['blog']));
-      if(isset($blog['link'])){
+      <h1 class='blog_title'>" . $blog['title']."</h1>" .
+      htmlspecialchars($blog['blog']));
+      if($blog['link']!=""){
         echo "<a href='".htmlspecialchars($blog['link'])."'>READ MORE</a>";
       }
       echo"<h2> By " . htmlspecialchars($blog['author']) . "</h2>
