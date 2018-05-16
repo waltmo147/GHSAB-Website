@@ -116,7 +116,7 @@ include('includes/sidebar.php');
       <textarea class = "simple" cols = '20' rows = '2' name="title" name = "title"><?php echo htmlspecialchars($title); ?></textarea>
       <label>Body:</label>
       <textarea class = "simple" cols = '180' rows = '30' name="body" name = "body" ><?php echo htmlspecialchars($body); ?></textarea>
-      <input type="hidden" name="id" value="<?php echo($id); ?>"/>
+      <input type="hidden" name="id" value="<?php echo htmlspecialchars($id); ?>"/>
       <button name="changetext" type="submit" onclick="return confirm('Are you satisfied with your changes?')">Submit Changes</button>
     </form>
     <?php
