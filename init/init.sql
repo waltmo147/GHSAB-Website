@@ -1,8 +1,7 @@
 CREATE TABLE admin (
   admin_id INTEGER PRIMARY KEY NOT NULL,
   username TEXT NOT NULL UNIQUE,
-  password TEXT NOT NULL,
-  session TEXT
+  password TEXT NOT NULL
 );
 
 CREATE TABLE members (

@@ -543,6 +543,10 @@ We reduced the number of steps to delete a blog by adding delete buttons under e
 
 [Describe the structure of your database. You may use words or a picture. A bulleted list is probably the simplest way to do this.]
 
+Table: admin
+* field 1: admin_id
+* field 2: username
+
 Table: accounts
 * field 1: id
 * field 2: username
