@@ -70,23 +70,23 @@ include('includes/sidebar.php');
       $title = $bodyelement['title'];
       $body = $bodyelement['body'];
       $body = explode("\n", $body);
-      echo("<h1>$title</h1>");
+      echo "<h1>".htmlspecialchars($title)."</h1>";
       foreach($body as $par){
-        echo("<p>$par</p>");
+        echo "<p>".htmlspecialchars($par)."</p>";
         }
       $body = implode("\n", $body);
       ?>
       <form class = "edittext" action="admin-home.php" method="post">
-      <input type="hidden" name="id" value="<?php echo($id); ?>"/>
-      <input type="hidden" name="title" value="<?php echo($title); ?>"/>
-      <input type="hidden" name="body" value="<?php echo($body); ?>"/>
+      <input type="hidden" name="id" value="<?php echo htmlspecialchars($id); ?>"/>
+      <input type="hidden" name="title" value="<?php echo htmlspecialchars($title); ?>"/>
+      <input type="hidden" name="body" value="<?php echo htmlspecialchars($body); ?>"/>
       <input type="hidden" name="edit" value="edit"/>
       <button>Edit</button>
       </form>
       <form class = "deletetext" action="admin-home.php" method="post">
-      <input type="hidden" name="id" value="<?php echo($id); ?>"/>
-      <input type="hidden" name="title" value="<?php echo($title); ?>"/>
-      <input type="hidden" name="body" value="<?php echo($body); ?>"/>
+      <input type="hidden" name="id" value="<?php echo htmlspecialchars($id); ?>"/>
+      <input type="hidden" name="title" value="<?php echo htmlspecialchars($title); ?>"/>
+      <input type="hidden" name="body" value="<?php echo htmlspecialchars($body); ?>"/>
       <input type="hidden" name="delete" value="delete"/>
       <button onclick="return confirm('Are you sure you want to delete this text?')" >Delete</button>
       </form>
@@ -113,9 +113,9 @@ include('includes/sidebar.php');
     ?>
     <form class = "edittext" action="admin-home.php" method="post">
       <label>Title:</label>
-      <textarea class = "simple" cols = '20' rows = '2' name="title" name = "title"><?php echo($title); ?></textarea>
+      <textarea class = "simple" cols = '20' rows = '2' name="title" name = "title"><?php echo htmlspecialchars($title); ?></textarea>
       <label>Body:</label>
-      <textarea class = "simple" cols = '180' rows = '30' name="body" name = "body" ><?php echo($body); ?></textarea>
+      <textarea class = "simple" cols = '180' rows = '30' name="body" name = "body" ><?php echo htmlspecialchars($body); ?></textarea>
       <input type="hidden" name="id" value="<?php echo($id); ?>"/>
       <button name="changetext" type="submit" onclick="return confirm('Are you satisfied with your changes?')">Submit Changes</button>
     </form>

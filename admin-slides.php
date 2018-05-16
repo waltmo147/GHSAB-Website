@@ -62,13 +62,13 @@ foreach($pictures as $picture){
   $title = $picture['title'];
   $id = $picture['id'];
   echo('<div class = "block">');
-  echo("<h4>$title</h4>");
-  echo("<img src='$path' alt='$title'>");
+  echo "<h4>".htmlspecialchars($title)."</h4>";
+  echo "<img src=".htmlspecialchars($path)."alt=".htmlspecialchars($title).">";
   ?>
   <form class = "deleteslide" action="admin-slides.php" method="post">
-  <input type="hidden" name="picid" value="<?php echo($id); ?>"/>
-  <input type="hidden" name="pictitle" value="<?php echo($title); ?>"/>
-  <input type="hidden" name="picpath" value="<?php echo($path); ?>"/>
+  <input type="hidden" name="picid" value="<?php echo htmlspecialchars($id); ?>"/>
+  <input type="hidden" name="pictitle" value="<?php echo htmlspecialchars($title); ?>"/>
+  <input type="hidden" name="picpath" value="<?php echo htmlspecialchars($path); ?>"/>
   <input type="hidden" name="deletepic" value="deletepic"/>
   <button onclick="return confirm('Are you sure you want to delete this picture?')" >Delete</button>
   </form>

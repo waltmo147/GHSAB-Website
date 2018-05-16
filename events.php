@@ -28,7 +28,7 @@ function print_events($events) {
       }
 
       //echo $image_file;
-      echo "<img src=".$image_file." alt=' ' width=120 height=120> ";
+      echo "<img src=".htmlspecialchars($image_file)." alt=' ' width=120 height=120> ";
       ?>
       </td>
       <td class="name"><?php echo htmlspecialchars($event["name"]);?></td>
