@@ -78,8 +78,8 @@ INSERT INTO picliason (member, picture) VALUES ((SELECT id FROM members WHERE fi
 INSERT INTO picliason (member, picture) VALUES ((SELECT id FROM members WHERE first_name = 'Jenny'),(SELECT id FROM member_images WHERE image_name = 'Jenny'));
 INSERT INTO picliason (member, picture) VALUES ((SELECT id FROM members WHERE first_name = 'Juliet'),(SELECT id FROM member_images WHERE image_name = 'Juliet'));
 
--- password is "good" for user 'admin'
-INSERT INTO admin (username, password) VALUES ('admin', '$2y$10$i41U0Al7AUAQFIAeoi0NH.1Aykum/Hf3vScM.zt1pQKcKHDSPlm0e');
+-- password is "cornellglobalhealth2018" for user 'admininistrator'
+INSERT INTO admin (username, password) VALUES ('administrator', '$2y$10$7yzA6bjor.PX2jkqbduReetOpP39/SifVIYUjxYLUx12Qv88jIfp2');
 
 -- seed data for slideshow
 INSERT INTO slideshow (picpath, title) VALUES ('uploads/pictures/image1.jpg', "image1");
