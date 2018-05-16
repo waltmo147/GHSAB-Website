@@ -71,6 +71,7 @@ INSERT INTO member_images (image_name,picpath) VALUES ('Annika','uploads/picture
 INSERT INTO member_images (image_name,picpath) VALUES ('Talia','uploads/pictures/icon.png');
 INSERT INTO member_images (image_name,picpath) VALUES ('Jenny','uploads/pictures/icon.png');
 INSERT INTO member_images (image_name,picpath) VALUES ('Juliet','uploads/pictures/icon.png');
+-- <a href="https://www.freeiconspng.com/img/1696">Person Icon by thekua  Icon for representing a person</a>
 
 INSERT INTO picliason (member, picture) VALUES ((SELECT id FROM members WHERE first_name = 'Annika'),(SELECT id FROM member_images WHERE image_name = 'Annika'));
 INSERT INTO picliason (member, picture) VALUES ((SELECT id FROM members WHERE first_name = 'Talia'),(SELECT id FROM member_images WHERE image_name = 'Talia'));
