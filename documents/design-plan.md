@@ -1256,7 +1256,7 @@ We reduced the number of steps to delete a blog by adding delete buttons under e
 
 [Your responses here should be very thorough and thoughtful.]
 
-Users can view the home, event, blog and about us page. User can also apply to join the team. The admin can successfully add or delete blog, events, edit the home page, edit the club logo, edit the about us page, edit the slide show in the home page and view all the other pages.
+Users can view the home, event, blog and about us page. User can also apply to join the team. The admin can successfully add or delete blog, events, edit the home page, edit the club logo, edit the about us page, edit the slide show in the home page and view all the other pages. All tasks were designed to be extremely straightforward and intuitive
 
 ## Milestone 5: Final Notes to the Clients
 
