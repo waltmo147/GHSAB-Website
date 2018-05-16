@@ -1,103 +1,56 @@
 <?php include('includes/init.php');
-
-
 $current_page = "Join Our Team";
-
 $showForm = TRUE;
 
-
-// echo("TO THE GRADERS: DEPENDCY IS REQUIRED FOR THIS FUNCTIONALITY... DID NOT WANT TO UPLOAD A PHP LIBRARY TO GITHUB");
-
-// use PHPMailer\PHPMailer\PHPMailer;
-// use PHPMailer\PHPMailer\Exception;
-// require 'vendor/autoload.php';
-
-
-
 if(isset($_POST['sendEmail'])){
-
-//
-//
-// ///Users/barrondubois/github/red-lion-project-4/PHPMailer-master
-// require_once('path/to/file/class.phpmailer.php');
-//
-// echo("Hello there");
-//
-//
-//
-//
-
-
-            // $upload_infoResume = $_FILES["resume"];
-            // $upload_infoCoverLetter = $_FILES["coverLetter"];
-            //
-            // if(($upload_infoResume['error'] == UPLOAD_ERR_OK) && $upload_infoCoverLetter['error'] == UPLOAD_ERR_OK ) {
 
 
 
           $applicantFirstName = filter_input(INPUT_POST, 'firstName', FILTER_SANITIZE_STRING);
           $lastName = filter_input(INPUT_POST, 'lastName', FILTER_SANITIZE_STRING);
           $phoneNumber = filter_input(INPUT_POST, 'phoneNumber', FILTER_SANITIZE_STRING);
-        //  $emailAddress = filter_input(INPUT_POST, 'emailAddress', FILTER_SANITIZE_STRING);
           $applicantNETID = filter_input(INPUT_POST, 'netID', FILTER_SANITIZE_STRING);
-
           $applicantYear = filter_input(INPUT_POST, 'year', FILTER_SANITIZE_STRING);
           $applicantMajor = filter_input(INPUT_POST, 'major', FILTER_SANITIZE_STRING);
           $applicantCollege = filter_input(INPUT_POST, 'college', FILTER_SANITIZE_STRING);
-          // $message = wordwrap($message, 70, "\r\n");
           $applicantProgram = filter_input(INPUT_POST, 'program', FILTER_SANITIZE_STRING);
           $applicantField = filter_input(INPUT_POST, 'fieldLocation', FILTER_SANITIZE_STRING);
-
-
+          $applicantCurric = filter_input(INPUT_POST, 'extracurricular', FILTER_SANITIZE_STRING);
+          $applicantResume = filter_input(INPUT_POST, 'resumeText', FILTER_SANITIZE_STRING);
+          $applicantSkills = filter_input(INPUT_POST, 'applicantSkills', FILTER_SANITIZE_STRING);
+          $applicantLearnSkills = filter_input(INPUT_POST, 'learnSkills', FILTER_SANITIZE_STRING);
+          $applicantStatement = filter_input(INPUT_POST, 'applicantStatement', FILTER_SANITIZE_STRING);
 
 
           $message = "Application from: " . $applicantFirstName . " " . $lastName . " (" . $applicantNETID . ")" . "\r\n";
           $lineTwo= "Applicant's phone number is: " . $phoneNumber . "\r\n";
-
           $lineThree = $applicantFirstName . " is a " . $applicantYear . " studying " . $applicantMajor . " in the College of " . $applicantCollege . "\r\n";
-
           $lineFour = $applicantFirstName . " is a part of the " . $applicantProgram . " program/organization and has done their field work in: " . $applicantField . "\r\n\r\n";
+          $lineFive = "Prompts and Applicant Responses: \r\n\r\n";
+          $lineSix = "What is your current extracurricular involvement? Please list and indicate approximate time commitment. \r\n\r\n";
+          $linesSevens = wordwrap($applicantCurric, 70, "\r\n") . "\r\n\r\n";
+          $lineEight = "What skills (i.e. computer programming, graphic design, etc.) have you developed that would benefit the Global Health Student Advisory Board? \r\n\r\n";
+          $lineNine = wordwrap($applicantSkills, 70, "\r\n") . "\r\n\r\n";
+          $lineTen = "What skills would you like to develop through being a member of the Global Health Student Advisory Board? \r\n\r\n";
+          $lineEleven = wordwrap($applicantLearnSkills, 70, "\r\n") . "\r\n\r\n";
+          $lineTwelve = "Personal Statement: Why are you interested in representing the Global Health Program and assisting with its development? \r\n\r\n";
+          $lineThirteen = wordwrap($applicantStatement, 70, "\r\n") . "\r\n\r\n";
+          $lineFourteen = "Copy and Paste Resume Text \r\n\r\n";
+          $lineFifteen = wordwrap($applicantResume, 70, "\r\n") . "\r\n\r\n";
+
+          $message = htmlspecialchars_decode($message . $lineTwo . $lineThree . $lineFour . $lineFive . $lineSix . $linesSevens . $lineEight . $lineNine . $lineTen . $lineEleven . $lineTwelve . $lineThirteen . $lineFourteen . $lineFifteen, ENT_QUOTES);
 
 
-          $lineFive = "Prompts and Applicant Responses: \r\n";
-
-          $message = $message . $lineTwo . $lineThree . $lineFour . $lineFive;
-
-
-
-
-
-          mail('barronfran@gmail.com', 'New Applicant', $message);
-
-
-          //UNCOMMENT THIS , THIS IS THE REAL STUFF
-          // $bodytext = "An application has been submitted by: $applicantFirstName $lastName \r\n Applicant's Phone Number: $phoneNumber \r\n Applicant's Email Address: $emailAddress \r\n Applicant's documents are attached below";
-          // $email = new PHPMailer();
-          // $email->From      = 'applicationmailer@gmail.com';
-          // $email->FromName  = 'New Applicant';
-          // $email->Subject   = 'Application';
-          // $email->Body      = $bodytext;
-          //
-          //
-          // //CHANGE THE EMAIL TO THE STUDENT ADVISORY BOARD EMAIL
-          // $email->AddAddress('dubois.barron@gmail.com');
-          // $email->AddAttachment( $_FILES['resume']['tmp_name'] , $applicantFirstName . $lastName . 'resume' . '.pdf' );
-          // $email->AddAttachment( $_FILES['resume']['tmp_name'], $applicantFirstName . $lastName . 'coverletter' . '.pdf' );
-          // $email->Send();
-
-          array_push($messages, "Thanks for submitting your application! If your resume matches our needs a member of our organization will contact you.");
-
-
+          if(mail("barronfran@gmail.com", "NEW APPLICATION FOR GHSAB", "$message")){
+            array_push($messages, "Thanks for submitting your application! If your resume matches our needs a member of our organization will contact you.");
+          } else {
+            array_push($messages, "There was an error processing your application, please resubmit at your earliest convenience.");
+          }
           $showForm = FALSE;
 
-//          }
 }
 
 ?>
-
-
-
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -118,17 +71,8 @@ include('includes/sidebar.php');
 
 
 
-
-  <!-- <h2> ................. TO THE GRADERS: A DEPENDCY IS REQUIRED FOR THIS FUNCTIONALITY <h2> -->
   <br>
   <br>
-
-
-
-
-
-
-
 
 <div id="applyFORM">
 
@@ -208,21 +152,22 @@ include('includes/sidebar.php');
             <br>
             <br>
 
-            What is your current extracurricular involvement? Please list and indicate approximate time commitment.
-            <textarea name="extracurricular" rows="10" cols="30" required> </textarea>
+            What is your current extracurricular involvement? Please list and indicate approximate time commitment Please explain in less than 500 characters.
+            <br>
+            <textarea name="extracurricular" rows="10" cols="30" maxlength="500"> </textarea>
             <br>
             <br>
 
             What skills (i.e. computer programming, graphic design, etc.) have you developed that would benefit the Global Health Student Advisory Board? Please explain in less than 500 characters.
             <br>
-            <textarea name="applicantSkills" rows="10" cols="30" maxlength="150"> </textarea>
+            <textarea name="applicantSkills" rows="10" cols="30" maxlength="500"> </textarea>
             <br>
             <br>
 
 
-            What skills would you like to develop through being a member of the Global Health Student Advisory Board?  Please briefly explain in less than 2000 characters.
+            What skills would you like to develop through being a member of the Global Health Student Advisory Board? Please briefly explain in less than 2000 characters.
             <br>
-            <textarea name="learnSkills" rows="10" cols="30" maxlength="150"> </textarea>
+            <textarea name="learnSkills" rows="10" cols="30" maxlength="2000"> </textarea>
 
             <br>
             <br>
@@ -232,23 +177,10 @@ include('includes/sidebar.php');
 
             Personal Statement: Why are you interested in representing the Global Health Program and assisting with its development?  In your response, please describe your experiences in the Global Health Program and how they have shaped your Cornell experience and/or your career goals. Please briefly explain in less than 2000 characters.
             <br>
-            <textarea name="applicantStatement" rows="10" cols="30" maxlength="500"> </textarea>
+            <textarea name="applicantStatement" rows="10" cols="30" maxlength="2000"> </textarea>
 
             <br>
             <br>
-
-
-
-            <!-- <br>
-            <input type="hidden" name="MAX_FILE_SIZE" value="<?php echo MAX_FILE_SIZE;?>" />
-            <label> Upload Resume: </label>
-            <input type="file" name="resume" required>
-            <br>
-            <input type="hidden" name="MAX_FILE_SIZE" value="<?php echo MAX_FILE_SIZE;?>" />
-            <label> Upload Cover Letter: </label>
-            <input type="file" name="coverLetter" required> -->
-
-
             <br>
 
 
@@ -259,7 +191,7 @@ include('includes/sidebar.php');
 
             <label> Copy and Paste Resume Text Below: </label>
             <br>
-            <textarea name="resumeText" rows="10" cols="30" required> </textarea>
+            <textarea name="resumeText" rows="10" cols="30" maxlength="3000"> </textarea>
             <br>
 
 
@@ -273,11 +205,8 @@ include('includes/sidebar.php');
 
 <?php } ?>
 
-
-
 </div>
 
-
-</body>
 <?php include('includes/footer.php'); ?>
+</body>
 </html>
