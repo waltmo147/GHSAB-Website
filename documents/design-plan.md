@@ -1286,10 +1286,7 @@ To login as an admin, you must add "/login.php" to the end of the websites url l
 [1. Give us three specific strengths of your site that sets it apart from the previous website of the client (if applicable) and/or from other websites. Think of this as your chance to argue for the things you did really well.]
 1. Our website gives the admin the ability to easily edit text and images
 2. Our website has a slideshow that looks good
-<<<<<<< HEAD
-3.
-=======
-3. Our website makes good use of white space and is pleasant to look at 
+3. Our website makes good use of white space and is pleasant to look at
 >>>>>>> 7e3541017903ced2525d2da811c59eb304831c51
 
 [2. Tell us about things that don't work, what you wanted to implement, or what you would do if you keep working with the client in the future. Give justifications.]
