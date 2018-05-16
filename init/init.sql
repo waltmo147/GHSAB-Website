@@ -1,8 +1,7 @@
 CREATE TABLE admin (
   admin_id INTEGER PRIMARY KEY NOT NULL,
   username TEXT NOT NULL UNIQUE,
-  password TEXT NOT NULL,
-  session TEXT
+  password TEXT NOT NULL
 );
 
 CREATE TABLE members (
@@ -82,10 +81,10 @@ INSERT INTO picliason (member, picture) VALUES ((SELECT id FROM members WHERE fi
 INSERT INTO admin (username, password) VALUES ('administrator', '$2y$10$7yzA6bjor.PX2jkqbduReetOpP39/SifVIYUjxYLUx12Qv88jIfp2');
 
 -- seed data for slideshow
-INSERT INTO slideshow (picpath, title) VALUES ('uploads/pictures/image1.jpg', "image1");
-INSERT INTO slideshow (picpath, title) VALUES ('uploads/pictures/image2.jpg', "image2");
-INSERT INTO slideshow (picpath, title) VALUES ('uploads/pictures/image3.jpg', "image3");
-INSERT INTO slideshow (picpath, title) VALUES ('uploads/pictures/image4.jpg', "image4");
+INSERT INTO slideshow (picpath, title) VALUES ('uploads/pictures/image1.jpg', "This image is owned by our client");
+INSERT INTO slideshow (picpath, title) VALUES ('uploads/pictures/image2.jpg', "This image is owned by our client");
+INSERT INTO slideshow (picpath, title) VALUES ('uploads/pictures/image3.jpg', "This image is owned by our client");
+INSERT INTO slideshow (picpath, title) VALUES ('uploads/pictures/image4.jpg', "This image is owned by our client");
 
 INSERT INTO events (name, date_time, address, description) values ('Cornell Ochestra', '2018-04-29 15:00:00', 'Bailey Hall', 'Tchaikovsky');
 INSERT INTO application (event_id, email, comment) values ((SELECT id FROM events where name is 'Cornell Ochestra'), 'jg2273@cornell.edu', 'Is is for free?');

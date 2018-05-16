@@ -509,7 +509,7 @@ Action #1 : click on Edit Blogs link
 
   - Will Abby know what to do at this step?
     - Yes, maybe or no: yes
-    - Why? because she wants to delete a blog post, and it makes the most sense to click on edit blogs
+    - Why? because she wants to delete a blog post, and it makes the most sense to click on edit blogs, since tht is where she can edit the whole page.
 
   - If Abby does the right thing, will she know that she did the right thing, and is making progress towards her goal?
     - Yes, maybe or no: yes
@@ -542,6 +542,10 @@ We reduced the number of steps to delete a blog by adding delete buttons under e
 ### Database Schema
 
 [Describe the structure of your database. You may use words or a picture. A bulleted list is probably the simplest way to do this.]
+
+Table: admin
+* field 1: admin_id
+* field 2: username
 
 Table: accounts
 * field 1: id

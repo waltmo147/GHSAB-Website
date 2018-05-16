@@ -86,24 +86,6 @@ function open_or_init_sqlite_db($db_filename, $init_sql_filename) {
 }
 
 function check_login() {
-  // global $db;
-  //
-  // if (isset($_COOKIE["session"])) {
-  //   $session = $_COOKIE["session"];
-  //
-  //   $sql = "SELECT * FROM admin WHERE session = :session";
-  //   $params = array(
-  //     ':session' => $session
-  //   );
-  //   $records = exec_sql_query($db, $sql, $params)->fetchAll();
-  //   if ($records) {
-  //     // Username is UNIQUE, so there should only be 1 record.
-  //     $account = $records[0];
-  //     return $account['username'];
-  //   }
-  // }
-  // return NULL;
-
   if (isset($_SESSION['current_user'])) {
     return $_SESSION['current_user'];
   }
@@ -151,8 +133,6 @@ function log_out() {
   session_destroy();
 
 
-
-
 }
 
 
@@ -185,39 +165,4 @@ if ($current_user) {
       $current_user_id = $records[0];
   }
 }
-function remove_member($member_id){
-  global $db;
-  $sql = "SELECT * FROM member_images WHERE member_images.id=:member_id";
-  $params = array('member_id' => $member_id);
-  $records = exec_sql_query($db, $sql,$params)->fetchAll();
-  $sql = "DELETE FROM member_images WHERE member_images.id=:member_id";
-  exec_sql_query($db, $sql,$params);
-  $sql1 = "DELETE FROM members WHERE members.id=:member_id";
-  exec_sql_query($db,$sql1,$params);
-  $sql1 = "DELETE FROM picliason WHERE member=:member_id";
-  exec_sql_query($db,$sql1,$params);
-
-}
-//function to remove blog from database
-function remove_blog($blog_id){
-    global $db;
-    $sql = "DELETE FROM blogs WHERE blogs.id=:blog_id";
-    $params = array(
-      ":blog_id"=> $blog_id
-  );
-  exec_sql_query($db, $sql,$params);
-}
-//function to add new blog to database
-function add_blog($title,$author,$blog_text,$link){
-  global $db;
-  $sql = "INSERT INTO blogs (title, author, blog, link) VALUES (:title, :author, :blog, :link)";
-  $params = array(
-    ":title"=>$title,
-    ":author"=>$author,
-    ":blog"=>$blog_text,
-    ":link"=>$link
-  );
-  exec_sql_query($db, $sql, $params);
-}
-
 ?>
