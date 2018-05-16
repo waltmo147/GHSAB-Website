@@ -1236,6 +1236,8 @@ Users can view the home, event, blog and about us page. User can also apply to j
 
 [Describe in some detail what the client will do (or would have to do) in order to make this website go live. What is the deployment plan?]
 
+Must convert sqlite into a deployment ready SQL
+
 [Include any other information that your client needs to know about your final website design. For example, what client wants or needs were unable to be realized in your final product? Why were you unable to meet those wants/needs?]
 
 ## Milestone 5: Final Notes to the Graders
