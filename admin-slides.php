@@ -63,7 +63,7 @@ foreach($pictures as $picture){
   $id = $picture['id'];
   echo('<div class = "block">');
   echo "<h4>".htmlspecialchars($title)."</h4>";
-  echo "<img src=".htmlspecialchars($path)."alt=".htmlspecialchars($title).">";
+  echo "<img src=".htmlspecialchars($path)." alt=".htmlspecialchars($title).">";
   ?>
   <form class = "deleteslide" action="admin-slides.php" method="post">
   <input type="hidden" name="picid" value="<?php echo htmlspecialchars($id); ?>"/>

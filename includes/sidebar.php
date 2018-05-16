@@ -1,5 +1,5 @@
 <div id = "sidebar">
-<img class='logo' src='documents/logo.png' alt='logo'>
+<img class='logo' src='uploads/logo/logo.png' alt='logo'>
 <?php
 if($current_user){
   foreach($adminpages as $name => $link){

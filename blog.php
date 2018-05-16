@@ -11,17 +11,17 @@ $current_page = "Blog";?>
 </head>
 
 <body>
-<?php include('includes/header.php');
-include('includes/sidebar.php');
+  <?php include('includes/header.php');
+  include('includes/sidebar.php');
 
-?>
-<div class = 'blogs'>
-<?php
-$sql = "SELECT * FROM blogs";
-$params = array();
-$blogs = exec_sql_query($db, $sql, $params)->fetchAll();
-foreach($blogs as $blog){
-  echo("<div class='blogpost'>
+  ?>
+  <div class = 'blogs'>
+    <?php
+    $sql = "SELECT * FROM blogs";
+    $params = array();
+    $blogs = exec_sql_query($db, $sql, $params)->fetchAll();
+    foreach($blogs as $blog){
+      echo("<div class='blogpost'>
       <h1 class='blog_title'>" . $blog['title']."</h1>" .
       htmlspecialchars($blog['blog']));
       if($blog['link']!=""){
@@ -29,10 +29,10 @@ foreach($blogs as $blog){
       }
       echo"<h2> By " . htmlspecialchars($blog['author']) . "</h2>
       </div>";
-}
+    }
 
-?>
-</div>
-<?php include('includes/footer.php')?>
+    ?>
+  </div>
+  <?php include('includes/footer.php')?>
 </body>
 </html>

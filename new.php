@@ -115,6 +115,6 @@ include('includes/sidebar.php');
 ?>
 
 
-</body>
 <?php include('includes/footer.php'); ?>
+</body>
 </html>

@@ -13,7 +13,7 @@ if (isset($_POST["submit_upload"])) {
 
     // check if the file is an image
     if (in_array($upload_ext, $image_ext)) {
-      $temp_file = "documents/" . "logo.png";
+      $temp_file = "uploads/logo/" . "logo.png";
 
       if (move_uploaded_file($upload_info["tmp_name"], $temp_file)){
         array_push($messages, "Your file has been uploaded.");
@@ -62,7 +62,7 @@ include('includes/sidebar.php');
       <label>Current logo:</label>
     </li>
     <li>
-      <img class="logo" src="documents/logo.png" alt="current logo" >
+      <img class="logo" src="uploads/logo/logo.png" alt="current logo" >
     </li>
 
     <li>

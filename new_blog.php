@@ -23,43 +23,43 @@ if(isset($_POST['submit_blog'])){
 </head>
 
 <body>
-<?php
-      include('includes/header.php');
-      include('includes/sidebar.php');
-      ?>
+  <?php
+  include('includes/header.php');
+  include('includes/sidebar.php');
+  ?>
 
-<div id='about_2'>
+  <div id='about_2'>
 
-<form method='post' name='new_blog' action='new_blog.php'>
-  <fieldset class='new_inputs'>
-  <legend>Add new blog</legend>
-  <ul>
-      <li>Title:
-        <input type='text' name='blog_title' required>
-      </li>
-      <li>Author:
-        <input type='text' name='author' required>
-      </li>
-      <li>
-        <label>Enter blog text:</label>
-      </li>
-      <li>
-        <textarea name='blog' cols='40' rows='5'></textarea>
-      </li>
-      <li>
-        Optional Link:
-        <input type='text' name='link'>
-      </li>
-      <input type='submit' name='submit_blog'>
-  </ul>
-</fieldset>
-</form>
-<?php print_messages();
-  if($show_preview){
-    echo"<a href='blog.php'>preview</a>";
-  }
- ?>
-</div>
-<?php include('includes/footer.php'); ?>
+    <form method='post' name='new_blog' action='new_blog.php'>
+      <fieldset class='new_inputs'>
+        <legend>Add new blog</legend>
+        <ul>
+          <li>Title:
+            <input type='text' name='blog_title' required>
+          </li>
+          <li>Author:
+            <input type='text' name='author' required>
+          </li>
+          <li>
+            <label>Enter blog text:</label>
+          </li>
+          <li>
+            <textarea name='blog' cols='40' rows='5'></textarea>
+          </li>
+          <li>
+            Optional Link:
+            <input type='text' name='link'>
+          </li>
+          <input type='submit' name='submit_blog'>
+        </ul>
+      </fieldset>
+    </form>
+    <?php print_messages();
+    if($show_preview){
+      echo"<a class='edit_links' href='blog.php'>preview</a>";
+    }
+    ?>
+  </div>
+  <?php include('includes/footer.php'); ?>
 </body>
 </html>

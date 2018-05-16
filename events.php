@@ -12,7 +12,6 @@ function print_events($events) {
       <th>Time</th>
       <th>Address</th>
       <th>Description</th>
-      <th>Application</th>
     </tr>
   <?php
   foreach ($events as $event) {
@@ -24,7 +23,7 @@ function print_events($events) {
         $image_file = "uploads/events/".$event["id"].".".$event["image"];
 
       } else {
-        $image_file = "documents/logo.png";
+        $image_file = "uploads/logo/logo.png";
       }
 
       //echo $image_file;
@@ -35,12 +34,6 @@ function print_events($events) {
       <td class="date_time"> <?php echo htmlspecialchars($event["date_time"]); ?> </td>
       <td class="address"> <?php echo htmlspecialchars($event["address"]); ?> </td>
       <td class="description"> <?php echo htmlspecialchars($event["description"]); ?> </td>
-      <td class="apply">
-        <?php
-        echo "<form class=\"loginform\" action=\"apply.php\" method=\"post\">";
-        ?>
-          <button type="submit" name="apply">Apply</button>
-        </form>
       </td>
     </tr>
     <?php
