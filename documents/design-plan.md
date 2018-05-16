@@ -866,11 +866,112 @@ consolidated some unnecessary database tables
 
 [Copy your tasks here from Milestone 2. Update them if you need to and then conduct another cognitive walkthrough.]
 
+Task 1: user submits application
+
+  1. user visits the website
+  2. user clicks on apply
+  3. user fills out application form
+  4. user hits submit
+  5. user sees feedback and does not submit again (if the submission was successful)
+
+Task 2: administrator wants to add an event
+  1. they add "login.php" to the website path and hit enter
+  2. admin inputs credentials
+  3. press login
+  4. click on the events nav element
+  5. click add event
+  6. fill out information
+  7. clicking submit
+  8. seeing feedback and does not submit again (if the submission was successful)
+  9. admin logs out
+
+Task 3: administrator wants to delete an event
+  1. they add "login.php" to the website path and hit enter
+  2. admin inputs credentials
+  3. press login
+  4. scroll down to the event list
+  5. find the specific event
+  6. click the delete button of that specific event
+  7. seeing the refresh of the page see if the event is deleted
+  8. admin logs out
+
+Task 4: administrator wants to delete a blog post
+  1. they add "login.php" to the website path and hit enter
+  2. admin inputs credentials
+  3. press login
+  4. click on the blog nav element
+  5. admin selects the blog post(s) they would like to be deleted
+  6. admin clicks on "delete blog post"
+  7. admin sees feedback and does not attempt to delete again (if the deletion was successful)
+  8. admin logs out
+
+Task 5: administrator wants to add a blog post
+
+  1. they add "login.php" to the website path and hit enter
+  2. admin inputs credentials
+  3. press login
+  4. click on the blog nav element
+  5. admin fill out the blog form
+  6. admin clicks on "add" button
+  7. admin sees feedback that blog is submitted
+  8. admin goes to blog page and check the submission
+  9. admin logs out
+
+Task 6: administrator wants to change the club logo
+
+  1. admin add "login.php" to the website path and hit enter
+  2. admin inputs credentials
+  3. press login
+  4. click on the edit logo in the side bar
+  5. admin uploads new logo image
+  6. admin clicks on "submit" button
+  7. admin sees feedback that new logo is submitted
+  8. admin see the logo change in the sidebar
+  9. admin logs out
+
+Task 6: administrator wants to edit the home page texts
+
+  1. admin add "login.php" to the website path and hit enter
+  2. admin inputs credentials
+  3. press login
+  4. click on the edit home texts in the side bar
+  5. admin fill in the text forms
+  6. admin clicks on "submit" button of the text form he/she would like to edit
+  7. admin goes to the home page to see if the change goes as supposed
+  8. admin logs out
+
+Task 7: administrator wants to edit the slide show in the home page
+
+  1. admin add "login.php" to the website path and hit enter
+  2. admin inputs credentials
+  3. press login
+  4. click on the edit slides in the side bar
+  5. admin click the delete button of the current pictures shown on the slide that would like to be deleted
+  6. admin upload new image files
+  7. admin click the upload button
+  8. admin goes to the home page to see if the change goes as supposed
+  9. admin logs out
+
+Task 7: administrator wants to edit the about us page
+
+  1. admin add "login.php" to the website path and hit enter
+  2. admin inputs credentials
+  3. press login
+  4. click on the edit slides in the side bar
+  5. admin click the delete button of the current member would like to be deleted
+  6. admin edit the text of each current members
+  7. admin click add new member
+  8. admin fill in the new member info in the forms
+  9. admin goes to the about us page to see if the changes are as supposed
+  10. admin logs out
+
 ### Cognitive Walk-though Results
 
 [Did you discover any issues with your design? What were they? How did you change your design to address the gender-inclusiveness bugs you discovered?]
 
 [Your responses here should be very thorough and thoughtful.]
+
+Users can view the home, event, blog and about us page. User can also apply to join the team. The admin can successfully add or delete blog, events, edit the home page, edit the club logo, edit the about us page, edit the slide show in the home page and view all the other pages.
 
 ## Milestone 5: Final Notes to the Clients
 
