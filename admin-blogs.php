@@ -23,10 +23,10 @@ $blogs = exec_sql_query($db, $sql, $params)->fetchAll();
 //echo "<a href='new_blog.php' >New Blog</a>";
 foreach($blogs as $blog){
   echo("<div class = 'blogpost'>
-      <h1>" . $blog['title'] . "</h1>
-      <p>" . $blog['blog'] . "</p>
-      <h2> By " . $blog['author'] . "</h2>
-      <a class='edit_links' href='delete.php?blog_id=".$blog['id']."'>Remove</a>".
+      <h1>" . htmlspecialchars($blog['title']) . "</h1>
+      <p>" . htmlspecialchars($blog['blog']) . "</p>
+      <h2> By " . htmlspecialchars($blog['author']) . "</h2>
+      <a class='edit_links' href='delete.php?blog_id=".htmlspecialchars($blog['id'])."'>Remove</a>".
       "</div>");
 
 }
