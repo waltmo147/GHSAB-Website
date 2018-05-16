@@ -15,11 +15,6 @@ $current_page = "About Us"?>
       include('includes/header.php');
       include('includes/sidebar.php');
       ?>
-<div id="about_1">
-<h3> Who we are </h3>
-<p>The GHSAB is a diverse team of dedicated, enthusiastic, and innovative upperclassmen that represents the Global Health Program and assists with overall program development.  This development includes organizing information sessions and other means of communicating various programs, an intramural Cornell Global Health Case Competition, and organizing Global Health related workshops and various events on campus.
-</p>
-</div>
 <div id='about_2'>
 <h3>Our Members</h3>
 <ul>

@@ -15,11 +15,6 @@ $current_page = "Edit About Us"?>
       include('includes/header.php');
       include('includes/sidebar.php');
       ?>
-<div id="about_1">
-<h3> Who we are </h3>
-<p>The GHSAB is a diverse team of dedicated, enthusiastic, and innovative upperclassmen that represents the Global Health Program and assists with overall program development.  This development includes organizing information sessions and other means of communicating various programs, an intramural Cornell Global Health Case Competition, and organizing Global Health related workshops and various events on campus.
-</p>
-</div>
 <div id='about_2'>
 <h3>Edit Members</h3>
 <a class='edit_links' href="new.php?add_member=true">Add new Member</a>
@@ -29,13 +24,22 @@ $current_page = "Edit About Us"?>
       $records = exec_sql_query($db, $sql)->fetchAll();
 
       foreach($records as $record){
-        echo "<li>";
-        echo "<h1>" . $record['first_name'] . " " . $record['last_name'] . "</h1>";
-        echo "<img class='team_imgs' src=" . $record['picpath'] . "alt=' '>";
-        //echo "<input name='pic_name' type='hidden' value=".$record['first_name']>;
-        echo "<a class='edit_links' href='delete.php?member_id=".$record['member']."'>remove_member</a>";
-        //echo '<p>'.$record['introduction'].'</p>';
-        echo "</li>";
+        $picpath = $record['picpath'];
+        $memberid = $record['member'];
+        $fname = $record['first_name'];
+        $lname = $record['last_name'];
+        $desc = $record['introduction'];
+        ?><li><h1><?php echo("$fname $lname"); ?></h1>
+          <img class='team_imgs' src= <?php echo("$picpath");?> alt=' '>
+          <form class = "edittext" action="admin-aboutus.php" method="post">
+          <input type="hidden" name="memberid" value="<?php echo($memberid); ?>"/>
+          <input type="hidden" name="fname" value="<?php echo($lname); ?>"/>
+          <input type="hidden" name="edit" value="edit"/>
+          <textarea class = "simple" cols = '100' rows = '10' name="body" name = "body" ><?php echo($desc); ?></textarea>
+          <button name="changetext" type="submit" onclick="return confirm('Are you satisfied with your changes?')">Submit Changes</button>
+          </form>
+          <a class='edit_links' href='delete.php?member_id=<?php echo($memberid)?>'>Remove Member</a>
+        </li><?php
       }
       ?>
 
