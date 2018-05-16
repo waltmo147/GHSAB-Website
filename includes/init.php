@@ -281,13 +281,14 @@ function remove_blog($blog_id){
   );
   exec_sql_query($db, $sql,$params);
 }
-function add_blog($title,$author,$blog_text){
+function add_blog($title,$author,$blog_text,$link){
   global $db;
-  $sql = "INSERT INTO blogs (title, author, blog) VALUES (:title, :author, :blog)";
+  $sql = "INSERT INTO blogs (title, author, blog, link) VALUES (:title, :author, :blog, :link)";
   $params = array(
     ":title"=>$title,
     ":author"=>$author,
-    ":blog"=>$blog_text
+    ":blog"=>$blog_text,
+    ":link"=>$link
   );
   exec_sql_query($db, $sql, $params);
 }

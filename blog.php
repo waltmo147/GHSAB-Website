@@ -24,10 +24,12 @@ foreach($blogs as $blog){
   echo("<div class='blogpost'>
 
       <h1 class='blog_title'>" . $blog['title'] . "</h1>
-      " . $blog['blog'] . "
-      <h2> By " . $blog['author'] . "</h2>
-
-      </div>");
+      " . htmlspecialchars($blog['blog']));
+      if(isset($blog['link'])){
+        echo "<a href='".htmlspecialchars($blog['link'])."'>READ MORE</a>";
+      }
+      echo"<h2> By " . htmlspecialchars($blog['author']) . "</h2>
+      </div>";
 }
 
 ?>
