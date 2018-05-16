@@ -4,13 +4,13 @@ $task;
 if(isset($_GET['member_id'])){
   $task="remove_member";
   //$pic_name = $_GET['pic_name'];
-  $current_member = $_GET['member_id'];
+  $current_member = filter_input(INPUT_GET,'member_id',FILTER_SANITIZE_STRING);
   remove_member($current_member);
 
   record_message("removed member!");
 }elseif(isset($_GET['blog_id'])){
   $task="remove_blog";
-  $blog_id = $_GET['blog_id'];
+  $blog_id = filter_input(INPUT_GET,'blog_id',FILTER_SANITIZE_STRING);
   remove_blog($blog_id);
   record_message("Blog removed");
 
