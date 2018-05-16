@@ -23,7 +23,7 @@ function print_events($events) {
         $image_file = "uploads/events/".$event["id"].".".$event["image"];
 
       } else {
-        $image_file = "documents/logo.png";
+        $image_file = "uploads/logo/logo.png";
       }
 
       //echo $image_file;
