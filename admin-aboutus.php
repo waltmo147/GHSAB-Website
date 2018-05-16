@@ -1,7 +1,7 @@
 <?php include('includes/init.php');
 $current_page = "Edit About Us"?>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
   <meta charset="UTF-8" />
@@ -35,7 +35,7 @@ $current_page = "Edit About Us"?>
         //echo "<input name='pic_name' type='hidden' value=".$record['first_name']>;
         echo "<a class='edit_links' href='delete.php?member_id=".$record['member']."'>remove_member</a>";
         //echo '<p>'.$record['introduction'].'</p>';
-        echo "</li>"; 
+        echo "</li>";
       }
       ?>
 

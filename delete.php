@@ -17,7 +17,7 @@ if(isset($_GET['member_id'])){
 }
 ?>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
   <meta charset="UTF-8" />

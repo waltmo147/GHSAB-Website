@@ -34,7 +34,7 @@ if (isset($_POST["submit_upload"])) {
 
 ?>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
   <meta charset="UTF-8" />
@@ -79,11 +79,11 @@ include('includes/sidebar.php');
   </ul>
 </form>
 </div>
-
-
-</body>
 <?php
 include('includes/footer.php');
 }
 ?>
+
+</body>
+
 </html>

@@ -12,7 +12,7 @@ if(isset($_POST['submit_blog'])){
 
 ?>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
   <meta charset="UTF-8" />
