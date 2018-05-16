@@ -40,7 +40,7 @@ foreach($blogs as $blog){
       </form>
       <?php
 }
-echo "<a href='new_blog.php' class='edit_links'>add blog</a>";
+echo "<a href='new_blog.php' class='edit_links'>Add Blog</a>";
 ?>
 </div>
 <?php include('includes/footer.php')?>
