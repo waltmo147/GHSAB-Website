@@ -1172,7 +1172,9 @@ Users can view the home, event, blog and about us page. User can also apply to j
 ## Milestone 5: Final Notes to the Graders
 
 [1. Give us three specific strengths of your site that sets it apart from the previous website of the client (if applicable) and/or from other websites. Think of this as your chance to argue for the things you did really well.]
-1.Our website gives the admin the ability to easily edit text and images 
+1.Our website gives the admin the ability to easily edit text and images
+
+2.Our website has a slide show that looks very nice
 
 [2. Tell us about things that don't work, what you wanted to implement, or what you would do if you keep working with the client in the future. Give justifications.]
 
