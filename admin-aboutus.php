@@ -87,7 +87,6 @@ include('includes/header.php');
 include('includes/sidebar.php');?>
 <div id='about_2'>
 <h3>Edit Members</h3>
-<ul>
 <?php
       if($showtext){
       $sql = "SELECT member,first_name, last_name, introduction, email, picpath FROM (SELECT * FROM members join picliason on id = member) JOIN member_images on member_images.id = picture;";
@@ -147,9 +146,6 @@ include('includes/sidebar.php');?>
           </li><?php
         }
       ?>
-
-</ul>
-
 </div>
 <?php include('includes/footer.php'); ?>
 </body>
