@@ -65,28 +65,28 @@ foreach($pictures as $picture){
 <br>
 
 <script>
-var slideIndex = 1;
-displaySlides(slideIndex);
+var slindex = 1;
+slidedisplay(slindex);
 function nextSlide(n) {
-  displaySlides(slideIndex += n);
+  slidedisplay(slindex += n);
 }
 function gotoslide(n) {
-  displaySlides(slideIndex = n);
+  slidedisplay(slindex = n);
 }
-function displaySlides(n) {
+function slidedisplay(n) {
   var i;
   var slides = document.getElementsByClassName("mySlides");
   var dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
+  if (n > slides.length) {slindex = 1}
+  if (n < 1) {slindex = slides.length}
   for (i = 0; i < slides.length; i++) {
       slides[i].style.display = "none";
   }
   for (i = 0; i < dots.length; i++) {
       dots[i].className = dots[i].className.replace(" active", "");
   }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
+  slides[slindex-1].style.display = "block";
+  dots[slindex-1].className += " active";
 }
 
 
