@@ -26,6 +26,7 @@ $current_page = "About Us"?>
         echo "<li>";
         echo "<h1>" . htmlspecialchars($record['first_name']) . " " . htmlspecialchars($record['last_name']) . "</h1>";
         echo "<img class='team_imgs' src=" . htmlspecialchars($record['picpath']) . " alt=' '>";
+        echo "<!-- if icon image Person Icon by thekua Icon for representing a person</a> -->";
         echo '<p class="intros">'.htmlspecialchars($record['introduction']).'</p>';
         echo '<strong><a href="mailto:'.htmlspecialchars($record['email']).'">'.htmlspecialchars($record['email']).'</a></strong>';
         echo "</li>";

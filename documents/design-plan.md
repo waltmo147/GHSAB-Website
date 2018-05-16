@@ -1211,6 +1211,8 @@ If the client (a group of Cornell students) had more time, we would request more
 
 [3. Tell us anything else you need us to know for when we're looking at the project.]
 
+We chose not to use database transactions while still maintaining atomic database queries. Users of the website only view data, they do not alter it nor do they add their own. The organization only has one person who will be the administrator of the site. Because there is only one person who will be altering data on the site, all database queries remain atomic.
+
 Below is a screenshot of a user application to the organization. The user fills out a form, then we format the text in a readable way before finally calling PHP's mail() function.
 
 

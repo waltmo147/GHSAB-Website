@@ -285,10 +285,10 @@ button, input[type=submit] {
 }
 
 img.logo {
-  height: 150px;
   width: 150px;
+  max-height: 150px;
   overflow: hidden;
-  border-radius: 75px;
+  /* border-radius: 75px; */
   background-color: grey;
   position: relative;
 }
@@ -365,7 +365,7 @@ td,th{
 
     width: 60%;
 
-    border: 3px solid red;
+    border: 3px solid blue;
     padding: 10px;
     margin-bottom: 64px;
 }
