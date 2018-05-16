@@ -8,9 +8,9 @@ $showForm = TRUE;
 
 // echo("TO THE GRADERS: DEPENDCY IS REQUIRED FOR THIS FUNCTIONALITY... DID NOT WANT TO UPLOAD A PHP LIBRARY TO GITHUB");
 
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\Exception;
-require 'vendor/autoload.php';
+// use PHPMailer\PHPMailer\PHPMailer;
+// use PHPMailer\PHPMailer\Exception;
+// require 'vendor/autoload.php';
 
 
 
@@ -28,52 +28,69 @@ if(isset($_POST['sendEmail'])){
 //
 
 
-
-
-
-
-
-            $upload_infoResume = $_FILES["resume"];
-            $upload_infoCoverLetter = $_FILES["coverLetter"];
-
-            if(($upload_infoResume['error'] == UPLOAD_ERR_OK) && $upload_infoCoverLetter['error'] == UPLOAD_ERR_OK ) {
+            // $upload_infoResume = $_FILES["resume"];
+            // $upload_infoCoverLetter = $_FILES["coverLetter"];
+            //
+            // if(($upload_infoResume['error'] == UPLOAD_ERR_OK) && $upload_infoCoverLetter['error'] == UPLOAD_ERR_OK ) {
 
 
 
           $applicantFirstName = filter_input(INPUT_POST, 'firstName', FILTER_SANITIZE_STRING);
           $lastName = filter_input(INPUT_POST, 'lastName', FILTER_SANITIZE_STRING);
           $phoneNumber = filter_input(INPUT_POST, 'phoneNumber', FILTER_SANITIZE_STRING);
-          $emailAddress = filter_input(INPUT_POST, 'emailAddress', FILTER_SANITIZE_STRING);
+        //  $emailAddress = filter_input(INPUT_POST, 'emailAddress', FILTER_SANITIZE_STRING);
+          $applicantNETID = filter_input(INPUT_POST, 'netID', FILTER_SANITIZE_STRING);
+
+          $applicantYear = filter_input(INPUT_POST, 'year', FILTER_SANITIZE_STRING);
+          $applicantMajor = filter_input(INPUT_POST, 'major', FILTER_SANITIZE_STRING);
+          $applicantCollege = filter_input(INPUT_POST, 'college', FILTER_SANITIZE_STRING);
+          // $message = wordwrap($message, 70, "\r\n");
+          $applicantProgram = filter_input(INPUT_POST, 'program', FILTER_SANITIZE_STRING);
+          $applicantField = filter_input(INPUT_POST, 'fieldLocation', FILTER_SANITIZE_STRING);
 
 
 
-// $message = wordwrap($message, 70, "\r\n");
+
+          $message = "Application from: " . $applicantFirstName . " " . $lastName . " (" . $applicantNETID . ")" . "\r\n";
+          $lineTwo= "Applicant's phone number is: " . $phoneNumber . "\r\n";
+
+          $lineThree = $applicantFirstName . " is a " . $applicantYear . " studying " . $applicantMajor . " in the College of " . $applicantCollege . "\r\n";
+
+          $lineFour = $applicantFirstName . " is a part of the " . $applicantProgram . " program/organization and has done their field work in: " . $applicantField . "\r\n\r\n";
+
+
+          $lineFive = "Prompts and Applicant Responses: \r\n";
+
+          $message = $message . $lineTwo . $lineThree . $lineFour . $lineFive;
 
 
 
+
+
+          mail('barronfran@gmail.com', 'New Applicant', $message);
 
 
           //UNCOMMENT THIS , THIS IS THE REAL STUFF
-          $bodytext = "An application has been submitted by: $applicantFirstName $lastName \r\n Applicant's Phone Number: $phoneNumber \r\n Applicant's Email Address: $emailAddress \r\n Applicant's documents are attached below";
-          $email = new PHPMailer();
-          $email->From      = 'applicationmailer@gmail.com';
-          $email->FromName  = 'New Applicant';
-          $email->Subject   = 'Application';
-          $email->Body      = $bodytext;
-
-
-          //CHANGE THE EMAIL TO THE STUDENT ADVISORY BOARD EMAIL
-          $email->AddAddress('dubois.barron@gmail.com');
-          $email->AddAttachment( $_FILES['resume']['tmp_name'] , $applicantFirstName . $lastName . 'resume' . '.pdf' );
-          $email->AddAttachment( $_FILES['resume']['tmp_name'], $applicantFirstName . $lastName . 'coverletter' . '.pdf' );
-          $email->Send();
+          // $bodytext = "An application has been submitted by: $applicantFirstName $lastName \r\n Applicant's Phone Number: $phoneNumber \r\n Applicant's Email Address: $emailAddress \r\n Applicant's documents are attached below";
+          // $email = new PHPMailer();
+          // $email->From      = 'applicationmailer@gmail.com';
+          // $email->FromName  = 'New Applicant';
+          // $email->Subject   = 'Application';
+          // $email->Body      = $bodytext;
+          //
+          //
+          // //CHANGE THE EMAIL TO THE STUDENT ADVISORY BOARD EMAIL
+          // $email->AddAddress('dubois.barron@gmail.com');
+          // $email->AddAttachment( $_FILES['resume']['tmp_name'] , $applicantFirstName . $lastName . 'resume' . '.pdf' );
+          // $email->AddAttachment( $_FILES['resume']['tmp_name'], $applicantFirstName . $lastName . 'coverletter' . '.pdf' );
+          // $email->Send();
 
           array_push($messages, "Thanks for submitting your application! If your resume matches our needs a member of our organization will contact you.");
 
 
           $showForm = FALSE;
 
-          }
+//          }
 }
 
 ?>
@@ -168,7 +185,7 @@ include('includes/sidebar.php');
             <br>
 
             NetID:
-            <input type="text" name="emailAddress" required>
+            <input type="text" name="netID" required>
             <br>
 
 
@@ -196,14 +213,14 @@ include('includes/sidebar.php');
             <br>
             <br>
 
-            What skills (i.e. computer programming, graphic design, etc.) have you developed that would benefit the Global Health Student Advisory Board?  Response should be 150 words or less.
+            What skills (i.e. computer programming, graphic design, etc.) have you developed that would benefit the Global Health Student Advisory Board? Please explain in less than 500 characters.
             <br>
             <textarea name="applicantSkills" rows="10" cols="30" maxlength="150"> </textarea>
             <br>
             <br>
 
 
-            What skills would you like to develop through being a member of the Global Health Student Advisory Board?  Please briefly explain.  Response should be 150 words or less.
+            What skills would you like to develop through being a member of the Global Health Student Advisory Board?  Please briefly explain in less than 2000 characters.
             <br>
             <textarea name="learnSkills" rows="10" cols="30" maxlength="150"> </textarea>
 
@@ -213,7 +230,7 @@ include('includes/sidebar.php');
 
 
 
-            Personal Statement: Why are you interested in representing the Global Health Program and assisting with its development?  In your response, please describe your experiences in the Global Health Program and how they have shaped your Cornell experience and/or your career goals.  Responses should be 500 words or less.
+            Personal Statement: Why are you interested in representing the Global Health Program and assisting with its development?  In your response, please describe your experiences in the Global Health Program and how they have shaped your Cornell experience and/or your career goals. Please briefly explain in less than 2000 characters.
             <br>
             <textarea name="applicantStatement" rows="10" cols="30" maxlength="500"> </textarea>
 
@@ -230,18 +247,6 @@ include('includes/sidebar.php');
             <input type="hidden" name="MAX_FILE_SIZE" value="<?php echo MAX_FILE_SIZE;?>" />
             <label> Upload Cover Letter: </label>
             <input type="file" name="coverLetter" required> -->
-
-
-
-
-
-
-
-
-
-
-
-
 
 
             <br>
