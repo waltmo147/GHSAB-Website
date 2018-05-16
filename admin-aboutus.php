@@ -12,9 +12,23 @@ $current_page = "Edit About Us"?>
 
 <body>
 <?php
-      include('includes/header.php');
-      include('includes/sidebar.php');
-      ?>
+if(isset($_POST['changetext'])){
+  $id = $_POST['memberid'];
+  $fname = $_POST['fname'];
+  $desc = $_POST['desc'];
+  var_dump($id);
+  var_dump($fname);
+  var_dump($desc);
+  $sql = "UPDATE members SET (introduction) = (:introduction) WHERE id = :id AND first_name = :first_name;";
+  $params = array(':introduction' => $desc,
+             ':id' => $id,
+             ':first_name' => $fname);
+  exec_sql_query($db, $sql, $params);
+}
+
+
+include('includes/header.php');
+include('includes/sidebar.php');?>
 <div id='about_2'>
 <h3>Edit Members</h3>
 <a class='edit_links' href="new.php?add_member=true">Add new Member</a>
@@ -33,8 +47,8 @@ $current_page = "Edit About Us"?>
           <img class='team_imgs' src= <?php echo("$picpath");?> alt=' '>
           <form class = "edittext" action="admin-aboutus.php" method="post">
           <input type="hidden" name="memberid" value="<?php echo($memberid); ?>"/>
-          <input type="hidden" name="fname" value="<?php echo($lname); ?>"/>
-          <input type="hidden" name="edit" value="edit"/>
+          <input type="hidden" name="fname" value="<?php echo($fname); ?>"/>
+          <input type="hidden" name="desc" value="<?php echo($desc); ?>"/>
           <textarea class = "simple" cols = '100' rows = '10' name="body" name = "body" ><?php echo($desc); ?></textarea>
           <button name="changetext" type="submit" onclick="return confirm('Are you satisfied with your changes?')">Submit Changes</button>
           </form>
