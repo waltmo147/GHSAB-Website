@@ -62,7 +62,7 @@ include('includes/sidebar.php');
       <label>Current logo:</label>
     </li>
     <li>
-      <img class="logo" src="documents/logo/logo.png" alt="current logo" >
+      <img class="logo" src="uploads/logo/logo.png" alt="current logo" >
     </li>
 
     <li>
