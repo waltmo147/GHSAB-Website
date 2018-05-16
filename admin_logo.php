@@ -70,7 +70,7 @@ include('includes/sidebar.php');
     </li>
     <li>
       <!-- MAX_FILE_SIZE must precede the file input field -->
-      <input type="hidden" name="MAX_FILE_SIZE" value="<?php echo MAX_FILE_SIZE; ?>" />
+      <input type="hidden" name="MAX_FILE_SIZE" value="<?php echo htmlspecialchars(MAX_FILE_SIZE); ?>" />
       <input type="file" name="box_file" required>
     </li>
     <li>

@@ -24,10 +24,10 @@ $current_page = "About Us"?>
 
       foreach($records as $record){
         echo "<li>";
-        echo "<h1>" . $record['first_name'] . " " . $record['last_name'] . "</h1>";
-        echo "<img class='team_imgs' src=" . $record['picpath'] . " alt=' '>";
-        echo '<p class="intros">'.$record['introduction'].'</p>';
-        echo '<strong>'.$record['email'].'</strong>';
+        echo "<h1>" . htmlspecialchars($record['first_name']) . " " . htmlspecialchars($record['last_name']) . "</h1>";
+        echo "<img class='team_imgs' src=" . htmlspecialchars($record['picpath']) . " alt=' '>";
+        echo '<p class="intros">'.htmlspecialchars($record['introduction']).'</p>';
+        echo '<strong>'.htmlspecialchars($record['email']).'</strong>';
         echo "</li>";
       }
       ?>
