@@ -55,7 +55,7 @@ if (isset($_POST["submit_upload"])) {
 }
 ?>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
   <meta charset="UTF-8" />

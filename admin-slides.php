@@ -4,7 +4,7 @@ if($current_user == NULL){
 }
 $current_page = "Edit Slides";?>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
   <meta charset="UTF-8" />

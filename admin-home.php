@@ -1,7 +1,7 @@
 <?php include('includes/init.php');
 $current_page = "Edit Home Texts";?>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
   <meta charset="UTF-8" />

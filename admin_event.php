@@ -192,7 +192,7 @@ $allevents =  exec_sql_query($db, "SELECT * FROM events", NULL)->fetchAll();
 
 ?>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
   <meta charset="UTF-8" />

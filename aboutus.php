@@ -1,7 +1,7 @@
 <?php include('includes/init.php');
 $current_page = "About Us"?>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
   <meta charset="UTF-8" />
@@ -31,7 +31,8 @@ $current_page = "About Us"?>
         echo "<li>";
         echo "<h1>" . $record['first_name'] . " " . $record['last_name'] . "</h1>";
         echo "<img class='team_imgs' src=" . $record['picpath'] . ">";
-        echo '<p>'.$record['introduction'].'</p>';
+        echo '<p class="intros">'.$record['introduction'].'</p>';
+        echo '<strong>'.$record['email'].'</strong>';
         echo "</li>";
       }
       ?>
