@@ -1,5 +1,5 @@
 <?php include('includes/init.php');
-$current_page = "Admin Events";
+$current_page = "Edit Events";
 //get all events
 
 
@@ -29,16 +29,16 @@ function print_events($events) {
       }
 
       //echo $image_file;
-      echo "<img src=".$image_file." alt=' ' width=120 height=120> ";
+      echo "<img src=".htmlspecialchars($image_file)." alt=' ' width=120 height=120> ";
       ?>
       </td>
-      <td><?php echo htmlspecialchars($event["name"]);?></td>
-      <td> <?php echo htmlspecialchars($event["date_time"]); ?> </td>
-      <td> <?php echo htmlspecialchars($event["address"]); ?> </td>
-      <td> <?php echo htmlspecialchars($event["description"]); ?> </td>
-      <td>
+      <td class="name"><?php echo htmlspecialchars($event["name"]);?></td>
+      <td class="date_time"> <?php echo htmlspecialchars($event["date_time"]); ?> </td>
+      <td class="address"> <?php echo htmlspecialchars($event["address"]); ?> </td>
+      <td class="description"> <?php echo htmlspecialchars($event["description"]); ?> </td>
+      <td class="apply">
         <form class='loginform' method="post" action="admin_event.php" enctype="multipart/form-data">
-          <button type="submit" name="remove_event" value=<?php echo $current_event;?>>Remove</button>
+          <button type="submit" name="remove_event" value=<?php echo htmlspecialchars($current_event);?>>Remove</button>
         </form>
       </td>
     </tr>
@@ -192,26 +192,26 @@ $allevents =  exec_sql_query($db, "SELECT * FROM events", NULL)->fetchAll();
 
 ?>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" type="text/css" href="styles/all.css" media="all" />
-  <title>About Us</title>
+  <title>Edit Events</title>
 </head>
 
 <body>
 <?php
+if ($current_user) {
 include('includes/header.php');
 include('includes/sidebar.php');
-if ($current_user) {
 ?>
 
 <div class='event_form'>
 
 
-  <form class='loginform' method="post" action="admin_event.php" enctype="multipart/form-data">
+  <form class='eventform' method="post" action="admin_event.php" enctype="multipart/form-data">
     <fieldset>
       <legend>Event form</legend>
       <?php print_messages(); ?>
@@ -237,6 +237,8 @@ if ($current_user) {
         </li>
         <li>
           <label>Upload Image:</label>
+        </li>
+        <li>
         <!-- MAX_FILE_SIZE must precede the file input field -->
           <input type="hidden" name="MAX_FILE_SIZE" value="<?php echo MAX_FILE_SIZE; ?>" />
           <input type="file" name="box_file" >
@@ -245,7 +247,7 @@ if ($current_user) {
           <label>Description:</label>
         </li>
         <li>
-          <textarea name="description" cols="50" rows="10" required/></textarea>
+          <textarea name="description" cols="50" rows="10" required></textarea>
         </li>
         <li>
           <button name="submit_upload" type="submit">Upload</button>
@@ -262,7 +264,8 @@ if ($current_user) {
   ?>
 </div>
 <?php
+include('includes/footer.php');
 }
-include('includes/footer.php')?>
+?>
 </body>
 </html>

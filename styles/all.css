@@ -1,15 +1,18 @@
 body {
   margin:0;
+  font-family: Verdana, Geneva, sans-serif;
   /* padding-bottom: 70px; */
 }
 header {
   background-color: black;
+  font-family: Tahoma, Geneva, sans-serif;
   height: 40px;
   padding-top: 10px;
   width:100%;
   margin-top: 0;
   top: 0;
   color: white;
+  font-weight: 100;
 }
 footer {
   position: fixed;
@@ -27,6 +30,7 @@ footer a {
   text-decoration: none;
   color: white;
 }
+
 footer a:hover {
     color: rgba(238, 188, 176, 0.93);
 }
@@ -73,20 +77,31 @@ ul {
 #mainslideshow {
   box-sizing: border-box;
 }
+
+#adminlogo li{
+  margin: 10px;
+}
+
 .mySlides {
   display: inline-block;
 }
 img {
   vertical-align: middle;
 }
-
+.indexbody {
+  margin: auto;
+  margin-left: 200px;
+  padding-bottom: 80px;
+}
+.indextext{
+  max-width: 1200px;
+}
 /* Slideshow container */
 .slideshow-container {
   max-width: 1200px;
   height: auto;
   position: relative;
-  margin: auto;
-  margin-left: 200px;
+  /* margin: auto; */
 }
 
 /* Next & previous buttons */
@@ -97,7 +112,7 @@ img {
   width: auto;
   padding: 16px;
   margin-top: -22px;
-  color: white;
+  color: #adadad;
   font-weight: bold;
   font-size: 18px;
   transition: 0.6s ease;
@@ -165,9 +180,11 @@ img {
   .prev, .next,.text {font-size: 11px}
 }
 
-#slideimg {
+.slideimg {
   max-height: 500px;
-  width: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .numbertext {
@@ -185,10 +202,16 @@ img {
   padding-top: 5px;
 }
 
-.loginform input[type=text], input[type=password], input[type=date] select, option, textarea {
+.eventform{
+  margin-left: 250px;
+  padding-top: 5px;
+  width: 520px;
+}
+
+.loginform input[type=text], input[type=password], select, option {
     /* width: 100%; */
     padding: 5px;
-    width: 250px;
+    width: 200px;
     /* border: 1px solid #ccc; */
     border: 1px solid;
     border-radius: 4px;
@@ -198,7 +221,50 @@ img {
     resize: vertical;
 }
 
-.loginform button, input[type=submit] {
+input[type=date], input[type=time] {
+  padding: 5px;
+  width: 198px;
+  /* border: 1px solid #ccc; */
+  border: 1px solid;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  resize: vertical;
+}
+.simple {
+  all: unset;
+  /* width: 100%; */
+  padding: 5px;
+  /* border: 1px solid #ccc; */
+  border: 1px solid;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.eventform input[type=text], select, option, textarea {
+    /* width: 100%; */
+    padding: 5px;
+
+    width: 400px;
+    /* border: 1px solid #ccc; */
+    border: 1px solid;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    resize: vertical;
+}
+
+.eventform input[type=file] {
+    padding: 10px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button, input[type=submit] {
     background-color: black;
     color: white;
     padding: 12px 15px;
@@ -258,8 +324,9 @@ div.content {
 .event_form {
   padding-left: 0;
   padding-right: 80px;
-  padding-bottom: 70px;
+  padding-bottom: 0px;
   padding-top: 50px;
+  /* width: 600px; */
 }
 
 /* Table Stylings */
@@ -285,9 +352,13 @@ td,th{
   margin-bottom: 70px;
 }
 .blogpost {
-  border-width: 2px;
-  border-color: black;
+  border-radius: 25px;
+  border: 2px solid black;
+  padding: 1em;
+  margin: 1em;
+  text-decoration: none;
 }
+
 
 #applyFORM {
   margin: auto;
@@ -299,15 +370,10 @@ td,th{
     margin-bottom: 64px;
 }
 
-
-
 #resumeText {
 height: 200px;
-width: 500px;;
+width: 500px;
 
-
-
-=======
     width: 40%;
 
     border: 3px solid red;
@@ -331,4 +397,42 @@ width: 500px;;
 .block img:hover {
   opacity: .8;
 
+}
+
+td .name {
+  width: 10%;
+}
+td .date_time {
+  width: 20%;
+}
+td .address {
+  width: 20%;
+}
+td .description {
+  width: 30%;
+}
+td .apply {
+  width: 10%;
+}
+
+
+.links {
+  text-decoration: none;
+}
+.edit_links {
+  text-decoration: none;
+  border-radius: 2px;
+  background-color: coral;
+  height: 50px;
+
+}
+.blog_title {
+  font-family: 'Times New Roman', Times, serif;
+}
+.intros {
+  margin-right: 400px;
+}
+.new_inputs {
+  margin-right: 300px;
+  margin-top: 60px;
 }

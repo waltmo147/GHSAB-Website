@@ -4,19 +4,17 @@ const BOX_EVENTS_PATH = "uploads/events/";
 
 $pages = array("Home" => "index.php",
                "Events" => "events.php",
-               "Applications" => "apply.php",
                "Blog" => "blog.php",
                "About Us" => "aboutus.php",
                "Join Our Team" => "apply.php");
 $adminpages = array("Home" => "index.php",
                     "Events" => "events.php",
-                    "Applications" => "applications.php",
                     "Blog" => "blog.php",
                     "About Us" => "aboutus.php",
+                    "Edit Home Texts" => "admin-home.php",
                     "Edit Logo" => "admin_logo.php",
                     "Edit Slides" => "admin-slides.php",
                     "Edit Events" => "admin_event.php",
-                    "Applications" => "admin-applications.php",
                     "Edit Blogs" => "admin-blogs.php",
                     "Edit About Us" => "admin-aboutus.php",
                     "Logout" => "logout.php");
@@ -259,13 +257,19 @@ if ($current_user) {
 function remove_member($member_id){
   //check if this actually works!
   global $db;
-  $sql = "DELETE FROM member_images WHERE member_images.id=:member_id";
+  $sql = "SELECT * FROM member_images WHERE member_images.id=:member_id";
   $params = array('member_id' => $member_id);
+  $records = exec_sql_query($db, $sql,$params)->fetchAll();
+  //Not going to delete images from file path
+  //unlink($records[0]['picpath']);
+  $sql = "DELETE FROM member_images WHERE member_images.id=:member_id";
   exec_sql_query($db, $sql,$params);
   $sql1 = "DELETE FROM members WHERE members.id=:member_id";
   exec_sql_query($db,$sql1,$params);
   $sql1 = "DELETE FROM picliason WHERE member=:member_id";
   exec_sql_query($db,$sql1,$params);
+
+
   //don't forget to check!
 }
 function remove_blog($blog_id){
@@ -276,13 +280,14 @@ function remove_blog($blog_id){
   );
   exec_sql_query($db, $sql,$params);
 }
-function add_blog($title,$author,$blog_text){
+function add_blog($title,$author,$blog_text,$link){
   global $db;
-  $sql = "INSERT INTO blogs (title, author, blog) VALUES (:title, :author, :blog)";
+  $sql = "INSERT INTO blogs (title, author, blog, link) VALUES (:title, :author, :blog, :link)";
   $params = array(
     ":title"=>$title,
     ":author"=>$author,
-    ":blog"=>$blog_text
+    ":blog"=>$blog_text,
+    ":link"=>$link
   );
   exec_sql_query($db, $sql, $params);
 }

@@ -1,7 +1,7 @@
 <?php include('includes/init.php');
 $current_page = "Home";?>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
   <meta charset="UTF-8" />
@@ -14,7 +14,7 @@ $current_page = "Home";?>
 <?php include('includes/header.php');
 include('includes/sidebar.php');
 ?>
-
+<div class = "indexbody">
 <div class="slideshow-container">
 
 <?php
@@ -25,11 +25,11 @@ $pictures = exec_sql_query($db,$sql,$params)->fetchAll();
 $i=0;
 foreach($pictures as $picture){
       $i+=1;
-    echo("<div class='mySlides fade'>
-      <div class='numbertext'>$i</div>
-      <img id = 'slideimg' src=". $picture['picpath'] . ">
-      <div class='text'>". $picture['title'] . "</div>
-    </div>");
+    echo "<div class='mySlides fade'>
+      <div class='numbertext'>".htmlspecialchars($i)."</div>
+      <img class = 'slideimg' alt='' src=". htmlspecialchars($picture['picpath']) . ">
+      <div class='text'>". htmlspecialchars($picture['title']) . "</div>
+    </div>";
 }
 ?>
 
@@ -40,9 +40,26 @@ foreach($pictures as $picture){
   <?php
   $j = 1;
   while($i>=$j){
-    echo("<span class='dot' onclick='gotoslide($j)'></span>");
+    echo("<span class='dot' onclick='gotoslide(".htmlspecialchars($j).")'></span>");
     $j+=1;
   }?>
+</div>
+</div>
+<div class = "indextext">
+  <?php
+    $sql = "SELECT * FROM maindescription";
+    $params = array();
+    $text = exec_sql_query($db,$sql,$params)->fetchAll();
+    foreach($text as $bodyelement){
+      $title = $bodyelement['title'];
+      $body = $bodyelement['body'];
+      $body = explode(PHP_EOL, $body);
+      echo("<h1>".htmlspecialchars($title)."</h1>");
+      foreach($body as $par){
+        echo("<p>".htmlspecialchars($par)."</p>");
+      }
+    }
+  ?>
 </div>
 </div>
 <br>
@@ -74,6 +91,7 @@ function displaySlides(n) {
 
 
 </script>
-</body>
 <?php include('includes/footer.php'); ?>
+</body>
+
 </html>

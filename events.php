@@ -18,7 +18,7 @@ function print_events($events) {
   foreach ($events as $event) {
     ?>
     <tr>
-      <td width="10%">
+      <td class='apply'>
       <?php
       if ($event["image"] != NULL) {
         $image_file = "uploads/events/".$event["id"].".".$event["image"];
@@ -28,14 +28,14 @@ function print_events($events) {
       }
 
       //echo $image_file;
-      echo "<img src=".$image_file." alt=' ' width=120 height=120> ";
+      echo "<img src=".htmlspecialchars($image_file)." alt=' ' width=120 height=120> ";
       ?>
       </td>
-      <td width="10%"><?php echo htmlspecialchars($event["name"]);?></td>
-      <td  width="20%"> <?php echo htmlspecialchars($event["date_time"]); ?> </td>
-      <td  width="20%"> <?php echo htmlspecialchars($event["address"]); ?> </td>
-      <td width="30%"> <?php echo htmlspecialchars($event["description"]); ?> </td>
-      <td width="10%">
+      <td class="name"><?php echo htmlspecialchars($event["name"]);?></td>
+      <td class="date_time"> <?php echo htmlspecialchars($event["date_time"]); ?> </td>
+      <td class="address"> <?php echo htmlspecialchars($event["address"]); ?> </td>
+      <td class="description"> <?php echo htmlspecialchars($event["description"]); ?> </td>
+      <td class="apply">
         <?php
         echo "<form class=\"loginform\" action=\"apply.php\" method=\"post\">";
         ?>
@@ -50,13 +50,13 @@ function print_events($events) {
 
 ?>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" type="text/css" href="styles/all.css" media="all" />
-  <title>About Us</title>
+  <title>Event</title>
 </head>
 
 <body>

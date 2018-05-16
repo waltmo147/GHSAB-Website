@@ -1,5 +1,5 @@
 <?php include('includes/init.php');
-$current_page = "Home";
+$current_page = "Edit Logo";
 
 $image_src = NULL;
 
@@ -34,22 +34,25 @@ if (isset($_POST["submit_upload"])) {
 
 ?>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" type="text/css" href="styles/all.css" media="all" />
-  <title>Home</title>
+  <title>Edit Logo</title>
 </head>
 
 <body>
-<?php include('includes/header.php');
+<?php
+if ($current_user) {
+include('includes/header.php');
 include('includes/sidebar.php');
+
 ?>
 
 <div class="content">
-  <form id="uploadFile" action="admin_logo.php" method="post" enctype="multipart/form-data">
+  <form id="adminlogo" action="admin_logo.php" method="post" enctype="multipart/form-data">
 
   <?php
   print_messages();
@@ -67,7 +70,7 @@ include('includes/sidebar.php');
     </li>
     <li>
       <!-- MAX_FILE_SIZE must precede the file input field -->
-      <input type="hidden" name="MAX_FILE_SIZE" value="<?php echo MAX_FILE_SIZE; ?>" />
+      <input type="hidden" name="MAX_FILE_SIZE" value="<?php echo htmlspecialchars(MAX_FILE_SIZE); ?>" />
       <input type="file" name="box_file" required>
     </li>
     <li>
@@ -76,8 +79,11 @@ include('includes/sidebar.php');
   </ul>
 </form>
 </div>
-
+<?php
+include('includes/footer.php');
+}
+?>
 
 </body>
-<?php include('includes/footer.php'); ?>
+
 </html>

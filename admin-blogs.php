@@ -1,7 +1,7 @@
 <?php include('includes/init.php');
 $current_page = "Edit Blogs";?>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
   <meta charset="UTF-8" />
@@ -17,21 +17,20 @@ include('includes/sidebar.php');
 ?>
 <div class = 'blogs'>
 <?php
-echo "<a href='new_blog.php'>add blog</a>";
 $sql = "SELECT * FROM blogs";
 $params = array();
 $blogs = exec_sql_query($db, $sql, $params)->fetchAll();
 //echo "<a href='new_blog.php' >New Blog</a>";
 foreach($blogs as $blog){
   echo("<div class = 'blogpost'>
-      <h1>" . $blog['title'] . "</h1>
-      <p>" . $blog['blog'] . "</p>
-      <h2> By " . $blog['author'] . "</h2>
-      <a href='delete.php?blog_id=".$blog['id']."'>Remove</a>".
+      <h1>" . htmlspecialchars($blog['title']) . "</h1>
+      <p>" . htmlspecialchars($blog['blog']) . "</p>
+      <h2> By " . htmlspecialchars($blog['author']) . "</h2>
+      <a class='edit_links' href='delete.php?blog_id=".htmlspecialchars($blog['id'])."'>Remove</a>".
       "</div>");
 
 }
-
+echo "<a href='new_blog.php' class='edit_links'>add blog</a>";
 ?>
 </div>
 <?php include('includes/footer.php')?>
