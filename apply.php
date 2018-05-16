@@ -41,7 +41,7 @@ if(isset($_POST['sendEmail'])){
           $message = htmlspecialchars_decode($message . $lineTwo . $lineThree . $lineFour . $lineFive . $lineSix . $linesSevens . $lineEight . $lineNine . $lineTen . $lineEleven . $lineTwelve . $lineThirteen . $lineFourteen . $lineFifteen, ENT_QUOTES);
 
 
-          if(mail("barronfran@gmail.com", "NEW APPLICATION FOR GHSAB", "$message")){
+          if(mail("CUGHStudentAdvisory@gmail.com", "NEW APPLICATION FOR GHSAB", "$message")){
             array_push($messages, "Thanks for submitting your application! If your resume matches our needs a member of our organization will contact you.");
           } else {
             array_push($messages, "There was an error processing your application, please resubmit at your earliest convenience.");
