@@ -882,6 +882,75 @@ Task 3: administrator wants to delete an event
   7. seeing the refresh of the page see if the event is deleted
   8. admin logs out
 
+Task 4: administrator wants to delete a blog post
+  1. they add "login.php" to the website path and hit enter
+  2. admin inputs credentials
+  3. press login
+  4. click on the blog nav element
+  5. admin selects the blog post(s) they would like to be deleted
+  6. admin clicks on "delete blog post"
+  7. admin sees feedback and does not attempt to delete again (if the deletion was successful)
+  8. admin logs out
+
+Task 5: administrator wants to add a blog post
+
+  1. they add "login.php" to the website path and hit enter
+  2. admin inputs credentials
+  3. press login
+  4. click on the blog nav element
+  5. admin fill out the blog form
+  6. admin clicks on "add" button
+  7. admin sees feedback that blog is submitted
+  8. admin goes to blog page and check the submission
+  9. admin logs out
+
+Task 6: administrator wants to change the club logo
+
+  1. admin add "login.php" to the website path and hit enter
+  2. admin inputs credentials
+  3. press login
+  4. click on the edit logo in the side bar
+  5. admin uploads new logo image
+  6. admin clicks on "submit" button
+  7. admin sees feedback that new logo is submitted
+  8. admin see the logo change in the sidebar
+  9. admin logs out
+
+Task 6: administrator wants to edit the home page texts
+
+  1. admin add "login.php" to the website path and hit enter
+  2. admin inputs credentials
+  3. press login
+  4. click on the edit home texts in the side bar
+  5. admin fill in the text forms
+  6. admin clicks on "submit" button of the text form he/she would like to edit
+  7. admin goes to the home page to see if the change goes as supposed
+  8. admin logs out
+
+Task 7: administrator wants to edit the slide show in the home page
+
+  1. admin add "login.php" to the website path and hit enter
+  2. admin inputs credentials
+  3. press login
+  4. click on the edit slides in the side bar
+  5. admin click the delete button of the current pictures shown on the slide that would like to be deleted
+  6. admin upload new image files
+  7. admin click the upload button
+  8. admin goes to the home page to see if the change goes as supposed
+  9. admin logs out
+
+Task 7: administrator wants to edit the about us page
+
+  1. admin add "login.php" to the website path and hit enter
+  2. admin inputs credentials
+  3. press login
+  4. click on the edit slides in the side bar
+  5. admin click the delete button of the current member would like to be deleted
+  6. admin edit the text of each current members
+  7. admin click add new member
+  8. admin fill in the new member info in the forms
+  9. admin goes to the about us page to see if the changes are as supposed
+  10. admin logs out
 
 #### Task 1 Cognitive walkthrough
   Task: **Apply to program**
@@ -1172,11 +1241,10 @@ Users can view the home, event, blog and about us page. User can also apply to j
 ## Milestone 5: Final Notes to the Graders
 
 [1. Give us three specific strengths of your site that sets it apart from the previous website of the client (if applicable) and/or from other websites. Think of this as your chance to argue for the things you did really well.]
-1.Our website gives the admin the ability to easily edit text and images 
 
 [2. Tell us about things that don't work, what you wanted to implement, or what you would do if you keep working with the client in the future. Give justifications.]
 
-If the client (a group of Cornell students) had more time, we would request more data from them. The client was incredibly slow in getting data (text descriptions and images) to us, so some of the displayed data is placeholder seed data.
+If the client (a group of Cornell students) had more time, we would request more data from them. The client was incredibly slow in getting data (text descriptions and images) to us, so some of the displayed data is placeholder seed data. However, the admin can add/edit the data to display to their audience.
 
 [3. Tell us anything else you need us to know for when we're looking at the project.]
 
