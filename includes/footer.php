@@ -1,3 +1,3 @@
 <footer>
-  <a class = "footerlink" href="mailto:studentadvisory@health.com">studentadvisory@health.com</a>
+  <a class = "footerlink" href="mailto:CUGHStudentAdvisory@gmail.com">CUGHStudentAdvisory@gmail.com</a>
 </footer>
