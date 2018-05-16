@@ -27,7 +27,7 @@ foreach($pictures as $picture){
       $i+=1;
     echo("<div class='mySlides fade'>
       <div class='numbertext'>$i</div>
-      <img id = 'slideimg' src=". $picture['picpath'] . ">
+      <img class = 'slideimg' alt='' src=". $picture['picpath'] . ">
       <div class='text'>". $picture['title'] . "</div>
     </div>");
 }
@@ -91,6 +91,7 @@ function displaySlides(n) {
 
 
 </script>
-</body>
 <?php include('includes/footer.php'); ?>
+</body>
+
 </html>
